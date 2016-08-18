@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>浮动广告</title>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            background: #35e4ff;
+            font-size:100px;
+            position:absolute;
+            top:0;
+            left:0;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oDiv=document.getElementById('box');
+            var iSpeedX=8;
+            var iSpeedY=8;
+            var t=0;
+            var l=0;
+            setInterval(function(){
+//                iSpeedY+=5;
+                t+=iSpeedY;
+                l+=iSpeedX;
+                if(t>=document.documentElement.clientHeight-oDiv.offsetHeight){
+                    t=document.documentElement.clientHeight-oDiv.offsetHeight;
+                    iSpeedY*=-1;
+                }
+                if(l>=document.documentElement.clientWidth-oDiv.offsetWidth){
+                    l=document.documentElement.clientWidth-oDiv.offsetWidth;
+                    iSpeedX*=-1;
+                }
+                if(t<=0){
+                    t=0;
+                    iSpeedY*=-1;
+                }
+                if(l<=0){
+                    l=0;
+                    iSpeedX*=-1;
+                }
+                oDiv.style.top=t+'px';
+                oDiv.style.left=l+'px';
+            },30)
+
+
+        }
+    </script>
+</head>
+<body>
+<div id="box">广告</div>
+</body>
+</html>

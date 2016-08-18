@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>手风琴效果</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #ul{
+            width:512px;
+            height: 320px;
+            margin:50px auto;
+            position:relative;
+            overflow: hidden;
+        }
+        li{
+            width:512px;
+            height: 320px;
+            position:absolute;
+            left:0;
+            top:0;
+            list-style:none;
+        }
+        img{
+            width: 512px;
+        }
+    </style>
+    <script src="move1.js"></script>
+    <script>
+        window.onload=function(){
+            var oUl=document.getElementById('ul');
+            var aLi=oUl.getElementsByTagName('li');
+            var W=40;
+            oUl.style.width=aLi[0].offsetWidth+W*(aLi.length-1)+'px';
+            for(var i=1;i<aLi.length;i++){
+                aLi[i].style.left=aLi[0].offsetWidth+W*(i-1)+'px';
+            }
+            for(var i=0;i<aLi.length;i++){
+                aLi[i].index=i;
+                aLi[i].onmouseover=function(){
+                    for(var i=1;i<aLi.length;i++){
+                        if(i<=this.index){
+                            move(aLi[i],{left:W*i},{duration:500,easing:'ease-in'});
+                        }else{
+                            move(aLi[i],{left:aLi[0].offsetWidth+W*(i-1)},{duration:500,easing:'ease-out'});
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<ul id="ul">
+    <li><img src="img6/1.jpg" alt=""/></li>
+    <li><img src="img6/2.jpg" alt=""/></li>
+    <li><img src="img6/3.jpg" alt=""/></li>
+    <li><img src="img6/4.jpg" alt=""/></li>
+    <li><img src="img6/5.jpg" alt=""/></li>
+    <li><img src="img6/6.jpg" alt=""/></li>
+    <li><img src="img6/7.jpg" alt=""/></li>
+    <li><img src="img6/8.jpg" alt=""/></li>
+    <li><img src="img6/9.jpg" alt=""/></li>
+    <li><img src="img6/10.jpg" alt=""/></li>
+    <li><img src="img6/11.jpg" alt=""/></li>
+    <li><img src="img6/12.jpg" alt=""/></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>灵魂回响</title>
+    <link href="css/base.css" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: "Microsoft Yahei";
+        }
+
+        body {
+            background: #1a191f;
+        }
+
+        .box-1 {
+            height: 55px;
+            background: url("martial/nav_bg.png") center top;
+        }
+
+        .top {
+            width: 1000px;
+            height: 50px;
+            margin: 0 auto;
+            background: url("martial/logo_dark.png") no-repeat 14px 0;
+            overflow: hidden;
+        }
+
+        .top-left {
+            width: 113px;
+            height: 37px;
+            border-right: 1px solid #cecece;
+            margin-top: 6px;
+        }
+
+        .top-right {
+            height: 50px;
+            padding-right: 10px
+        }
+
+        .top-right li {
+            float: right;
+            height: 50px;
+            line-height: 50px;
+            border-right: 1px solid #cecece;
+            padding: 0 15px 0 25px;
+        }
+
+        .top-right span {
+            padding-right: 5px;
+        }
+
+        .arrow {
+            width: 7px;
+            height: 6px;
+            background: url("martial/cyou_sprite.png") no-repeat -206px -147px;
+            margin-top: 22px;
+        }
+
+        .top-mid {
+            height: 50px;
+            border-right: 1px solid #cecece;
+        }
+
+        .top-mid li {
+            float: right;
+            height: 50px;
+            line-height: 50px;
+            padding: 0 10px 0 10px;
+        }
+
+        .top-mid span {
+            padding-left: 5px;
+        }
+
+        .round1, .round2, .round3 {
+            width: 24px;
+            height: 24px;
+            background: url("martial/cyou_sprite.png") no-repeat;
+            margin-top: 13px;
+        }
+
+        .round1 {
+            background-position: 0 -104px;
+        }
+
+        .round2 {
+            background-position: -189px 0px;
+        }
+
+        .round3 {
+            background-position: -139px 0px;
+        }
+
+        .con-bg {
+            width: 100%;
+            height: 2444px;
+            background: url("martial/con_bg.jpg") center top no-repeat;
+        }
+
+        .header-mian {
+            width: 1000px;
+            height: 551px;
+            margin: 0 auto;
+            background: url("martial/header_main.jpg")
+        }
+
+        .header-top {
+            width: 100%;
+            height: 110px;
+            background: url("martial/123.jpg")
+        }
+
+        .logo {
+            width: 190px;
+            height: 100px;
+            background: url("martial/logo.gif");
+            text-indent: -999em;
+        }
+
+        .nav {
+            width: 775px;
+            height: 110px;
+        }
+
+        .nav li {
+            float: left;
+            width: 86px;
+            height: 110px;
+            margin-right: 5px;
+        }
+
+        .nav .home {
+            width: 62px;
+        }
+
+        .nav .w_81 {
+            width: 70px;
+            margin-right: 0
+        }
+
+        .navbtn {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .nav-2 {
+            position: relative;
+        }
+
+        .nav-con {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 86px;
+            height: 110px;
+            line-height: 30px;
+            padding: 20px 0 0 15px;
+            background: url("martial/nav_new_hover.jpg") no-repeat;
+            display: none;
+        }
+
+        .nav-con a {
+            color: #e6e2e0;
+        }
+
+        .nav-con a:hover {
+            color: #f3ca90;
+            text-decoration: underline;
+        }
+
+        .nav li:hover .nav-con {
+            display: block;
+        }
+
+        .box-2 {
+            width: 1000px;
+            height: 986px;
+            background: url("martial/content.jpg") no-repeat;
+            margin: 0 auto;
+        }
+
+        .body-1 {
+            width: 100%;
+            height: 413px;
+        }
+
+        .b1-l {
+            width: 617px;
+            height: 100%;
+        }
+
+        .b1-r {
+            width: 383px;
+            height: 100%;
+        }
+
+        .b1l-1 {
+            width: 617px;
+            height: 110px;
+        }
+
+        .b1l1-1 {
+            width: 216px;
+            height: 110px;
+            background: url("martial/sprite.jpg") no-repeat;
+            position: relative;
+        }
+
+        .b1l1-2 {
+            width: 101px;
+            height: 110px;
+            background: url("martial/sprite.jpg") no-repeat -216px 0px;
+            position: relative;
+        }
+
+        .b1l1-3 {
+            width: 100px;
+            height: 110px;
+            background: url("martial/sprite.jpg") no-repeat -317px 0px;
+            position: relative;
+        }
+
+        .b1l1-4 {
+            width: 100px;
+            height: 110px;
+            background: url("martial/sprite.jpg") no-repeat -417px 0px;
+            position: relative;
+        }
+
+        .b1l1-5 {
+            width: 100px;
+            height: 110px;
+            background: url("martial/sprite.jpg") no-repeat -517px 0px;
+            position: relative;
+        }
+
+        .b-nav1 {
+            width: 216px;
+            height: 110px;
+            background: url("martial/sprite.jpg") no-repeat 0px -110px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+
+        .b-nav2 {
+            width: 101px;
+            height: 110px;
+            background: url("martial/sprite.jpg") no-repeat -216px -110px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+
+        .b-nav3 {
+            width: 100px;
+            height: 110px;
+            background: url("martial/sprite.jpg") no-repeat -317px -110px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+
+        .b-nav4 {
+            width: 100px;
+            height: 110px;
+            background: url("martial/sprite.jpg") no-repeat -417px -110px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+
+        .b-nav5 {
+            width: 100px;
+            height: 110px;
+            background: url("martial/sprite.jpg") no-repeat -517px -110px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+
+        .b1l1-1:hover .b-nav1 {
+            display: block;
+        }
+
+        .b1l1-2:hover .b-nav2 {
+            display: block;
+        }
+
+        .b1l1-3:hover .b-nav3 {
+            display: block;
+        }
+
+        .b1l1-4:hover .b-nav4 {
+            display: block;
+        }
+
+        .b1l1-5:hover .b-nav5 {
+            display: block;
+        }
+
+        .b1l-2 {
+            position: relative;
+            background: url("martial/main_a1%20(1).jpg");
+            width: 616px;
+            height: 303px;
+            border-left: 1px solid #322e3f;
+        }
+
+        .b1r-1 {
+            width: 358px;
+            height: 55px;
+            background: url("martial/sever.png");
+            margin: 7px 0 5px 14px
+        }
+
+        .b1r-1 p {
+            padding-left: 90px;
+            line-height: 27px;
+            color: #adb9e0;
+        }
+
+        .b1r-1 em {
+            color: #f00000;
+        }
+
+        .b1r-2 {
+            width: 381px;
+            height: 42px;
+            background: url("martial/sprite.jpg") no-repeat 0 -220px;
+            color: #adb9e0;
+            line-height: 42px;
+            position: relative;
+            border-left: 1px solid #322e3f;
+            border-right: 1px solid #322e3f;
+        }
+
+        .b1r-2 i {
+            color: #f93d1a;
+            text-decoration: underline;
+        }
+
+        .plus {
+            width: 14px;
+            height: 14px;
+            background: url("martial/sprite.jpg") -603px -227px;
+            position: absolute;
+            top: 14px;
+            right: 195px;
+        }
+
+        .blr-3 {
+            width: 381px;
+            height: 58px;
+            background: url("martial/sprite.jpg") 0 -262px;
+            border-left: 1px solid #322e3f;
+            border-right: 1px solid #322e3f;
+        }
+
+        .blr-3 li {
+            width: 94px;
+            height: 58px;
+            float: left;
+            text-align: center;
+            line-height: 58px;
+            color: #fff;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .blr-3 .media {
+            width: 97px;
+        }
+
+        .blr-3 .news {
+            width: 95px;
+        }
+
+        .blr-3 a {
+            height: 58px;
+            text-align: center;
+            line-height: 58px;
+            color: #fff;
+            font-weight: bold;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+
+        .blrnav1 {
+            width: 94px;
+            background: url("martial/sprite.jpg") 0 -319px;
+        }
+
+        .blrnav2, .blrnav3 {
+            width: 95px;
+            background: url("martial/sprite.jpg") -94px -319px;
+        }
+
+        .blrnav4 {
+            width: 97px;
+            background: url("martial/sprite.jpg") -284px -319px;
+        }
+
+        .comprehensive:hover .blrnav1 {
+            display: block;
+        }
+
+        .news:hover .blrnav2 {
+            display: block;
+        }
+
+        .notice:hover .blrnav3 {
+            display: block;
+        }
+
+        .media:hover .blrnav4 {
+            display: block;
+        }
+
+        .b1r-3 {
+            width: 383px;
+            height: 246px;
+            background: #322e3f;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .b1r3tit {
+            width: 347px;
+            height: 34px;
+            background: url("martial/sprite.jpg") 0 -378px;
+            margin: 17px 0 5px 17px;
+            color: #fe4100;
+            text-align: center;
+            line-height: 34px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .b1r3con {
+            padding: 0 18px 0 20px;
+            color: #9ca7ca;
+            line-height: 27px;
+        }
+
+        .b1r3con i {
+            font-size: 14px;
+        }
+
+        .more {
+            background: url("martial/more.jpg") left center no-repeat;
+            position: absolute;
+            bottom: 9px;
+            right: 15px;
+            padding-left: 18px;
+            color: #9ca7ca;
+        }
+
+        .more i {
+            font-family: "\9ED1\4F53", "CourierNewPSMT";
+        }
+
+        .body-2 {
+            width: 1000px;
+            height: 132px;
+            margin: 30px 0;
+        }
+
+        .pic-1 {
+            border: 1px solid #433b4f;
+        }
+
+        .ad1 {
+            margin-right: 8px;
+        }
+
+        .body-3 {
+            width: 1000px;
+            height: 348px;
+        }
+
+        .b3-l {
+            width: 656px;
+            height: 346px;
+            border: 1px solid #433b4f;
+        }
+
+        .career-nav {
+            width: 656px;
+            height: 58px;
+            border-bottom: 1px solid #433b4f;
+        }
+
+        .career-1, .career-2, .career-3, .career-4, .career-5, .career-6 {
+            background: url("martial/sprite.jpg") no-repeat;
+            height: 58px;
+        }
+
+        .career-1 {
+            width: 109px;
+            background-position: 0 -412px;
+        }
+
+        .career-2 {
+            width: 110px;
+            background-position: -109px -412px;
+        }
+
+        .career-3 {
+            width: 110px;
+            background-position: -219px -412px;
+        }
+
+        .career-4 {
+            width: 110px;
+            background-position: -329px -412px;
+        }
+
+        .career-5 {
+            width: 110px;
+            background-position: -439px -412px;
+        }
+
+        .career-6 {
+            width: 107px;
+            background-position: -549px -412px;
+        }
+
+        .career-1:hover {
+            background-position-y: -471px;
+        }
+
+        .career-2:hover {
+            background-position-y: -471px;
+        }
+
+        .career-3:hover {
+            background-position-y: -471px;
+        }
+
+        .career-4:hover {
+            background-position-y: -471px;
+        }
+
+        .career-5:hover {
+            background-position-y: -471px;
+        }
+
+        .career-6:hover {
+            background-position-y: -471px;
+        }
+
+        .b3l-2 {
+            width: 656px;
+            height: 286px;
+        }
+
+        .b3-r {
+            width: 321px;
+            height: 346px;
+            margin-right: 1px;
+        }
+
+        .block1-tit {
+            height: 31px;
+            line-height: 31px;
+            padding-left: 42px;
+            font-size: 18px;
+            color: #f3ca90;
+            background: url("martial/sprite.jpg") no-repeat -628px 0;
+        }
+
+        .b3r-2 {
+            width: 319px;
+            height: 149px;
+            border: 1px solid #433b4f;
+            margin: 15px 0 10px 0;
+            position: relative;
+        }
+
+        .opa {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 36px;
+            width: 100%;
+            background: #000;
+            opacity: 0.5;
+            filter: alpha(opacity:50);
+        }
+
+        .opacon {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 36px;
+            width: 100%;
+            line-height: 36px;
+            color: #fff;
+            font-size: 14px;
+            padding-left: 10px;
+        }
+
+        .b3r-3 {
+            width: 319px;
+            height: 25px;
+            background: url("martial/sprite.jpg") no-repeat -319px -530px;
+            margin-bottom: 3px;
+        }
+
+        .b3r-3 a {
+            color: #99a4c7;
+            line-height: 25px;
+            padding-left: 27px;
+            float: left;
+        }
+
+        .b3r-3 i {
+            color: #99a4c7;
+            line-height: 25px;
+            padding-right: 9px;
+            float: right;
+        }
+
+        .b3r-3:hover {
+            background-position-x: 0;
+        }
+
+        .box-4 {
+            width: 1000px;
+            height: 907px;
+            margin: 0 auto;
+            background: url("martial/bg.jpg");
+        }
+
+        .b4-mian {
+            height: 777px;
+            width: 1000px;
+        }
+
+        .b4-l {
+            width: 215px;
+            height: 777px;
+        }
+
+        .b4l-1 {
+            width: 215px;
+            height: 189px;
+            background: url("martial/sprite.jpg") no-repeat 0 -555px;
+        }
+
+        .block2-tit {
+            height: 42px;
+            line-height: 40px;
+            font-size: 16px;
+            color: #c2b383;
+            text-align: center;
+            padding-top: 4px;
+        }
+
+        .b4l1-bottom {
+            width: 180px;
+            height: 130px;
+            margin: 10px 0 0 30px;
+        }
+
+        .b4l1-bottom ul {
+            width: 90px;
+            height: 100%;
+        }
+
+        .b4l1-bottom li {
+            line-height: 27px;
+        }
+
+        .b4l1-bottom a {
+            color: #8f82a4;
+            font-size: 14px;
+        }
+
+        .b4l-2 {
+            width: 100%;
+            height: 262px;
+            margin-top: 23px;
+        }
+        .b4l-3{width:205px;height:36px;margin:0 auto;border:5px solid #433b4f;line-height:36px;text-align:center;color:#b1a1ca;
+        font-size:16px;background:url("martial/sprite.jpg") no-repeat -451px -273px;}
+        .b4l-4{width:215px;height:268px;background:url("martial/examen.jpg")}
+        .b4l-4:hover{background-position-x: -215px;}
+        .b4-m{width:424px;height:737px;margin-left:20px;}
+        .block3-tit{ height: 31px;
+            line-height: 31px;
+            padding-left: 42px;
+            font-size: 18px;
+            color: #f3ca90;
+            background: url("martial/sprite.jpg") no-repeat -609px -349px;margin:0 0 10px 0;}
+        .b4m-2{width:424px;height:305px;position:relative;}
+        .b4m2-t{width:424px;height:48px;}
+        .b4m2-1{width:104px;height:100%;border:1px solid #433b4f;color:#a295b7;font-size:14px;
+            line-height:48px;text-align:center;}
+        .b4m2-2{width:104px;height:100%;border:1px solid #433b4f;border-left:0;color:#a295b7;font-size:14px;
+            line-height:48px;text-align:center;}
+        .b4m2-3{width:104px;height:100%;border:1px solid #433b4f;border-left:0;color:#a295b7;font-size:14px;
+            line-height:48px;text-align:center;}
+        .b4m2-4{width:107px;height:49px;border-bottom:1px solid #433b4f;color:#a295b7;font-size:14px;
+            line-height:48px;text-align:center;}
+        .b4m2-1:hover{background:#322b3c;color:#fff;border-bottom-color: #322b3c;}
+        .b4m2-2:hover{background:#322b3c;color:#fff;border-bottom-color: #322b3c;}
+        .b4m2-3:hover{background:#322b3c;color:#fff;border-bottom-color: #322b3c;}
+        .b4m2-b{width:407px;height:232px;background:#322b3c;border:1px solid #433b4f;border-top:0;
+        padding:23px 0 0 15px;}
+        .more2 {
+            background: url("martial/more.jpg") left center no-repeat;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding-left: 18px;
+            color: #9ca7ca;
+        }
+        .more2 i {
+            font-family: "\9ED1\4F53", "CourierNewPSMT";  }
+        .more2 p{color:#a295b7;}
+        .b4m2b-r{margin-left:25px;}
+        .b4m2b-r li{line-height:25px;}
+        .b4m2b-r a{color:#a295b7;font-size:14px;}
+        .block4-tit{height: 31px;
+            line-height: 31px;
+            padding-left: 42px;
+            font-size: 18px;
+            color: #f3ca90;
+            background: url("martial/sprite.jpg") no-repeat -613px -381px;margin:40px 0 10px 0;}
+        .block5-tit{height: 31px;
+            line-height: 31px;
+            padding-left: 42px;
+            font-size: 18px;
+            color: #f3ca90;
+            background: url("martial/sprite.jpg") no-repeat -628px -40px;margin:0 0 10px 0;}
+        .block6-tit{height: 31px;
+            line-height: 31px;
+            padding-left: 42px;
+            font-size: 18px;
+            color: #f3ca90;
+            background: url("martial/sprite.jpg") no-repeat -623px -78px;margin:40px 0 10px 0;}
+        .b4-r{width:322px;height:349px;}
+        .b4r-1{width:302px;height:303px;background:#26212d;border:1px solid #433b4f;padding-left:18px;}
+        .b4r1-t{width:286px;height:239px;}
+        .b4r1-t li{width:286px;height:58px;border-bottom:1px dashed #594f67;color:#9587ab;}
+        .b4r1-t p{background:#594f67;height:26px;line-height:26px;padding:0 7px;font-size:14px;color:#fff;
+            margin-top:15px;}
+        .b4r1-t a{color:#9587ab;font-size:14px;line-height:58px;}
+        .b4r1-1{padding-left:12px;}
+        .arrow2{width:8px;height:26px;background:url("martial/ico.jpg") no-repeat;margin-top:15px;  }
+        .b4r1-b{width:279px;height:39px;border:3px solid #4b3f5c;margin-top:7px;font-size:22px;line-height:39px;
+        text-align:center;color:#b1a1ca;}
+        .b4r-2{width:322px;height:305px;position:relative;}
+        .b4r2-t{width:322px;height:48px;}
+        .b4r2-b{width:322px;height:256px;background:#322b3c;border:1px solid #433b4f;border-top:0;  }
+        .b4r2-4{width:111px;height:49px;border-bottom:1px solid #433b4f;color:#a295b7;font-size:14px;
+            line-height:48px;text-align:center;}
+        .pic-3{margin:23px 23px 23px 11px;}
+        .pic-4{margin:23px 0 23px 0;}
+        .pic-5{margin:0 23px 0 11px;}
+        .b4n-1{width:893px;height:30px;margin:0 auto;background:url("martial/game_anc.jpg");font-size:16px;
+            line-height:30px;text-align:center;color:#908c9b;}
+        .b4n-2{margin:5px auto;font-size:16px;
+            line-height:30px;text-align:center;color:#908c9b;}
+        .bottom-1{height:10px;background:url("martial/nav_bg.png") 0 -55px;}
+        .bottom-2{height:100px;background:#181818;}
+        .bottom-inner{width:1000px;height:100px;margin:0 auto;}
+        .bi1{width:120px;height:70px;background:url("martial/logo_dark.png")no-repeat 0 -50px;margin:15px 0 0 70px;}
+        .bi2{width:32px;height:48px;background:url("martial/cyou_copyright_sprite.png")no-repeat;margin:27px 0 0 15px;}
+        .bi3{color:#767676;line-height:23px;margin:29px 0 0 10px;}
+    </style>
+
+</head>
+<body>
+<div class="box-1">
+    <div class="top clearfix">
+        <div class="top-left fl"></div>
+        <ul class="top-right fr clearfix">
+            <li class="clearfix"><a href="#" class="clearfix"><i class="arrow fr"></i><span class="fr">畅游全游戏</span></a>
+            </li>
+            <li class="clearfix"><a href="#" class="clearfix"><i class="arrow fr"></i><span class="fr">畅游全服务</span></a>
+            </li>
+            <li class="clearfix"><a href="#" class="clearfix"><i class="arrow fr"></i><span class="fr">客服</span></a>
+            </li>
+        </ul>
+        <ul class="top-mid fr clearfix">
+            <li class="clearfix"><a href="#" class="clearfix"><i class="round1 fl"></i><span class="fl">畅游+</span></a>
+            </li>
+            <li class="clearfix"><a href="#" class="clearfix"><i class="round2 fl"></i><span class="fl">充值</span></a>
+            </li>
+            <li class="clearfix"><a href="#" class="clearfix"><i class="round3 fl"></i><span class="fl">注册</span></a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="con-bg">
+    <div class="header-mian">
+        <div class="header-top clearfix">
+            <a href="#" class="fl"><h2 class="logo">灵魂回响</h2></a>
+            <ul class="nav clearfix fr">
+                <li class="home">
+                    <a href="#" class="navbtn"></a>
+                </li>
+                <li class="nav-2">
+                    <a href="#" class="navbtn"></a>
+
+                    <div class="nav-con">
+                        <p><a href="#">游戏新闻</a></p>
+
+                        <p><a href="#">官方公告</a></p>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="navbtn"></a>
+                </li>
+                <li>
+                    <a href="#" class="navbtn"></a>
+                </li>
+                <li>
+                    <a href="#" class="navbtn"></a>
+                </li>
+                <li>
+                    <a href="#" class="navbtn"></a>
+                </li>
+                <li>
+                    <a href="#" class="navbtn"></a>
+                </li>
+                <li>
+                    <a href="#" class="navbtn"></a>
+                </li>
+                <li class="w_81">
+                    <a href="#" class="navbtn"></a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="box-2">
+        <div class="body-1 clearfix">
+            <div class="b1-l fl">
+                <ul class="b1l-1 clearfix">
+                    <li class="b1l1-1 fl"><a href="#"><i class="b-nav1"></i></a></li>
+                    <li class="b1l1-2 fl"><a href="#"><i class="b-nav2"></i></a></li>
+                    <li class="b1l1-3 fl"><a href="#"><i class="b-nav3"></i></a></li>
+                    <li class="b1l1-4 fl"><a href="#"><i class="b-nav4"></i></a></li>
+                    <li class="b1l1-5 fl"><a href="#"><i class="b-nav5"></i></a></li>
+                </ul>
+                <a href="#">
+                    <div class="b1l-2"></div>
+                </a>
+            </div>
+            <div class="b1-r fl">
+                <div class="b1r-1">
+                    <p>电信一区 <em>【元素殿堂】</em> 欢迎进驻！</p>
+
+                    <p>网通一区 <em>【雷霆之怒】</em> 欢迎进驻！</p>
+                </div>
+                <div class="b1r-2">
+                    <p>&nbsp;距您上次访问有 <i>200</i> 条更新</p>
+
+                    <div class="plus"></div>
+                </div>
+                <ul class="blr-3 clearfix">
+                    <li class="comprehensive">综合<a href="#" class="blrnav1">综合</a></li>
+                    <li class="news">新闻<a href="#" class="blrnav2">新闻</a></li>
+                    <li class="notice">公告<a href="#" class="blrnav3">公告</a></li>
+                    <li class="media">媒体<a href="#" class="blrnav4">媒体</a></li>
+                </ul>
+                <div class="b1r-3">
+                    <h3 class="b1r3tit">4月8日大版开启 新职业术士魔神天降</h3>
+
+                    <p class="b1r3con clearfix">
+                        <i class="fl">【新闻】</i>
+                        <i class="fl">两大满级副本特色揭秘 终极BOSS曝光</i>
+                        <i class="fr">03/24</i>
+                    </p>
+
+                    <p class="b1r3con clearfix">
+                        <i class="fl">【新闻】</i>
+                        <i class="fl">两大满级副本特色揭秘 终极BOSS曝光</i>
+                        <i class="fr">03/24</i>
+                    </p>
+
+                    <p class="b1r3con clearfix">
+                        <i class="fl">【新闻】</i>
+                        <i class="fl">两大满级副本特色揭秘 终极BOSS曝光</i>
+                        <i class="fr">03/24</i>
+                    </p>
+
+                    <p class="b1r3con clearfix">
+                        <i class="fl">【新闻】</i>
+                        <i class="fl">两大满级副本特色揭秘 终极BOSS曝光</i>
+                        <i class="fr">03/24</i>
+                    </p>
+
+                    <p class="b1r3con clearfix">
+                        <i class="fl">【新闻】</i>
+                        <i class="fl">两大满级副本特色揭秘 终极BOSS曝光</i>
+                        <i class="fr">03/24</i>
+                    </p>
+
+                    <p class="b1r3con clearfix">
+                        <i class="fl">【新闻】</i>
+                        <i class="fl">两大满级副本特色揭秘 终极BOSS曝光</i>
+                        <i class="fr">03/24</i>
+                    </p>
+                    <a href="#" class="more"><p>更多信息<i>></i></p></a>
+                </div>
+
+            </div>
+        </div>
+        <ul class="body-2 clearfix">
+            <li class="fl ad1"><a href="#"><img src="martial/main_a2.jpg" class="pic-1"/></a></li>
+            <li class="fl ad1"><a href="#"><img src="martial/main_a2.jpg" class="pic-1"/></a></li>
+            <li class="fl ad1"><a href="#"><img src="martial/main_a2.jpg" class="pic-1"/></a></li>
+            <li class="fl"><a href="#"><img src="martial/main_a2.jpg" class="pic-1"/></a></li>
+        </ul>
+        <div class="body-3 clearfix">
+            <div class="b3-l fl">
+                <div class="career-nav clearfix">
+                    <a href="#" class="career-1 fl"></a>
+                    <a href="#" class="career-2 fl"></a>
+                    <a href="#" class="career-3 fl"></a>
+                    <a href="#" class="career-4 fl"></a>
+                    <a href="#" class="career-5 fl"></a>
+                    <a href="#" class="career-6 fl"></a>
+                </div>
+                <div class="b3l-2">
+                    <img src="martial/cike.jpg"/>
+                </div>
+            </div>
+            <div class="b3-r fr">
+                <h4 class="block1-tit">活动中心</h4>
+                <a href="#">
+                    <div class="b3r-2">
+                        <img src="martial/1.jpg" class="pic-2"/>
+
+                        <div class="opa"></div>
+                        <div class="opacon">女武神的秘宝</div>
+                    </div>
+                </a>
+
+                <p class="b3r-3 clearfix">
+                    <a href="#">神谕者的成长礼</a>
+                    <i>进行中</i>
+                </p>
+
+                <p class="b3r-3 clearfix">
+                    <a href="#">神谕者的成长礼</a>
+                    <i>进行中</i>
+                </p>
+
+                <p class="b3r-3 clearfix">
+                    <a href="#">神谕者的成长礼</a>
+                    <i>进行中</i>
+                </p>
+
+                <p class="b3r-3 clearfix">
+                    <a href="#">神谕者的成长礼</a>
+                    <i>进行中</i>
+                </p>
+
+                <p class="b3r-3 clearfix">
+                    <a href="#">神谕者的成长礼</a>
+                    <i>进行中</i>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="box-4">
+        <div class="b4-mian clearfix">
+            <div class="b4-l fl">
+                <div class="b4l-1">
+                    <h4 class="block2-tit">快捷入口</h4>
+
+                    <div class="b4l1-bottom clearfix">
+                        <ul class="fl">
+                            <li><a href="#">·账号管理</a></li>
+                            <li><a href="#">·账号安全</a></li>
+                            <li><a href="#">·BUG提交</a></li>
+                            <li><a href="#">·玩家社区</a></li>
+                        </ul>
+                        <ul class="fl">
+                            <li><a href="#">·兑换中心</a></li>
+                            <li><a href="#">·畅游知道</a></li>
+                            <li><a href="#">·客户端FAQ</a></li>
+                            <li><a href="#">·加速器下载</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="b4l-2">
+                    <a href="#"><img src="martial/main_a3_3.jpg"/></a>
+                </div>
+                <a href="#"><div class="b4l-3">媒体合作专区</div></a>
+                <a href="#"><div class="b4l-4"></div></a>
+            </div>
+            <div class="b4-m fl">
+                <h4 class="block3-tit">玩家交流</h4>
+                <div class="b4m-2">
+                    <a href="#" class="more2"><p>更多信息<i>></i></p></a>
+                    <ul class="b4m2-t clearfix">
+                        <li class="b4m2-1 fl">玩家攻略</li>
+                        <li class="b4m2-2 fl">论坛热帖</li>
+                        <li class="b4m2-3 fl">社区精华</li>
+                        <li class="b4m2-4 fl"></li>
+                    </ul>
+                    <div class="b4m2-b clearfix">
+                        <div class="b4m2b-l fl">
+                            <a href="#"><img src="martial/wj.jpg" /></a>
+                        </div>
+                        <ul class="b4m2b-r fl">
+                            <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                            <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                            <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                            <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                            <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                            <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                            <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                            <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <h4 class="block4-tit">媒体专区</h4>
+                <div class="b4m-2">
+                    <a href="#" class="more2"><p>更多信息<i>></i></p></a>
+                    <ul class="b4m2-t clearfix">
+                        <li class="b4m2-1 fl">17173</li>
+                        <li class="b4m2-2 fl">新浪爱问</li>
+                        <li class="b4m2-3 fl">太平洋游戏</li>
+                        <li class="b4m2-4 fl"></li>
+                    </ul>
+                    <div class="b4m2-b clearfix">
+                        <div class="b4m2b-l fl">
+                            <a href="#"><img src="martial/1031.jpg" /></a>
+                        </div>
+                        <ul class="b4m2b-r fl">
+                            <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                            <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                            <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                            <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                            <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                            <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                            <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                            <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="b4-r fr">
+                <h4 class="block5-tit">游戏资料</h4>
+                <div class="b4r-1">
+                    <ul class="b4r1-t">
+                        <li class="clearfix">
+                            <p class="fl">新手入门</p>
+                            <div class="arrow2 fl"></div>
+                            <a href="" class="b4r1-1">注册账号</a>丨<a href="">下载游戏</a>丨<a href="">登录游戏</a>
+                        </li>
+                        <li class="clearfix">
+                            <p class="fl">职业介绍</p>
+                            <div class="arrow2 fl"></div>
+                            <a href="" class="b4r1-1">注册账号</a>丨<a href="">下载游戏</a>丨<a href="">登录游戏</a>
+                        </li>
+                        <li class="clearfix">
+                            <p class="fl">新手入门</p>
+                            <div class="arrow2 fl"></div>
+                            <a href="" class="b4r1-1">注册账号</a>丨<a href="">下载游戏</a>丨<a href="">登录游戏</a>
+                        </li>
+                        <li class="clearfix">
+                            <p class="fl">新手入门</p>
+                            <div class="arrow2 fl"></div>
+                            <a href="" class="b4r1-1">注册账号</a>丨<a href="">下载游戏</a>丨<a href="">登录游戏</a>
+                        </li>
+                    </ul>
+                    <a href=""><div class="b4r1-b">进入资料站</div></a>
+                </div>
+                <h4 class="block6-tit">视觉欣赏</h4>
+                <div class="b4r-2">
+                    <a href="#" class="more2"><p>更多信息<i>></i></p></a>
+                    <ul class="b4r2-t clearfix">
+                        <li class="b4m2-1 fl">17173</li>
+                        <li class="b4m2-2 fl">新浪爱问</li>
+                        <li class="b4r2-4 fl"></li>
+                    </ul>
+                    <div class="b4r2-b clearfix">
+                        <a href=""><img src="martial/1%20(1).jpg" class="fl pic-3"/></a>
+                        <a href=""><img src="martial/1%20(1).jpg" class="fl pic-4"/></a>
+                        <a href=""><img src="martial/1%20(1).jpg" class="fl pic-5"/></a>
+                        <a href=""><img src="martial/1%20(1).jpg" class="fl pic-6"/></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="b4-notice">
+            <p class="b4n-1">健康游戏公告</p>
+            <p class="b4n-2">抵制不良游戏,拒绝盗版游戏。注意自我保护，谨防上当受骗。适度游戏益脑，沉迷游戏伤身。合理安排时间，向后健康生活。<br/>
+            本游戏适合18岁以上的成年人用户,未满18周岁的未成年用户请在家长的监督下进行游戏。</p>
+
+        </div>
+    </div>
+    <div class="bottom-1"></div>
+    <div class="bottom-2">
+        <div class="bottom-inner clearfix">
+            <div class="bi1 fl"></div>
+            <div class="bi2 fl"></div>
+            <p class="bi3 fl">北京畅游时代数码技术有限公司版权所有 COPYRIGHT @ 2011 CHUANGYOU.COMLIMITED.ALL
+                RIGHTS RESERVED.法律声明丨联系我们
+                <br/>京文网[2011]0260-093号丨京ICP证:070525号</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

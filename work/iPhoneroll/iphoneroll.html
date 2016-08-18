@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>iPhone手机图片查看器</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script src="../move1.js"></script>
+<script>
+	window.onload=function(){
+		var oUl=document.getElementById('ul1');
+		var aLi=oUl.children;
+
+		var width=aLi[0].offsetWidth;
+
+		var iNow=0;
+		oUl.onmousedown=function(ev){
+			clearInterval(oUl.timer);
+			var oEvent=ev || event;
+			var disX=oEvent.clientX-oUl.offsetLeft;
+			var downX=oEvent.clientX;
+
+			document.onmousemove=function(ev){
+				var oEvent=ev || event;
+
+				oUl.style.left=oEvent.clientX-disX+'px';
+			};
+			document.onmouseup=function(ev){
+				var oEvent=ev || event;
+				document.onmousemove=null;
+				document.onmouseup=null;
+
+				var upX=oEvent.clientX;
+				if(Math.abs(upX-downX)>100){
+					if(upX>downX){
+						iNow--;
+						iNow<0 && (iNow=0);
+						move(oUl, {left: -width*iNow});
+					}else{
+						iNow++;
+						iNow>aLi.length-1 && (iNow=aLi.length-1);
+						move(oUl, {left: -width*iNow});
+					}
+				}else{
+					move(oUl, {left: -width*iNow});
+				}
+			};
+			return false;
+		};
+	};
+</script>
+</head>
+
+<body>
+<div id="iphone">
+	<div id="wrap">
+		<ul id="ul1">
+			<li style="background:url(images/pic1.png);" title="智能课堂"></li>
+			<li style="background:url(images/pic2.png);" title="智能课堂"></li>
+			<li style="background:url(images/pic3.png);" title="智能课堂"></li>
+			<li style="background:url(images/pic4.png);" title="智能课堂"></li>
+		</ul>
+	</div>
+</div>
+
+</body>
+</html>

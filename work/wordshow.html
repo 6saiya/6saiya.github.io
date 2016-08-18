@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>文字打字效果</title>
+    <style>
+        body{
+            background:#000;
+            color:#fff;
+            font-size:30px;
+            line-height:40px;
+        }
+        span{
+            opacity: 0;
+        }
+    </style>
+    <script src="move1.js"></script>
+    <script>
+        window.onload=function(){
+            var str='军队征召动物们从军去打仗 于是森林里的动物全都要来体检 排第一的猴子很不想从军去 他看看他的长尾巴 于是牙一咬狠下心来把他折断 进去后... 军医说：猴子尾巴断了，是残障，不用当兵啦.... 第二的兔子看到猴子这般行为后 也毅然决然的把他的长耳朵给折断了 进去后... 军医说：兔子耳朵断了，是残障，不用当兵啦... 排第三的黑熊心想.. "我耳朵那么短尾巴有跟没有差不多怎么办呢？" 好心的兔子与猴子来帮他想办法.. 忽然猴子大呼：我知道了把你的牙打断你就算残障啦！ 于是猴子与兔子狠狠地K了黑熊一顿 把他的牙全打断..... 黑熊虽然痛但也很开心地进去体检了 不久后，只见黑熊捂着嘴出来 哭着说...... 我靠....他们说我太胖不用当兵啦';
+            for(var i=0;i<str.length;i++){
+                var oSpan=document.createElement('span');
+                oSpan.innerHTML=str.charAt(i);
+                document.body.appendChild(oSpan);
+            }
+            var aSpan=document.getElementsByTagName('span');
+            var iNow=0;
+            var timer=null;
+            timer=setInterval(function(){
+                move(aSpan[iNow],{opacity:1});
+                iNow++;
+                if(iNow==aSpan.length){
+                    clearInterval(timer);
+                }
+            },100)
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

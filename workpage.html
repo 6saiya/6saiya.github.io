@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <style>
+        #nav {
+            width: 20%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: #fff;
+        }
+        #main {
+            background: rgb(235, 235, 235);
+            position: relative;
+            min-height: 900px;
+        }
+        #con{
+            margin-left: 20%;
+            position: relative;
+            overflow: hidden;
+        }
+        #container {
+            width: 90%;
+            margin:50px auto;
+        }
+        .logobox{
+            width: 100%;
+            height: 30%;
+            position:relative;
+        }
+        .logo{
+            width: 160px;
+            position:absolute;
+            top:50%;
+            left:50%;
+            margin-top:-30px;
+            margin-left:-80px;
+        }
+        .navlist{
+            width: 100%;
+            height: 70%;
+            position:absolute;
+            top:30%;
+            left:0;
+        }
+        .navlist li{
+            height: 11%;
+            width: 100%;
+            left:0;
+            color:#000;
+            cursor: pointer;
+            transition: 1s all ease;
+            position:relative;
+        }
+        .navlist li span{
+            font-family: "Microsoft YaHei", "宋体", "Segoe UI", "Lucida Grande", Helvetica, Arial, sans-serif, FreeSans, Arimo;
+            font-size:20px;
+            position: absolute;
+            top:0;
+            left:0;
+  
+            filter:alpha(opacity=0);
+        }
+        .navlist li:hover{
+            background:#000;
+            color:#fff;
+        }
+        .navlist li.active{
+            color:#1abc9c;
+        }
+        .item{
+            width: 400px;
+            height: 260px;
+            float: left;
+            margin:20px;
+            overflow: hidden;
+        }
+        .item img{
+            width: 100%;
+        }
+        #container li div{
+            border-radius: 0 0 0 0;
+            transition: 0.1s all ease;
+            position:relative;
+            overflow: hidden;
+        }
+        #container span{
+            position:absolute;
+            top:50%;
+            left:100%;
+            width: 100%;
+            height: 50px;
+            background:#B22512;
+            color:#fff;
+            font-size:16px;
+            line-height:50px;
+            margin-top:-25px;
+            font-family: "Microsoft YaHei", "宋体", "Segoe UI", "Lucida Grande", Helvetica, Arial, sans-serif, FreeSans, Arimo;
+            text-align:center;
+            transition: 0.1s all ease;
+        }
+        #container li div:hover{
+            border-radius: 100px 100px 100px 0;
+        }
+        #container li:hover span{
+            left:0;
+        }
+    </style>
+    <script src="js/jquery-1.7.2.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script>
+        $(function () {
+            var $container = $('#container');
+            // init
+            $container.isotope({
+                // options
+                itemSelector: '.item',
+                layoutMode: 'fitRows'
+            });
+            $('.navlist').children().eq(0).click(function(){
+                $container.isotope({filter: '.item'});
+                $('.navlist').children().removeClass('active');
+                $(this).addClass('active');
+            });
+            $('.navlist').children().eq(1).click(function(){
+                $container.isotope({filter: '.ht'});
+                $('.navlist').children().removeClass('active');
+                $(this).addClass('active');
+            });
+            $('.navlist').children().eq(2).click(function(){
+                $container.isotope({filter: '.js'});
+                $('.navlist').children().removeClass('active');
+                $(this).addClass('active');
+            });
+            $('.navlist').children().eq(3).click(function(){
+                $container.isotope({filter: '.move'});
+                $('.navlist').children().removeClass('active');
+                $(this).addClass('active');
+            });
+            $('.navlist').children().eq(4).click(function(){
+                $container.isotope({filter: '.jq'});
+                $('.navlist').children().removeClass('active');
+                $(this).addClass('active');
+            });
+            $('.navlist').children().eq(5).click(function(){
+                $container.isotope({filter: '.h5'});
+                $('.navlist').children().removeClass('active');
+                $(this).addClass('active');
+            });
+
+//            $('#container li').hover(
+//                    function(){
+//                        $(this).animate({'border-radius':'100px 100px 100px 0'},200)
+//                    },
+//                    function(){
+//                        $(this).animate({'border-radius':'0 0 0 0'},200)
+//            })
+            $('.navlist li span').css('line-height', $('.navlist li').eq(0).height()+'px');
+            $('.navlist li span').eq(0).animate({left:50,opacity:1},100,function(){
+                $('.navlist li span').eq(1).animate({left:50,opacity:1},100,function(){
+                    $('.navlist li span').eq(2).animate({left:50,opacity:1},100,function(){
+                        $('.navlist li span').eq(3).animate({left:50,opacity:1},100,function(){
+                            $('.navlist li span').eq(4).animate({left:50,opacity:1},100,function(){
+                                $('.navlist li span').eq(5).animate({left:50,opacity:1},100,function(){
+                                    $('.navlist li span').eq(6).animate({left:50,opacity:1},100,function(){
+                                        $('.navlist li span').eq(7).animate({left:50,opacity:1},100,function(){
+
+                                        })
+                                    })
+                                })
+                            })
+                        })
+                    })
+                })
+            })
+        })
+
+    </script>
+
+</head>
+<body>
+<div id="main">
+    <div id="nav">
+        <div class="logobox">
+            <img src="img/logo3.png" alt="" class="logo"/>
+        </div>
+        <ul class="navlist">
+            <li class="active"><span>ALL</span></li>
+            <li><span>HTML & CSS</span></li>
+            <li><span>JavaScript</span></li>
+            <li><span>Move</span></li>
+            <li><span>jQuery</span></li>
+            <li><span>HTML5 & CSS3</span></li>
+            <a href="index.html"><li><span>Home</span></li></a>
+            <li><span>Invest</span></li>
+        </ul>
+    </div>
+    <div id="con">
+        <ul id="container" class="clearfix">
+            <li class="item ht"><div><a href="site/mi/index.html" target="_blank"><img src="img/mi.jpg" alt=""/><span>小米首页</span></a></div></li>
+            <li class="item move"><div><a href="work/accordion.html" target="_blank"><img src="img/accordion.jpg" alt=""/><span>手风琴效果</span></a></div></li>
+            <li class="item h5"><div><a href="work/lft.html" target="_blank"><img src="img/lft.jpg" alt=""/><span>立方体</span></a></div></li>
+            <li class="item ht"><div><a href="site/jingdong/index.html" target="_blank"><img src="img/jd.jpg" alt=""/><span>京东</span></a></div></li>
+            <li class="item move"><div><a href="work/photowall.html" target="_blank"><img src="img/photowall.jpg" alt=""/><span>照片墙</span></a></div></li>
+            <li class="item ht"><div><a href="site/baideli/index.html" target="_blank"><img src="img/bdl.jpg" alt=""/><span>百得利汽车</span></a></div></li>
+            <li class="item move"><div><a href="work/movenav.html" target="_blank"><img src="img/movenav.jpg" alt=""/><span>弹性运动导航</span></a></div></li>
+            <li class="item ht"><div><a href="site/meilishuo/meilishuo.html" target="_blank"><img src="img/mls.jpg" alt=""/><span>美丽说</span></a></div></li>
+            <li class="item js"><div><a href="site/sina/weibo.html" target="_blank"><img src="img/xlwb.jpg" alt=""/><span>新浪微博</span></a></div></li>
+            <li class="item h5"><div><a href="work/photobook.html" target="_blank"><img src="img/book.jpg" alt=""/><span>照片翻页效果</span></a></div></li>
+            <li class="item ht"><div><a href="site/aiqiyi/aiqiyi-fal.html" target="_blank"><img src="img/aiqiyi.jpg" alt=""/><span>爱奇艺</span></a></div></li>
+            <li class="item move"><div><a href="work/gravityboll.html" target="_blank"><img src="img/gravityboll.jpg" alt=""/><span>重力弹球效果</span></a></div></li>
+            <li class="item ht"><div><a href="site/baidunuoimi/index.html" target="_blank"><img src="img/bdnm.jpg" alt=""/><span>百度糯米</span></a></div></li>
+            <li class="item js"><div><a href="work/tab/tab.html" target="_blank"><img src="img/tab.jpg" alt=""/><span>选项卡</span></a></div></li>
+            <li class="item move"><div><a href="work/fkyd.html" target="_blank"><img src="img/fkyd.jpg" alt=""/><span>分块运动</span></a></div></li>
+            <li class="item js"><div><a href="work/workshow.html" target="_blank"><img src="img/workshow.jpg" alt=""/><span>作品放大展示</span></a></div></li>
+            <li class="item js"><div><a href="work/tysz.html" target="_blank"><img src="img/ty.jpg" alt=""/><span>涂鸦时钟</span></a></div></li>
+            <li class="item move"><div><a href="work/lagou.html" target="_blank"><img src="img/lagou.jpg" alt=""/><span>拉勾网移入遮盖效果</span></a></div></li>
+            <li class="item h5"><div><a href="work/3Dphotocircle.html" target="_blank"><img src="img/3Dphotocircle.jpg" alt=""/><span>3D照片环效果</span></a></div></li>
+            <li class="item move"><div><a href="work/continuousroll.html" target="_blank"><img src="img/continuousroll.jpg" alt=""/><span>无缝轮播图</span></a></div></li>
+            <li class="item js"><div><a href="work/floatad.html" target="_blank"><img src="img/floatad.jpg" alt=""/><span>页面浮动广告</span></a></div></li>
+            <li class="item ht"><div><a href="site/soul%20echo/soul%20echo.html" target="_blank"><img src="img/lhhx.jpg" alt=""/><span>灵魂回响</span></a></div></li>
+            <li class="item js"><div><a href="work/macbookmenus.html" target="_blank"><img src="img/macbookmenu.jpg" alt=""/><span>苹果菜单效果模拟</span></a></div></li>
+            <li class="item js"><div><a href="work/waterfall.html" target="_blank"><img src="img/waterfall.jpg" alt=""/><span>瀑布流效果</span></a></div></li>
+            <li class="item move "><div><a href="work/wordshow.html" target="_blank"><img src="img/wordshow.jpg" alt=""/><span>文字打字效果</span></a></div></li>
+            <li class="item move"><div><a href="work/circle.html" target="_blank"><img src="img/circle.jpg" alt=""/><span>圆形运动效果</span></a></div></li>
+            <li class="item js"><div><a href="work/iPhoneroll/iphoneroll.html" target="_blank"><img src="img/iphoneroll.jpg" alt=""/><span>模拟iphone滚屏效果</span></a></div></li>
+            <li class="item js "><div><a href="work/tuntuphoto.html" target="_blank"><img src="img/tuntuphoto.jpg" alt=""/><span>吞吐照片效果</span></a></div></li>
+            <li class="item js"><div><a href="work/customscroll.html" target="_blank"><img src="img/customscroll.jpg" alt=""/><span>自定义滚动条</span></a></div></li>
+            <li class="item jq"><div><a href="work/tab/tabjquery.html" target="_blank"><img src="img/tab.jpg" alt=""/><span>jQuery双选项卡</span></a></div></li>
+            <li class="item h5"><div><a href="work/photoboom.html" target="_blank"><img src="img/photoboom.jpg" alt=""/><span>照片爆炸效果</span></a></div></li>
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>

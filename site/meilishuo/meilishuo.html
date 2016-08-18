@@ -1,0 +1,631 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>美丽说</title>
+<link href="css/base.css" rel="stylesheet">
+<style>
+* {font-family:"微软雅黑";}
+a {color:#000;}
+.top-nav{height:40px;background:#f5f5f5;border-bottom:1px solid #eee;overflow:hidden;}
+.t-inner {height:18px;width:1200px;margin:11px auto;}
+.t-nav1,.t-nav2{line-height:18px;padding:0px 15px;float:right;border-left:1px dashed #cbcbcb;}
+.t-nav2{border:0;}
+.phone{width:16px;height:17px;display:inline-block;background:url(img/mls_global140607.png) -168px -44px;}
+.page{width:16px;height:17px;display:inline-block;background:url(img/mls_global140607.png) -223px -44px;}
+.buycar{width:16px;height:17px;display:inline-block;background:url(img/mls_global140607.png) -192px -44px;padding-right:3px;}
+.qq{background:url(img/mls_global140607.png) -185px -21px;padding:1px 8px;}
+.wx{background:url(img/i_wx_single.png) no-repeat;padding:1px 8px;}
+.box-1{width:1200px;height:66px;margin:0 auto;}
+.tit{width:124px;height:66px;background:url(img/logo_n4.png) no-repeat center; text-indent:-999em;}
+.search{padding:17px 0 0 247px;}
+.box-2{height:40px;background:#ff6599;}
+.inner-2{width:790px;height:40px;margin:0 auto;}
+.inner-2 li{height:40px;line-height:40px;padding:0 14px;float:left;}
+.inner-2 a{color:#fff;font-size:14px;}
+.arrow{width:10px;height:6px;background:url(img/mls_global140607.png) no-repeat -61px -70px;display:inline-block;}
+.inner-2 li:hover{background:#ed3577;}
+.box-3{width:1200px;height:574px;margin:0 auto;}
+.b3-l{width:238px;height:572px;border:1px solid #e6e6e6;}
+.b3-l li{width:218px;height:115px;padding:0px 0px 0 20px;position:relative;}
+.b3-l h2{font-size:16px;color:#ff6699;line-height:34px;}
+.pic-1{padding-top:7px;}
+.con-1{width:195px;height:77px;}
+.con-2,.con-3{margin-right:15px;line-height:24px;}
+.con-2{color:#ff6699;}
+.gre{width:9px;height:11px;background:url(img/gre.jpg);position:absolute;top:50px;right:8px;z-index:10;}
+.nav-1{width:350px;height:298px;position:absolute;top:-1px;right:-351px;background:#fff;display:none;border:1px solid #e6e6e6;}
+.c-1:hover .nav-1{display:block;}
+.c-1:hover .b3l-1{width:219px;border:0;}
+.c-1:hover{border-bottom:1px solid #e6e6e6;}
+.c-1:hover .gre{background:url(img/redj.jpg);}
+.b3-r{width:960px;height:574px;}
+.b3l-1{border-bottom:1px dashed #ccc;position:relative;z-index:9;background:#fff;padding-top:4px}
+.b3r-1{width:960px;height:420px;}
+.pic-2{border-bottom:1px solid #e6e6e6;}
+.b3r-2{width:200px;height:420px;}
+.b3r-3{width:960px;height:154px;}
+.pic-3,.pic-4{border:1px solid #e6e6e6;margin:10px 0px 0 10px;}
+.pic-4{margin-left:11px;}
+.box-4{width:1200px;height:36px;margin:20px auto 0;line-height:36px;border-bottom:1px solid #e6e6e6;}
+.hot{background:url(img/wel_ico2.png) no-repeat 0px 0px;width:163px;height:29px;display:block;}
+.box-5{width:1200px;height:750px;margin:0 auto;}
+.b5-1{width:180px;height:362px;margin:15px 24px 8px 0;}
+.b5-2{width:180px;height:362px;margin:15px 0 8px 0;}
+.w-1{line-height:18px;}
+.w-2{line-height:28px;font-size:16px;color:#ff6699;margin-bottom:4px;}
+.w-3{color:#999;text-decoration:line-through;}
+.w-4{line-height:32px;border-top:1px solid #e6e6e6;}
+.tuan{background:url(img/wel_ico2.png) no-repeat 0px -237px;width:163px;height:29px;display:block;}
+.box-6{width:1200px;height:385px;margin:0 auto;}
+.box-7{width:1200px;height:100px;margin:10px auto;background:url(img/ad.jpg);}
+.clothes{background:url(img/wel_ico2.png) no-repeat 0px -42px;width:78px;height:29px;display:block;}
+.box-8{width:1200px;height:611px;margin:0 auto;border-bottom:1px solid #e6e6e6;}
+.b8-l{width:940px;height:611px;border-right:1px solid #e6e6e6;}
+.b8-lt{width:940px;height:535px;}
+.b8l-1{width:180px;height:254px;margin:20px 5px 0 0;position:relative;}
+.b8l-2{width:180px;height:254px;margin:5px 5px 0 0;position:relative;}
+.opa{background:url(img/bar_bg.png);width:100%;height:34px;position:absolute;bottom:0px;left:0px;}
+.con-4{font-size:14px;color:#fff;width:100%;line-height:34px;position:absolute;bottom:0px;left:0px;text-align:center;}
+.b8-lb{widh:940px;height:45px;margin:10px 0;}
+.b8l-3,.b8l-4{width:312px;height:45px;border-right:1px dashed #e6e6e6;}
+.b8l-4{border-right:0;}
+.w-5{width:63px;height:45px;line-height:45px;font-size:16px;color:#ff6699;text-align:center;padding-right:3px;}
+.w-6{width:244px;height:45px;line-height:22px;}
+.b8-r{width:259px;height:611px;}
+.w-7{font-size:16px;font-weight:bold;margin:20px 0 0 20px;}
+.w-8{font-size:14px;font-weight:normal;color:#999;padding-top:3px;}
+.b8r-1,.b8r-2{width:239px;height:62px;border-bottom:1px dashed #e6e6e6;margin-left:20px;background:url(img/store.jpg) no-repeat left center;}
+.b8r-2{border-bottom:0;}
+.w-9{padding:12px 0 0 46px;}
+.w-10{padding:5px 0 0 46px;color:#999;}
+.mag{background:url(img/wel_ico2.png) no-repeat 0px -200px;width:158px;height:29px;display:block;}
+.mag-right li{line-height:16px;float:right;border-right:1px dashed #e6e6e6; padding:0 14px;}
+.mag-right .mag-last{border-right:0;}
+.mag-1{line-height:16px;font-size:14px;color:#999;}
+.box-9{width:1200px;height:285px; margin:0 auto;}
+.b9-1,.b9-2{width:226px;height:283px;border:1px solid #e6e6e6;margin-right:15px;}
+.b9-2{margin-right:0;}
+.box-10{width:1200px;height:36px;margin:20px auto 0;line-height:36px;}
+.w-11{font-size:14px;padding:12px 0 5px 14px;}
+.pic-5{margin-left:14px;}
+.w-12{color:#999;background:url(img/golook.jpg) no-repeat right center;margin:14px;}
+.box-11{height:311px;background:#f5f5f5;margin-top:20px;color:#666;}
+.b11{height:311px;width:1200px;margin:0 auto;}
+.b11-1{height:210px;width:1200px;margin:0 auto;}
+.b11-11{height:180px;width:192px;padding:30px 0 0 50px;background:url(img/tele.jpg) no-repeat 0px 33px;}
+.b11-12{height:180px;width:123px;padding-top:30px;}
+.b11-13{height:180px;width:155px;padding-top:30px;background:url(img/wx.jpg) no-repeat 3px 63px;}
+.b11-14{height:180px;width:150px;padding-top:30px;}
+.w-13{font-size:18px;line-height:24px;color:#666;font-weight:bold;}
+.w-14{font-size:14px;line-height:30px;color:#666;}
+.w-15{font-size:12px;line-height:26px;color:#666;}
+.pic-6,.pic-7,.pic-8{width:16px;height:16px;background:url(img/mls_global140607.png) no-repeat 0px -21px;margin:4px 4px 0 0;}
+.pic-7{background:url(img/mls_global140607.png) no-repeat -73px -21px;}
+.pic-8{background:url(img/mls_global140607.png) no-repeat -49px -21px;}
+.pic-9{width:135px;height:102px;background:url(img/mls_global140607.png) no-repeat 0 -400px;margin-top:15px;}
+.b11-2{width:1200px;height:30px;border-top:1px solid #e6e6e6;border-bottom:1px solid #e6e6e6;line-height:30px;color:#666;padding-left:20px;text-align:left;}
+.b11-2 a{color:#666;}
+.last{margin:15px auto;line-height:22px;width:1200px;}
+</style>
+<script src="js/DD_belatedPNG.js"></script>
+<script>
+	DD_belatedPNG.fix('*');
+</script>
+</head>
+
+<body>
+	<div class="top-nav">
+    	<ul class="t-inner clearfix">
+        	<li class="t-nav1 clearfix"><a href="#">客户服务</a></li>
+            <li class="t-nav1 clearfix"><a href="#"><span class="phone fl"></span>下载App</a></li>
+            <li class="t-nav1 clearfix"><a href="#"><span class="page fl"></span>我的订单</a></li>
+            <li class="t-nav1 clearfix"><a href="#"><span class="buycar fl"></span>我的购物车</a></li>
+            <li class="t-nav1 clearfix"><a href="#">注册</a></li>
+            <li class="t-nav1 clearfix"><a href="#">登录</a></li>
+            <li class="t-nav1 clearfix"><a href="#"><span class="qq">&nbsp;</span>QQ登录</a></li>
+            <li class="t-nav2 clearfix"><a href="#"><span class="wx">&nbsp;</span>微信登录</a></li>
+        </ul>
+    </div><!--top nav-->
+    <div class="box-1 clearfix"> 
+    	<h1 class="tit fl">美丽说</h1>
+        <img src="img/sousuo.jpg" class="search fl">
+    </div>
+    <div class="box-2">
+    	<ul class="inner-2 clearfix">
+        	<li><a href="#">首页</a></li>
+            <li><a href="#">今日最热</a></li>
+            <li><a href="#">衣服<em class="arrow"></em></a></li>
+            <li><a href="#">鞋子</a></li>
+            <li><a href="#">包包</a></li>
+            <li><a href="#">配饰</a></li>
+            <li><a href="#">美妆</a></li>
+            <li><a href="#">特卖</a></li>
+            <li><a href="#">团购</a></li>
+            <li><a href="#">好店</a></li>
+            <li><a href="#">杂志</a></li>
+            <li><a href="#">爱美丽Club<em class="arrow"></em></a></li>
+        </ul>
+    </div><!--tit-->
+    <div class="box-3 clearfix">
+    	<ul class="b3-l fl">
+        	<li class="c-1 clearfix">
+            	<div class="fl b3l-1">
+                    <h2><img src="img/images/tubiao_03.jpg" class="pic-1">最热</h2>
+                    <p class="con-1 clearfix">
+                    	<a href="#" class="con-3 fl">冬季新品</a>
+                        <a href="#" class="con-2 fl">毛衣</a>
+                        <a href="#" class="con-3 fl">活力运动鞋</a>
+                        <a href="#" class="con-3 fl">连衣裙</a>
+                        <a href="#" class="con-2 fl">新款靴子</a>
+                        <a href="#" class="con-3 fl">单肩包</a>
+                        <a href="#" class="con-3 fl">暖冬美裤</a>
+                        <a href="#" class="con-3 fl">外套</a>
+                        <a href="#" class="con-2 fl">入冬打底裤</a>
+                    </p>
+                </div>
+                <div class="gre"></div>
+                <div class="nav-1"></div>
+            </li>
+            <li class="clearfix">
+            	<div class="fl b3l-1">
+                    <h2><img src="img/images/tubiao_06.jpg" class="pic-1">衣服</h2>
+                    <p class="con-1 clearfix">
+                    	<a href="#" class="con-2 fl">卫衣</a>
+                        <a href="#" class="con-3 fl">开衫</a>
+                        <a href="#" class="con-3 fl">大衣</a>
+                        <a href="#" class="con-3 fl">小脚裤</a>
+                        <a href="#" class="con-3 fl">牛仔裤</a>
+                        <a href="#" class="con-2 fl">半身裙</a>
+                        <a href="#" class="con-3 fl">长袖连衣裙</a>
+                        <a href="#" class="con-2 fl">打底裤</a>
+                        <a href="#" class="con-3 fl">秋冬美裙</a>
+                        <a href="#" class="con-3 fl">打底衫</a>
+                    </p>
+                </div>
+                <img src="img/gre.jpg" class="gre" />
+            </li>
+            <li class="clearfix">
+            	<div class="fl b3l-1">
+                    <h2><img src="img/images/tubiao_08.jpg" class="pic-1">鞋子</h2>
+                    <p class="con-1 clearfix">
+                    	<a href="#" class="con-3 fl">靴子</a>
+                        <a href="#" class="con-2 fl">短靴</a>
+                        <a href="#" class="con-3 fl">长靴</a>
+                        <a href="#" class="con-2 fl">雪地靴</a>
+                        <a href="#" class="con-3 fl">运动鞋</a>
+                        <a href="#" class="con-3 fl">高跟鞋</a>
+                        <a href="#" class="con-3 fl">秋冬美鞋</a>
+                        <a href="#" class="con-3 fl">优质热销鞋履</a>
+                        <a href="#" class="con-3 fl">过膝靴</a>
+                        <a href="#" class="con-3 fl">马丁靴</a>
+                    </p>
+                </div>
+                <img src="img/gre.jpg" class="gre" />
+            </li>
+            <li class="clearfix">
+            	<div class="fl b3l-1">
+                    <h2><img src="img/images/tubiao_10.jpg" class="pic-1">包包</h2>
+                    <p class="con-1 clearfix">
+                    	<a href="#" class="con-2 fl">冬季新款包包</a>
+                        <a href="#" class="con-2 fl">双肩包</a>
+                        <a href="#" class="con-3 fl">行李箱</a>
+                        <a href="#" class="con-2 fl">超高人气必败潮包</a>
+                        <a href="#" class="con-3 fl">大包</a>
+                        <a href="#" class="con-2 fl">钱包</a>
+                        <a href="#" class="con-2 fl">单肩包</a>
+                        <a href="#" class="con-3 fl">手提包</a>
+                        <a href="#" class="con-3 fl">小包</a>
+                        <a href="#" class="con-2 fl">斜挎包</a>
+                    </p>
+                </div>
+                <img src="img/gre.jpg" class="gre" />
+            </li>
+            <li class="clearfix">
+            	<div class="fl">
+                    <h2><img src="img/images/tubiao_12.jpg" class="pic-1">配饰</h2>
+                    <p class="con-1 clearfix">
+                    	<a href="#" class="con-2 fl">围巾</a>
+                        <a href="#" class="con-3 fl">帽子</a>
+                        <a href="#" class="con-2 fl">项链</a>
+                        <a href="#" class="con-3 fl">手机壳</a>
+                        <a href="#" class="con-2 fl">耳钉</a>
+                        <a href="#" class="con-3 fl">手链</a>
+                        <a href="#" class="con-2 fl">发箍</a>
+                        <a href="#" class="con-3 fl">手表</a>
+                        <a href="#" class="con-2 fl">连裤袜</a>
+                        <a href="#" class="con-3 fl">袜子</a>
+                        <a href="#" class="con-3 fl">丝巾</a>
+                        <a href="#" class="con-2 fl">腰带</a>
+                    </p>
+                </div>
+                <img src="img/gre.jpg" class="gre" />
+            </li>
+        </ul>
+        <div class="b3-r fl">
+        	<div class="b3r-1 clearfix">
+            	<a href="#"><img src="img/zhiling.jpg" class="fl pic-2"></a>
+                <div class="b3r-2 fr">
+                	<a href="#"><img src="img/sucai/5f8663325e2869e65bf2722db221_200_139.cg.jpg" class="pic-2"></a>
+                    <a href="#"><img src="img/sucai/c8ef6839d95786830ebf46c5d7b6_200_139.cf.jpg" class="pic-2"></a>
+                    <a href="#"><img src="img/sucai/63ca018fb1b5a17a64118d45df5a_200_139.cf.jpg" class="pic-2"></a>
+                </div>
+            </div>
+            <div class="b3r-3 clearfix">
+            	<img src="img/sucai/e4563da0edb81d3d0e558306a5e8_175_142.cg.jpg" class="pic-4 fl";>
+                <img src="img/sucai/e4563da0edb81d3d0e558306a5e8_175_142.cg.jpg" class="pic-3 fl";>
+                <img src="img/sucai/e4563da0edb81d3d0e558306a5e8_175_142.cg.jpg" class="pic-3 fl";>
+                <img src="img/sucai/e4563da0edb81d3d0e558306a5e8_175_142.cg.jpg" class="pic-3 fl";>
+                <img src="img/sucai/98495ea9f28135426810ac6c263b_198_142.ch.jpg" class="pic-3 fl";>
+            </div>
+        </div>
+    </div><!--box-3-->
+    <div class="box-4">
+    	<em class="hot"></em>
+    </div>
+    <div class="box-5 clearfix">
+    	<div class="b5-1 fl">
+        	<img src="img/sucai/267778da94332bcf9572ededaddc_640_900.cf.jpg_d3639f8a_s2_180_255.jpg">
+            <p class="w-1">美丽无上限 不到50元<br />&nbsp;</p>
+            <p class="w-2">¥49.00  <em class="w-3">¥189.00</em></p>
+            <p class="w-4">1885人已购买</p>
+        </div>
+        <div class="b5-1 fl">
+        	<img src="img/sucai/267778da94332bcf9572ededaddc_640_900.cf.jpg_d3639f8a_s2_180_255.jpg">
+            <p class="w-1">美丽无上限 不到50元<br />&nbsp;</p>
+            <p class="w-2">¥49.00  <em class="w-3">¥189.00</em></p>
+            <p class="w-4">1885人已购买</p>
+        </div>
+        <div class="b5-1 fl">
+        	<img src="img/sucai/267778da94332bcf9572ededaddc_640_900.cf.jpg_d3639f8a_s2_180_255.jpg">
+            <p class="w-1">美丽无上限 不到50元<br />&nbsp;</p>
+            <p class="w-2">¥49.00  <em class="w-3">¥189.00</em></p>
+            <p class="w-4">1885人已购买</p>
+        </div>
+        <div class="b5-1 fl">
+        	<img src="img/sucai/267778da94332bcf9572ededaddc_640_900.cf.jpg_d3639f8a_s2_180_255.jpg">
+            <p class="w-1">美丽无上限 不到50元<br />&nbsp;</p>
+            <p class="w-2">¥49.00  <em class="w-3">¥189.00</em></p>
+            <p class="w-4">1885人已购买</p>
+        </div>
+        <div class="b5-1 fl">
+        	<img src="img/sucai/267778da94332bcf9572ededaddc_640_900.cf.jpg_d3639f8a_s2_180_255.jpg">
+            <p class="w-1">美丽无上限 不到50元<br />&nbsp;</p>
+            <p class="w-2">¥49.00  <em class="w-3">¥189.00</em></p>
+            <p class="w-4">1885人已购买</p>
+        </div>
+        <div class="b5-2 fl">
+        	<img src="img/sucai/267778da94332bcf9572ededaddc_640_900.cf.jpg_d3639f8a_s2_180_255.jpg">
+            <p class="w-1">美丽无上限 不到50元<br />&nbsp;</p>
+            <p class="w-2">¥49.00  <em class="w-3">¥189.00</em></p>
+            <p class="w-4">1885人已购买</p>
+        </div>
+        <div class="b5-1 fl">
+        	<img src="img/sucai/267778da94332bcf9572ededaddc_640_900.cf.jpg_d3639f8a_s2_180_255.jpg">
+            <p class="w-1">美丽无上限 不到50元<br />&nbsp;</p>
+            <p class="w-2">¥49.00  <em class="w-3">¥189.00</em></p>
+            <p class="w-4">1885人已购买</p>
+        </div>
+        <div class="b5-1 fl">
+        	<img src="img/sucai/267778da94332bcf9572ededaddc_640_900.cf.jpg_d3639f8a_s2_180_255.jpg">
+            <p class="w-1">美丽无上限 不到50元<br />&nbsp;</p>
+            <p class="w-2">¥49.00  <em class="w-3">¥189.00</em></p>
+            <p class="w-4">1885人已购买</p>
+        </div>
+        <div class="b5-1 fl">
+        	<img src="img/sucai/267778da94332bcf9572ededaddc_640_900.cf.jpg_d3639f8a_s2_180_255.jpg">
+            <p class="w-1">美丽无上限 不到50元<br />&nbsp;</p>
+            <p class="w-2">¥49.00  <em class="w-3">¥189.00</em></p>
+            <p class="w-4">1885人已购买</p>
+        </div>
+        <div class="b5-1 fl">
+        	<img src="img/sucai/267778da94332bcf9572ededaddc_640_900.cf.jpg_d3639f8a_s2_180_255.jpg">
+            <p class="w-1">美丽无上限 不到50元<br />&nbsp;</p>
+            <p class="w-2">¥49.00  <em class="w-3">¥189.00</em></p>
+            <p class="w-4">1885人已购买</p>
+        </div>
+        <div class="b5-1 fl">
+        	<img src="img/sucai/267778da94332bcf9572ededaddc_640_900.cf.jpg_d3639f8a_s2_180_255.jpg">
+            <p class="w-1">美丽无上限 不到50元<br />&nbsp;</p>
+            <p class="w-2">¥49.00  <em class="w-3">¥189.00</em></p>
+            <p class="w-4">1885人已购买</p>
+        </div>
+        <div class="b5-2 fl">
+        	<img src="img/sucai/267778da94332bcf9572ededaddc_640_900.cf.jpg_d3639f8a_s2_180_255.jpg">
+            <p class="w-1">美丽无上限 不到50元<br />&nbsp;</p>
+            <p class="w-2">¥49.00  <em class="w-3">¥189.00</em></p>
+            <p class="w-4">1885人已购买</p>
+        </div>
+    </div><!--box-5-->
+    <div class="box-4">
+    	<em class="tuan"></em>
+    </div>
+    <div class="box-6">
+    	<div class="b5-1 fl">
+        	<img src="img/sucai/ffaf5416e4ecb51f79413b20fd4e_640_832.cc.jpg_04e0a2b5_s2_180_255.jpg">
+            <p class="w-1">荧光色针织帽<br />&nbsp;</p>
+            <p class="w-2">¥9.90  <em class="w-3">¥45.00</em></p>
+            <p class="w-4">3179人已参加</p>
+        </div>
+        <div class="b5-1 fl">
+        	<img src="img/sucai/ffaf5416e4ecb51f79413b20fd4e_640_832.cc.jpg_04e0a2b5_s2_180_255.jpg">
+            <p class="w-1">荧光色针织帽<br />&nbsp;</p>
+            <p class="w-2">¥9.90  <em class="w-3">¥45.00</em></p>
+            <p class="w-4">3179人已参加</p>
+        </div>
+        <div class="b5-1 fl">
+        	<img src="img/sucai/ffaf5416e4ecb51f79413b20fd4e_640_832.cc.jpg_04e0a2b5_s2_180_255.jpg">
+            <p class="w-1">荧光色针织帽<br />&nbsp;</p>
+            <p class="w-2">¥9.90  <em class="w-3">¥45.00</em></p>
+            <p class="w-4">3179人已参加</p>
+        </div>
+        <div class="b5-1 fl">
+        	<img src="img/sucai/ffaf5416e4ecb51f79413b20fd4e_640_832.cc.jpg_04e0a2b5_s2_180_255.jpg">
+            <p class="w-1">荧光色针织帽<br />&nbsp;</p>
+            <p class="w-2">¥9.90  <em class="w-3">¥45.00</em></p>
+            <p class="w-4">3179人已参加</p>
+        </div>
+        <div class="b5-1 fl">
+        	<img src="img/sucai/ffaf5416e4ecb51f79413b20fd4e_640_832.cc.jpg_04e0a2b5_s2_180_255.jpg">
+            <p class="w-1">荧光色针织帽<br />&nbsp;</p>
+            <p class="w-2">¥9.90  <em class="w-3">¥45.00</em></p>
+            <p class="w-4">3179人已参加</p>
+        </div>
+        <div class="b5-2 fl">
+        	<img src="img/sucai/ffaf5416e4ecb51f79413b20fd4e_640_832.cc.jpg_04e0a2b5_s2_180_255.jpg">
+            <p class="w-1">荧光色针织帽<br />&nbsp;</p>
+            <p class="w-2">¥9.90  <em class="w-3">¥45.00</em></p>
+            <p class="w-4">3179人已参加</p>
+        </div>
+    </div><!--box-6-->
+    <div class="box-7"></div>
+    <div class="box-4">
+    	<em class="clothes"></em>
+    </div>
+    <div class="box-8 clearfix">
+    	<div class="b8-l fl">
+               	<ul class="b8-lt  clearfix">
+                    <li class="b8l-1 fl">
+                        <img src="img/sucai/3c6fca87a553f63306f30e80c3bb_640_900.cf.jpg_96bc3895_s2_180_255.jpg">
+                        <div class="opa"></div>
+                        <div class="con-4">冬季买穿连衣裙</div>
+                    </li>
+                    <li class="b8l-1 fl">
+                        <img src="img/sucai/3c6fca87a553f63306f30e80c3bb_640_900.cf.jpg_96bc3895_s2_180_255.jpg">
+                        <div class="opa"></div>
+                        <div class="con-4">冬季买穿连衣裙</div>
+                    </li>
+                    <li class="b8l-1 fl">
+                        <img src="img/sucai/3c6fca87a553f63306f30e80c3bb_640_900.cf.jpg_96bc3895_s2_180_255.jpg">
+                        <div class="opa"></div>
+                        <div class="con-4">冬季买穿连衣裙</div>
+                    </li>
+                    <li class="b8l-1 fl">
+                        <img src="img/sucai/3c6fca87a553f63306f30e80c3bb_640_900.cf.jpg_96bc3895_s2_180_255.jpg">
+                        <div class="opa"></div>
+                        <div class="con-4">冬季买穿连衣裙</div>
+                    </li>
+                    <li class="b8l-1 fl">
+                        <img src="img/sucai/3c6fca87a553f63306f30e80c3bb_640_900.cf.jpg_96bc3895_s2_180_255.jpg">
+                        <div class="opa"></div>
+                        <div class="con-4">冬季买穿连衣裙</div>
+                    </li>
+                    <li class="b8l-2 fl">
+                        <img src="img/sucai/3c6fca87a553f63306f30e80c3bb_640_900.cf.jpg_96bc3895_s2_180_255.jpg">
+                        <div class="opa"></div>
+                        <div class="con-4">冬季买穿连衣裙</div>
+                    </li>
+                     <li class="b8l-2 fl">
+                        <img src="img/sucai/3c6fca87a553f63306f30e80c3bb_640_900.cf.jpg_96bc3895_s2_180_255.jpg">
+                        <div class="opa"></div>
+                        <div class="con-4">冬季买穿连衣裙</div>
+                    </li>
+                     <li class="b8l-2 fl">
+                        <img src="img/sucai/3c6fca87a553f63306f30e80c3bb_640_900.cf.jpg_96bc3895_s2_180_255.jpg">
+                        <div class="opa"></div>
+                        <div class="con-4">冬季买穿连衣裙</div>
+                    </li>
+                     <li class="b8l-2 fl">
+                        <img src="img/sucai/3c6fca87a553f63306f30e80c3bb_640_900.cf.jpg_96bc3895_s2_180_255.jpg">
+                        <div class="opa"></div>
+                        <div class="con-4">冬季买穿连衣裙</div>
+                    </li>
+                     <li class="b8l-2 fl">
+                        <img src="img/sucai/3c6fca87a553f63306f30e80c3bb_640_900.cf.jpg_96bc3895_s2_180_255.jpg">
+                        <div class="opa"></div>
+                        <div class="con-4">冬季买穿连衣裙</div>
+                    </li>
+            </ul>
+            <div class="b8-lb clearfix">
+            	<dl class="b8l-3 clearfix fl">
+                    <dt class="w-5 fl">上衣</dt>
+                    <dd class="w-6 fl">
+                    	<a href="#">背心</a>&nbsp;
+                        <a href="#">针织衫</a>&nbsp;
+                        <a href="#">打底衫</a>&nbsp;
+                        <a href="#">衬衫</a>&nbsp;
+                        <a href="#">卫衣</a>&nbsp;
+                        <a href="#">情侣装</a>&nbsp;<br />
+                        <a href="#">外套</a>&nbsp;
+                        <a href="#">韩范儿T恤</a>&nbsp;
+                        <a href="#">小西装</a>&nbsp;
+                        <a href="#">马甲</a>&nbsp;
+                        
+                    </dd>
+                </dl>
+                <dl class="b8l-3 clearfix fl">
+                    <dt class="w-5 fl">上衣</dt>
+                    <dd class="w-6 fl">
+                    	<a href="#">背心</a>&nbsp;
+                        <a href="#">针织衫</a>&nbsp;
+                        <a href="#">打底衫</a>&nbsp;
+                        <a href="#">衬衫</a>&nbsp;
+                        <a href="#">卫衣</a>&nbsp;
+                        <a href="#">情侣装</a>&nbsp;<br />
+                        <a href="#">外套</a>&nbsp;
+                        <a href="#">韩范儿T恤</a>&nbsp;
+                        <a href="#">小西装</a>&nbsp;
+                        <a href="#">马甲</a>&nbsp;
+                        
+                    </dd>
+                </dl>
+                <dl class="b8l-4 clearfix fl">
+                    <dt class="w-5 fl">上衣</dt>
+                    <dd class="w-6 fl">
+                    	<a href="#">背心</a>&nbsp;
+                        <a href="#">针织衫</a>&nbsp;
+                        <a href="#">打底衫</a>&nbsp;
+                        <a href="#">衬衫</a>&nbsp;
+                        <a href="#">卫衣</a>&nbsp;
+                        <a href="#">情侣装</a>&nbsp;<br />
+                        <a href="#">外套</a>&nbsp;
+                        <a href="#">韩范儿T恤</a>&nbsp;
+                        <a href="#">小西装</a>&nbsp;
+                        <a href="#">马甲</a>&nbsp;
+                        
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div class="b8-r fr">
+        	<h4 class="w-7 clearfix">
+            最热衣服好店
+                <a href="#" class="w-8 fr">更多好店&gt;</a>
+            </h4>
+            <div class="b8r-1">
+            	<p class="w-9">妖精的衣橱</p>
+                <p class="w-10">235件商品/总销量84572</p>
+            </div>
+            <div class="b8r-1">
+            	<p class="w-9">妖精的衣橱</p>
+                <p class="w-10">235件商品/总销量84572</p>
+            </div>
+            <div class="b8r-1">
+            	<p class="w-9">妖精的衣橱</p>
+                <p class="w-10">235件商品/总销量84572</p>
+            </div>
+            <div class="b8r-1">
+            	<p class="w-9">妖精的衣橱</p>
+                <p class="w-10">235件商品/总销量84572</p>
+            </div>
+            <div class="b8r-1">
+            	<p class="w-9">妖精的衣橱</p>
+                <p class="w-10">235件商品/总销量84572</p>
+            </div>
+            <div class="b8r-1">
+            	<p class="w-9">妖精的衣橱</p>
+                <p class="w-10">235件商品/总销量84572</p>
+            </div>
+            <div class="b8r-1">
+            	<p class="w-9">妖精的衣橱</p>
+                <p class="w-10">235件商品/总销量84572</p>
+            </div>
+            <div class="b8r-1">
+            	<p class="w-9">妖精的衣橱</p>
+                <p class="w-10">235件商品/总销量84572</p>
+            </div>
+            <div class="b8r-2">
+            	<p class="w-9">妖精的衣橱</p>
+                <p class="w-10">235件商品/总销量84572</p>
+            </div>
+        </div>
+    </div><!--box-8-->
+    <div class="box-10 clearfix">
+    	<em class="mag fl"></em>
+        <ul class="mag-right fr clearfix">
+        	<li class="mag-last"><a href="#" class="mag-1">更多杂志&gt;</a></li>
+            <li><a href="#" class="mag-1">其他</a></li>
+            <li><a href="#" class="mag-1">日系</a></li>
+            <li><a href="#" class="mag-1">个性</a></li>
+            <li><a href="#" class="mag-1">复古</a></li>
+            <li><a href="#" class="mag-1">甜美</a></li>
+            <li><a href="#" class="mag-1">欧美</a></li>
+        </ul>
+    </div>
+    <div class="box-9 clearfix">
+     	<div class="b9-1 fl">
+        	<p class="w-11">小女人有恋物癖</p>
+            <img src="img/sucai/eee2323884768bd34eab636cfe24.c6.jpg" class="pic-5">
+            <p class="w-12">886个分享</p>
+        </div>
+        <div class="b9-1 fl">
+        	<p class="w-11">小女人有恋物癖</p>
+            <img src="img/sucai/eee2323884768bd34eab636cfe24.c6.jpg" class="pic-5">
+            <p class="w-12">886个分享</p>
+        </div>
+        <div class="b9-1 fl">
+        	<p class="w-11">小女人有恋物癖</p>
+            <img src="img/sucai/eee2323884768bd34eab636cfe24.c6.jpg" class="pic-5">
+            <p class="w-12">886个分享</p>
+        </div>
+        <div class="b9-1 fl">
+        	<p class="w-11">小女人有恋物癖</p>
+            <img src="img/sucai/eee2323884768bd34eab636cfe24.c6.jpg" class="pic-5">
+            <p class="w-12">886个分享</p>
+        </div>
+        <div class="b9-2 fl">
+        	<p class="w-11">小女人有恋物癖</p>
+            <img src="img/sucai/eee2323884768bd34eab636cfe24.c6.jpg" class="pic-5">
+            <p class="w-12">886个分享</p>
+        </div>
+        
+    </div><!--box-9-->
+    <div class="box-11">
+    	<div class="b11">
+        	<div class="b11-1 clearfix">
+            	<div class="b11-11 fl">
+                    <p class="w-13">4000-800-577</p>
+                    <p class="w-14">美丽说客服热线</p>
+                    <p class="w-15">周一至周日08:00-22:00</p>
+                </div>
+                <div class="b11-12 fl">
+                	<p class="w-13">用户帮助</p>
+                    <a href="#"><p class="w-15">新手指南</p></a>
+                    <a href="#"><p class="w-15">站点地图</p></a>
+                    <a href="#"><p class="w-15">意见反馈</p></a>
+                </div>
+                <div class="b11-12 fl">
+                	<p class="w-13">关于我们</p>
+                    <a href="#"><p class="w-15">关于美丽说</p></a>
+                    <a href="#"><p class="w-15">联系我们</p></a>
+                    <a href="#"><p class="w-15">加入美丽说</p></a>
+                    <a href="#"><p class="w-15">商家入驻</p></a>
+                    <a href="#"><p class="w-15">商家推广</p></a>
+                    
+                </div>
+                <div class="b11-12 fl">
+                	<p class="w-13">关注我们</p>
+                    <a href="#"><p class="w-15 clearfix"><i class="pic-6 fl"></i>新浪微博</p></a>
+                    <a href="#"><p class="w-15 clearfix"><i class="pic-7 fl"></i>QQ空间</p></a>
+                    <a href="#"><p class="w-15 clearfix"><i class="pic-8 fl"></i>腾讯微博</p></a>
+                </div>
+                <div class="b11-13 fl">
+                	<p class="w-13">美丽说微信服务号</p>
+                </div>
+                <div class="b11-14 fr">
+                	<p class="w-13">美丽说客户端下载</p>
+                     <a href="#"><div class="pic-9"></div></a>
+                </div>
+            </div>
+            <p class="b11-2 clearfix">
+            友情链接:&nbsp;<a href="#">腾讯女性</a>&nbsp;
+            <a href="#">列表网</a>&nbsp;
+            <a href="#">太平洋女性</a>&nbsp;
+            <a href="#">多宝汇</a>&nbsp;
+            <a href="#">七丽女性网</a>&nbsp;
+            <a href="#">酷我音乐</a>&nbsp;
+            <a href="#">LADYMAX时尚网</a>&nbsp;
+            <a href="#">空姐网</a>&nbsp;
+            <a href="#">中国品牌服装网</a>&nbsp;
+            <a href="#">优美网</a>&nbsp;
+            <a href="#">男士时尚</a>&nbsp;
+            <a href="#">哈秀时尚网</a>&nbsp;
+            <a href="#" class="fr">更多&gt;</a>
+            </p>
+        
+        <p class="last">
+        Copyright@2014 Meilishuo.com 电信与信息服务经营许可证100798号 企业法人营业执照 京ICP备110108006045<br />
+客服邮箱:kf@meilishuo.com 客服电话: 4000-800-577 文明办网上网举报电话:010-82615762 违法不良信息举报中心 我最喜爱的人民警察评选&gt;&gt;
+        </p>
+        </div>
+    </div>

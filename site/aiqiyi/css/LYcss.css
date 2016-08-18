@@ -1,0 +1,105 @@
+.ly-body {
+	width: 980px;
+	margin:0 auto;
+}
+
+.ly-body * {
+	font-size: 12px;
+	line-height: 1em;
+	font-family: "微软雅黑";
+	color: #333;
+}
+
+.ly-body a {
+	text-decoration: none;
+	color: #333;
+}
+
+.ly-part1 {
+	width: 980px;
+	height: 400px;
+}
+
+.ly-part2 {
+	width: 980px;
+	height: 248px;
+}
+
+.ly-s1 {
+	width: 580px;
+	margin-right: 20px;
+}
+
+.ly-s2 {
+	width: 180px;
+	margin-right: 20px;
+}
+
+.ly-s3 {
+	width: 180px;
+}
+
+.ly-s4 {
+	width: 380px;
+	margin-right: 20px;
+}
+
+.ly-h {
+	padding-bottom: 10px;
+	border-bottom: 2px solid #79b700;
+	margin-bottom: 25px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.ly-h img {
+	vertical-align: bottom;
+}
+
+.ly-body .ly-span1 {
+	font-size: 26px;
+	color: #79B700;
+	padding: 0 8px;
+}
+
+.ly-body .ly-a1 {
+	color: #79B700;
+	padding-right: 26px;
+}
+
+.ly-a2 {
+	padding: 0 8px;
+}
+
+.ly-p1 {
+	width: 380px;
+	background: #f2f2f2;
+	padding: 11px 0;
+	border-bottom: 1px solid #ebebeb;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.ly-p2 {
+	width: 180px;
+	background: #f2f2f2;
+	padding: 11px 0;
+	border-bottom: 1px solid #ebebeb;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+a.ly-pic1 {
+	margin: 0 20px 0 0;
+}
+
+.ly-pic2 {
+	margin: 0 0 15px 0;
+}
+
+.ly-pic3 {
+	margin: 0 20px 15px 0;
+}

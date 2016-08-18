@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>瀑布流效果</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        ul{
+            width: 200px;
+            border: 1px solid #000;
+            float: left;
+            margin: 20px;
+        }
+        ul li{
+            width: 180px;
+            margin: 10px;
+        }
+    </style>
+    <script>
+        function rnd(n,m){
+            return parseInt(Math.random()*(m-n)+n);
+        }
+        function creatLi(){
+            var oLi=document.createElement('li');
+            oLi.style.height=rnd(50,400)+'px';
+            oLi.style.background='rgb('+rnd(0,256)+','+rnd(0,256)+','+rnd(0,256)+')';
+            return oLi;
+        }
+
+        window.onload=function(){
+            var aUl=document.getElementsByTagName('ul');
+            function creatLis(n){
+                for(var i=0;i<n;i++){
+                    var oLi=creatLi();
+                    var H1=aUl[0].offsetHeight;
+                    var H2=aUl[1].offsetHeight;
+                    var H3=aUl[2].offsetHeight;
+                    var iMin;
+                    if(H1<H2){
+                        if(H1<H3){
+                            iMin=aUl[0];
+                        }else{
+                            iMin=aUl[2];
+                        }
+                    }else{
+                        if(H2<H3){
+                            iMin=aUl[1];
+                        }else{
+                            iMin=aUl[2];
+                        }
+                    }
+                    iMin.appendChild(oLi);
+                }
+            }
+            creatLis(20);
+            window.onscroll=function(){
+                var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+                var clientH=document.documentElement.clientHeight;
+                var scrollBottom=scrollTop+clientH;
+                if(scrollBottom>=document.body.scrollHeight-100){
+                    creatLis(10);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<ul></ul>
+<ul></ul>
+<ul></ul>
+</body>
+</html>

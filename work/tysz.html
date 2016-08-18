@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>涂鸦时钟</title>
+    <style>
+        #ul{
+            margin:100px auto;
+            overflow: hidden;
+            width: 520px;
+            padding:0;
+            height: 80px;
+        }
+        li{
+            width: 65px;
+            height: 80px;
+            float: left;
+            list-style: none;
+            font-size:30px;
+            position:relative;
+        }
+        img{
+            position:absolute;
+            top:0;
+            left:0;
+        }
+    </style>
+    <script>
+        function toDou(a){
+            if(a<10){
+                return '0'+a;
+            }else{
+                return ''+a;
+            }
+        }
+        window.onload=function(){
+            var oUl=document.getElementById('ul');
+            var aImg=oUl.getElementsByTagName('img');
+            function clock(){
+                var oDate=new Date();
+                var str=toDou(oDate.getHours())+toDou(oDate.getMinutes())+toDou(oDate.getSeconds());
+                for(var i=0;i<aImg.length;i++){
+                    aImg[i].src='img8/'+str.charAt(i)+'.jpg'
+                }
+            }
+            clock();
+            setInterval(clock,1000);
+
+        }
+    </script>
+</head>
+<body>
+<ul id="ul">
+    <li><img src="img8/0.jpg" alt=""/></li>
+    <li><img src="img8/0.jpg" alt=""/></li>
+    <li>:</li>
+    <li><img src="img8/0.jpg" alt=""/></li>
+    <li><img src="img8/0.jpg" alt=""/></li>
+    <li>:</li>
+    <li><img src="img8/0.jpg" alt=""/></li>
+    <li><img src="img8/0.jpg" alt=""/></li>
+</ul>
+</body>
+</html>

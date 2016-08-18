@@ -1,0 +1,1312 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>京东首页</title>
+<link href="css/base.css" rel="stylesheet" />
+<script src="js/DD_belatedPNG.js"></script>
+<script>
+		DD_belatedPNG.fix('*');
+</script>
+<style>
+	.top{height:30px; background:#f1f1f1;}
+	.top-inner{width:990px; margin:0 auto;}
+	.top-address li{float:left; width:80px; height:20px; margin-bottom:3px;}
+	.top-inner1{position:relative; width:95px;}
+	.top-inner2{position:relative; z-index:2; height:30px; width:85px; line-height:30px; display:block; padding-left:10px; background:url(img/image/dsfae1.jpg) no-repeat 77px;}
+	.top-address{display:none; width:400px; height:100px; position:absolute; left:0; top:29px; border:1px solid #ededed; padding:15px; background:#fff; z-index:1;}
+	.top-address a{padding:4px 10px;}
+	.top-inner1 .top-address1{background:#cc1647; color:#fff;}
+	.top-inner1:hover .top-inner2{color:#666;background:url(img/image/1.jpg) no-repeat 77px #FFF; border-left:1px solid #ededed; border-right:1px solid #ededed;}
+	.top-inner1:hover .top-address{display:block;}
+	.top-address .top-address2:hover{background:#f1f1f1;}
+	.top-inner3{position:relative; height:30px; text-align:center; width:85px;}
+	.top-inner31{position:relative; height:30px; text-align:center; width:102px;}
+	.top-inner32{position:relative; height:30px; text-align:center; width:75px;}
+	.spacer{height:12px; border-left:1px solid #ddd; margin-top:9px;}
+	.top-inner4{display:block; position:relative;z-index:5; margin:0 auto; height:30px; line-height:30px; padding:0 10px;}
+	.icon1{display:block; height:100%; width:15px; background:url(img/image/dsfae1.jpg) no-repeat center;}
+	.top-list1{width:990px; height:100px; border:1px solid #ededed; position:absolute; right:0; top:29px; background:#fff; display:none;}
+	.top-inner3:hover .top-inner4{background:#fff; height:30px; margin-top:0; line-height:30px;}
+	.top-inner3:hover .top-list1{display:block;} .top-inner3:hover .icon1{background:url(img/image/1.jpg) no-repeat center;}
+	.top-list2{width:170px; height:80px; left:0; background:#fff;}
+	.top-list3{width:85px; height:120px; left:0; background:#fff;}
+	.icon2{width:15px; height:20px; background:url(img/image/jd2015img.png); margin-top:5px; margin-right:3px;}
+	.top-inner5{height:30px;line-height:30px;padding:0 10px;}
+	.fr .top-inner6{height:30px; line-height:30px; padding:0 10px 0 5px; color:#c81623;}
+	.top-inner7{height:30px; line-height:30px;}
+	/*top end*/
+	.top-banner{height:80px; background:#000;}
+	.top-banner a{display:block; height:80px; width:100%; background:url(img/568c83aaN14d4776d.jpg) no-repeat center;}  /*top banner*/
+	.tit{width:990px; height:100px; margin:0 auto;}
+	.tit-logo{width:270px; height:60px; margin-top:20px; background:url(img/image/logo-201305.png);}
+	h1{text-indent:-99em;}
+	.tit-right{width:628px; height:60px; margin-top:25px;}
+	.buycar{width:141px; height:36px; position:relative;}
+	.bnt{border:1px solid #dfdfdf; text-align:center; line-height:34px; width:139px; height:34px; display:block; position:relative; z-index:8;}
+	.tit-right0{margin-right:20px;}
+	.tit-right1{padding-right:11px; padding-top:8px;}
+	.tit-right .tit-right2{color:#c81623;}
+	.icon3{height:16px; width:20px; background:url(img/image/jd2015img.png) 0px -57px; margin:8px 6px 0 16px;}
+	.con{height:50px; width:230px; border:1px solid #dfdfdf; position:absolute; right:0; top:36px; display:none; background:#fff;}
+	.buycar:hover .bnt{border-bottom:none; background:#fff; height:36px;}
+	.buycar:hover .con{display:block;}
+	.bnt1{position:absolute; right:10px; top:-5px; height:14px; padding:0 7px;background:url(img/image/2_05.jpg); line-height:14px; color:#fff;}
+	.bnt2,.bnt3{position:absolute; height:14px; width:7px;}
+	.bnt2{background:url(img/image/2_03.jpg); left:0; top:0;}
+	.bnt3{background:url(img/image/2_06.jpg); right:0; top:0;}
+	/*tit logo*/
+	.nav{height:29px; border-bottom:2px solid #b1191a; padding-top:15px; position:relative;}
+	.nav1{width:760px; margin:0 auto; padding-left:230px;}
+	.nav1 a{padding-right:40px; font-size:13px; height:15px; line-height:15px; font-weight:bold;}
+	.nav1 .nav1-last{width:50px;}
+	.year{position:relative;}
+	.year1{position:absolute; right:-7px; top:-20px; height:17px; background:url(img/image/3_04.jpg); padding:1px 5px 0;; color:#fff;}
+	.year2,.year3{position:absolute; height:18px; width:5px;}
+	.year2{background:url(img/image/3_02.jpg);left:0; top:0;}
+	.year3{background:url(img/image/3_06.jpg); right:0; top:0;}
+	.nav-list{position:absolute; left:50%; top:0; margin-left:-495px; background:#c81623; width:200px; height:512px; padding-left:10px;}
+	.nav-list .nav-list1{height:46px; font-size:13px; color:#fff;line-height:46px;}
+	.nav-list li a{color:#fff; margin-right:8px;}
+	.nav-list li{height:31px; line-height:31px;}
+	.nav-list2{width:186px; background:url(img/image/sdafsd4.jpg) no-repeat right;}
+	/*nav end*/
+	.nav-banner{width:990px; height:455px; padding-top:12px; margin:0 auto; }
+	.nav-b-1{width:510px; height:454; margin-left:220px; margin-right:10px;}
+	.nav-b-2{}
+	.nav-b-top{width:248px; height:200px; border:1px solid #e4e4e4; border-bottom:1px dashed #e4e4e4;}
+	.nav-b-top1{width:216px; height:43px; border-bottom:1px dashed #e4e4e4; line-height:43px; padding:0 15px;}
+	.nav-b-top1 p{font-size:15px;}
+	.nav-b-top2{height:12px; padding-left:15px; line-height:12px; margin-top:16px;}
+	.nav-b-top2 span{font-weight:bold;}
+	.nav-b-bot{width:248px; height:252px; border-left:1px solid #e4e4e4; border-right:1px solid #e4e4e4;}
+	.nav-b-bot1{height:43px; padding-left:15px; border-bottom:1px dotted #e4e4e4; line-height:43px; font-size:15px; width:230px;}
+	.nav-b-bot3,.nav-b-bot4,.nav-b-bot5{display:block; height:30px; padding-top:40px; line-height:30px; text-align:center; border-bottom:1px solid #e4e4e4;}
+	.nav-b-bot3{ width:62px; background:url(img/image/-3_03.jpg) no-repeat center 13px; border-right:1px solid #e4e4e4;}
+	.nav-b-bot4{width:59px; background:url(img/image/-3_09.jpg) no-repeat center 13px;}
+	.nav-b-bot5{width:59px;background:url(img/image/sdafsfda4.jpg) no-repeat center 0;}
+	.nav2-banner{width:990px; height:165px; padding-top:9px; margin:0 auto;}
+	.nav2-banner1{margin-right:1px;}
+	/*nav banner*/
+	.tit-nav{width:990px; height:33px; font-size:19px; padding-top:22px; margin:0 auto; line-height:33px;}
+	.main-1f{width:992px; height:403px; margin:0 auto;}
+	.main-1f1 img{margin-left:-20px;}
+	.main-1f1{position:relative; display:block; width:163px; height:200px; border:1px solid #ededed; overflow:hidden;}
+	.main-1f2{position:absolute; left:0px; top:21px; height:20px; width:162px; line-height:20px; text-align:center; font-size:16px; font-weight:bold;}
+	.main-1f3{position:absolute; left:0px; top:49px; height:15px; width:162px; line-height:15px; text-align:center; font-size:11px; color:#c81623;}
+	.main-1f4{width:327px; border-left:none;}
+	.main-1f5{position:absolute; left:0px; top:61px; height:20px; width:200px; line-height:20px; text-align:center; font-size:18px; font-weight:bold; color:#333;}
+	.main-1f6{top:88px; font-size:16px; font-weight:normal;}
+	.main-1f7{position:absolute; left:31px; top:116px; width:137px; height:24px; line-height:24px; text-align:center; font-size:15px; color:#fff; background:#e7004d;}
+	.main-1f8{width:165px;border-left:none;}
+	.main-1f2-sp1{width:30px; height:16px; color:#fff; background:#dd4957; line-height:16px; font-size:11px; margin-left:41px; margin-right:4px; margin-top:2px;}
+	.main-1f2-sp2{font-size:16px;}
+	.main-1f9{border-top:none;}
+	.main-1f10{border-top:none; border-left:none;}
+	.main-1f11{width:163px; height:200px; border:1px solid #ededed; border-top:none; border-left:none;}
+	.main-1f11 li{width:163px; height:39px; border-bottom:1px dashed #e0e0e0;}
+	.main-1f11 .last{border:none;}
+	.main-1f12{width:165px;border-left:none; border-top:none;}
+	.main-1f13{width:165px; height:200px; border:1px solid #ededed; border-top:none; border-left:none;}
+	.main-1f13 li{width:165px; height:49px; border-bottom:1px solid #e0e0e0;}
+	.main-1f13 .last{border:none;}
+	/*speical shopping*/
+	.spe-shop-banner{height:141px; padding-top:20px;}
+	.spe-shop-banner ul{height:125px; width:960px; margin:0 auto;}
+	.main-2f{width:990px; height:510px; margin:0 auto;}
+	.main-2f h3{width:274px; height:35px;}
+	.main-2f-icon1{height:21px; width:31px; background:url(img/image/sprite_floor.png) 0px -34px; padding-top:5px; line-height:21px; text-indent:0.3em; font-size:14px; color:#fff;}
+	.main-2f-icon2{height:29px; line-height:29px; padding-left:9px; font-size:19px; color:#333;}
+	.main-2f1{height:35px; width:716px;}
+	.main-2f1 li{height:35px; position:relative; width:82px;}
+	.main-2f1 .main-2f1-one{width:58px;}
+	.main-2f2{position:relative; z-index:2; display:block; height:14px; line-height:14px; text-align:center; border-right:1px solid #ccc; margin-top:11px;}
+	.main-2f3{position:absolute; left:-65px; top:35px; width:779px; height:473px; border-right:1px solid #ccc; border-bottom:1px solid #ccc; border-top:1px solid #c81623;}
+	.main-2f2-1{margin-left:-1px; height:14px; line-height:14px; padding-top:8px; padding-bottom:11px; background:#fff; border:1px solid #c81623; border-top:3px solid #c81623; border-bottom:none; margin-top:0px;}
+    .main-2f1-one .main-2f2-1{color:#c81623;}
+	.main-2f3 .one{width:339px; height:296px; border-right:1px solid #ccc; border-bottom:1px dashed #ccc;}
+	.main-2f3 .two{width:219px; height:296px; border-right:1px solid #ccc; border-bottom:1px solid #ccc;}
+	.main-2f3 .three{border-right:none;}
+	.main-2f3 .four{width:339px; height:176px; border-right:1px solid #ccc;}
+	.main-2f3 .five{width:219px; height:176px; border-right:1px solid #ccc;}
+	.main-2f3 .six{border-right:none;}
+	.main-2f1 .last{border:none;}
+	.main-2f1-box2{left:-123px; display:none;}
+	.main-2f1-box3{left:-205px;}
+	.main-2f1-box4{left:-287px;}
+	.main-2f1-box5{left:-369px;}
+	.main-2f1-box6{left:-451px;}
+	.main-2f1-box7{left:-533px;}
+	.main-2f1-box8{left:-615px;}
+	.main-2f1-box9{left:-697px;}
+	.main-2f1 li:hover .main-2f1-box2{display:block;}
+	.main-2f1 li:hover .main-2f2{margin-left:-1px; height:14px; line-height:14px; padding-top:8px; padding-bottom:11px; background:#fff; border:1px solid #c81623; border-top:3px solid #c81623; border-bottom:none; margin-top:0px;}
+	.main-2f1 li:hover .main-2f1-one .main-2f2-1{color:#c81623;}
+	.main-2f4{position:relative; width:210px; height:475px;}
+	.main-2f5{position:relative; display:block;}
+	.main-2f .opa1{position:absolute; left:0; top:330px; width:210px; height:145px; background:#fff; opacity:0.65; filter:alpha(opacity:65);}
+	.main-2f .opa2{position:absolute; left:0; top:238px; width:210px; height:92px; background:#fff; opacity:0.3; filter:alpha(opacity:30);}
+	.main-2f .top-border{position:absolute; left:0; top:0px; _top:-1px; width:210px; height:0px; border-top:1px solid #c81623;}
+	.main-2f .box-opa1{position:absolute; left:0; top:330px; width:160px; height:123px; padding:22px 25px 0;}
+	.box-opa1 .box-opa1-a{display:block; width:160px; height:24px; line-height:24px; font-weight:bold;}
+	.box-opa1 .bottom{padding-bottom:6px;}
+	.box-opa1 .box-opa1-a1{display:block; height:24px; line-height:24px; width:46px;}
+	.box-opa1 .ball{width:54px;}
+	.box-opa1 .col{color:#c81623;}
+	.main-2f .box-opa2{position:absolute; left:0; top:238px; width:210px; height:92px;}
+	.box-opa2 .box-opa2-a{display:block; width:97px; height:46px;}
+	.box-opa2-icon{width:26px; height:26px; margin-top:10px; margin-left:10px; background:url(img/image/cosmeticsicon.png); margin-right:5px;}
+	.box-opa2-text{height:46px; line-height:46px; font-weight:bold;}
+	.main-2f-banner1{width:990px; height:66px; margin:10px auto 21px;}
+	.main-2f-banner2{width:990px; height:110px; margin:0px auto 31px;}
+    /*	2f end*/
+	.main-3f{width:990px; height:510px; margin:0 auto;}
+	.main-3f h3{width:405px; height:35px;}
+	.main-3f-icon1{height:21px; width:31px; background:url(img/image/sprite_floor.png) 0px -34px; padding-top:5px; line-height:21px; text-indent:0.3em; font-size:14px; color:#fff;}
+	.main-3f-icon2{height:29px; line-height:29px; padding-left:9px; font-size:19px; color:#333;}
+	.main-3f1{height:35px; width:585px;}
+	.main-3f1 li{height:35px; position:relative; width:78px;}
+	.main-3f1 .main-3f1-one{width:58px;}
+	.main-3f2{position:relative; z-index:2; display:block; height:14px; line-height:14px; text-align:center; border-right:1px solid #ccc; margin-top:11px;}
+	.main-3f3{position:absolute; left:-75px; top:35px; width:659px; height:473px; border-right:1px solid #ccc; border-bottom:1px solid #ccc; border-top:1px solid #c81623;}
+	.main-3f2-1{margin-left:-1px; height:14px; line-height:14px; padding-top:8px; padding-bottom:11px; background:#fff; border:1px solid #c81623; border-top:3px solid #c81623; border-bottom:none; margin-top:0px;}
+    .main-3f1-one .main-3f2-1{color:#c81623;}
+	.main-3f3 .one{width:440px; height:237px;}
+	.main-3f3 .two{width:219px; height:117px; border-bottom:1px solid #ccc;}
+	.main-3f3 .four{width:219px; height:236px; border-right:1px solid #ccc;}
+	.main-3f3 .five{border-right:none;}
+	.main-3f1 .last{border:none;}
+	.main-3f1-box2{left:-133px; display:none;}
+	.main-3f1-box3{left:-191px;}
+	.main-3f1-box4{left:-269px;}
+	.main-3f1-box5{left:-347px;}
+	.main-3f1-box6{left:-425px;}
+	.main-3f1-box7{left:-503px;}
+	.main-3f1-box8{left:-581px;}
+	.main-3f1 li:hover .main-3f1-box2{display:block;}
+	.main-3f1 li:hover .main-3f2{margin-left:-1px; height:14px; line-height:14px; padding-top:8px; padding-bottom:11px; background:#fff; border:1px solid #c81623; border-top:3px solid #c81623; border-bottom:none; margin-top:0px;}
+	.main-3f1 li:hover .main-3f1-one .main-3f2-1{color:#c81623;}
+	.main-3f4{position:relative; width:330px; height:475px;}
+	.main-3f5{position:relative; display:block;}
+	.main-3f .f3-opa1{position:absolute; left:0; top:284px; width:330px; height:191px; background:#fff; opacity:0.65; filter:alpha(opacity:65);}
+	.main-3f .f3-opa2{position:absolute; left:0; top:238px; width:330px; height:46px; background:#fff; opacity:0.3; filter:alpha(opacity:30);}
+	.main-3f .f3-top-border{position:absolute; left:0; top:0px; _top:-1px; width:330px; height:0px; border-top:1px solid #c81623;}
+	.main-3f .f3-box-opa1{position:absolute; left:0; top:284px; width:137px; height:169px; padding:22px 25px 0;}
+	.main-3f .f3-box-opa11{left:162px;}
+	.f3-box-opa1 .f3-box-opa1-a{display:block; width:137px; height:24px; line-height:24px; font-weight:bold;}
+	.f3-box-opa1 .bottom{padding-bottom:6px;}
+	.f3-box-opa1 .f3-box-opa1-a1{display:block; height:24px; line-height:24px; width:46px;}
+	.f3-box-opa1 .ball{width:54px;}
+	.f3-box-opa1 .col{color:#c81623;}
+	.main-3f .f3-box-opa2{position:absolute; left:0; top:238px; width:330px; height:46px;}
+	.f3-box-opa2 .f3-box-opa2-a{display:block; width:97px; height:46px;}
+	.f3-box-opa2-icon{width:26px; height:26px; margin-top:10px; margin-left:10px; background:url(img/image/cosmeticsicon.png); margin-right:5px;}
+	.f3-box-opa2-text{height:46px; line-height:46px; font-weight:bold;}
+	.main-3f-banner1{width:990px; height:66px; margin:10px auto 21px;}
+	.main-3f-banner2{width:990px; height:110px; margin:0px auto 31px;}
+	.tit-nav-last{width:990px; height:33px; margin:0 auto;}
+	.tit-cheap{width:680px; height:100%; font-size:19px; margin:0 auto; line-height:33px;}
+	.tit-cheap1{width:310px; height:100%; font-size:19px; margin:0 auto; line-height:33px;}
+	.cheap-shop{width:988px; height:281px; border:1px solid #ededed; margin:0 auto 20px;}
+	.cheap-shop1{display:block; width:239px; height:281px; border-right:1px solid #ededed}
+	.cheap-shop2{display:block; width:308px; height:281px;}
+	.cheap-shop3{display:block; width:219px; height:140px; border-right:1px solid #ededed; border-bottom:1px solid #ededed;}
+	.cheap-shop3{border-bottom:none;}
+	.last-banner{height:94px; background:#f5f5f5;}
+	.last-banner1{height:94px; margin:0 auto; width:1007px;}
+	.service{width:990px; height:187px; border-bottom:1px solid #ededed; margin:0 auto; padding-top:15px; margin-bottom:23px;}
+	.service ul{width:144px;}
+	.ser-tit{display:block; height:35px; line-height:35px; font-size:15px; font-weight:bold;}
+	.ser-tit1{display:block; height:20px; line-height:20px; font-size:12px;}
+	.service div{width:230px; padding-left:40px;}
+	.ser-tit2{width:200px; padding-bottom:9px;}
+	.service p{line-height:18px; width:185px;}
+	.service div a{margin-right:40px;}
+	.friendlink{width:820px; height:12px; margin:0 auto 13px;}
+	.friendlink li a{display:block; width:70px; line-height:12px; height:12px; text-align:center; border-right:1px solid #ededed;}
+	.friendlink li .link-a{display:block; width:89px; line-height:12px; height:12px; text-align:center; border-right:1px solid #ededed;}
+	.friendlink li .last{border:none;}
+	.note1{height:18px; line-height:18px; text-align:center;}
+	p .p-a{padding:0 5px; border-right:1px solid #ededed;}
+	.note2{height:18px; line-height:18px; text-align:center; margin-bottom:10px;}
+	.bot-logo{width:650px; height:32px; margin:0 auto;}
+	.bot-logo li{margin-right:13px; float:left;}
+	.bot-logo .lat{margin-right:0px;}
+</style>
+
+</head>
+
+<body>
+<div class="top">
+	<ul class="top-inner clearfix">
+    	<li class="top-inner1 fl">
+        		<a href="#" class="top-inner2" >送至：北京</a>
+                <ul class="top-address clearfix">
+                		<li><a href="#" class="top-address1">北京</a></li>
+                        <li><a href="#" class="top-address2">上海</a></li>
+                        <li><a href="#" class="top-address2">天津</a></li>
+                        <li><a href="#" class="top-address2">天津</a></li>
+                        <li><a href="#" class="top-address2">天津</a></li>
+                        <li><a href="#" class="top-address2">内蒙古</a></li>
+                        <li><a href="#" class="top-address2">内蒙古</a></li>
+                        <li><a href="#" class="top-address2">内蒙古</a></li>
+                        <li><a href="#" class="top-address2">内蒙古</a></li>
+                        <li><a href="#" class="top-address2">内蒙古</a></li>
+                        <li><a href="#" class="top-address2">北京</a></li>
+                        <li><a href="#" class="top-address2">上海</a></li>
+                        <li><a href="#" class="top-address2">天津</a></li>
+                        <li><a href="#" class="top-address2">天津</a></li>
+                        <li><a href="#" class="top-address2">天津</a></li>
+                        <li><a href="#" class="top-address2">内蒙古</a></li>
+                        <li><a href="#" class="top-address2">内蒙古</a></li>
+                        <li><a href="#" class="top-address2">内蒙古</a></li>
+                        <li><a href="#" class="top-address2">内蒙古</a></li>
+                        <li><a href="#" class="top-address2">内蒙古</a></li>
+                </ul>
+        </li>
+        <li class="top-inner3 fr">
+        		<a href="#" class="top-inner4 clearfix" ><span class="fl">网站导航</span><span class="icon1 fr"></span></a>
+                <div class="top-list1"></div>
+         </li>
+         <li class="spacer fr"></li>
+         <li class="top-inner3 fr">
+        		<a href="#" class="top-inner4 clearfix" ><span class="fl">客服服务</span><span class="icon1 fr"></span></a>
+                <div class="top-list1 top-list2"></div>
+          </li>
+          <li class="spacer fr"></li>
+          <li class="top-inner3 fr">
+        		<div><a href="#" class="top-inner4 clearfix" ><span class="fl">关注京东</span><span class="icon1 fr"></span></a></div>
+                <div class="top-list1 top-list3"></div>
+          </li>
+          <li class="spacer fr"></li>
+          <li class="top-inner3 top-inner31 fr">
+        		<a href="#" class="top-inner4 clearfix" ><span class="icon2 fl"></span><span class="fl">手机京东</span><span class="icon1 fr"></span></a>
+                <div class="top-list1 top-list2"></div>
+          </li>
+          <li class="spacer fr"></li>
+          <li class="fr">
+        		<a href="#" class="top-inner5 clearfix" >京东会员</a>
+          </li>
+          <li class="spacer fr"></li>
+          <li class="fr">
+        		<a href="#" class="top-inner5 clearfix" >企业采购</a>
+          </li>
+          <li class="spacer fr"></li>
+          <li class="top-inner3 fr">
+        		<a href="#" class="top-inner4 clearfix" ><span class="fl">我的京东</span><span class="icon1 fr"></span></a>
+                <div class="top-list1 top-list3"></div>
+          </li>
+          <li class="spacer fr"></li>
+          <li class="fr">
+        		<a href="#" class="top-inner5 clearfix" >我的订单</a>
+          </li>
+          <li class="spacer fr"></li>
+          <li class="fr">
+        		<a href="#" class="top-inner6 clearfix" >免费注册</a>
+          </li>
+          <li class="fr">
+        		<a href="#" class="top-inner7 clearfix" >你好，请登录</a>
+          </li>
+
+    </ul>
+</div>
+<!--top end-->
+<div class="top-banner">
+	<a href="#"></a>
+</div>
+<!--top banner-->
+<div class="tit clearfix">
+	<a href="#" class="fl tit-logo"><h1>京东</h1></a>
+    <div class="tit-right fr">
+    		<a href="#" class="fl tit-right0"><img src="img/image/dsfadsfa-1.jpg" /></a>
+            <div class="fr buycar">
+            		<a href="#" class="bnt"><span class="icon3 fl"></span><span class="fl">我的购物车&nbsp;&gt;</span>
+                    		<span class="bnt1 fr"><i class="bnt2"></i>12<i class="bnt3"></i></span>
+                    </a>
+                    <div class="con"></div> 
+            </div>
+            <a href="#" class="fl tit-right1 tit-right2">微信红包</a>
+            <a href="#" class="fl tit-right1">每日特惠</a>
+            <a href="#" class="fl tit-right1">蝴蝶兰</a>
+            <a href="#" class="fl tit-right1">三星A9</a>
+            <a href="#" class="fl tit-right1">1元拿走</a>
+            <a href="#" class="fl tit-right1">笔记本电脑</a>
+            <a href="#" class="fl tit-right1">每日特</a>
+            <a href="#" class="fl tit-right1">普拉达男装</a>
+    </div>
+</div>
+<!--tit logo-->
+<div class="nav clearfix">
+	<div class="nav1 clearfix">
+			<a href="#" class="fl">服装城</a>
+            <a href="#" class="fl">美妆馆</a>
+            <a href="#" class="fl">超市</a>
+            <a href="#" class="fl">全球购</a>
+            <a href="#" class="fl year">闪购
+            		<span class="year1"><i class="year2"></i>周年庆<i class="year3"></i></span>
+            </a>
+            <a href="#" class="fl">团购</a>
+            <a href="#" class="fl">拍卖</a>
+            <a href="#" class="fl nav1-last">金融</a> 
+    </div>
+    <ul class="nav-list">
+    		<li class="nav-list1"><a href="#">全部商品分类</a></li>
+            <li class="nav-list2"><a href="#">家用电器</a></li>
+            <li class="nav-list2"><a href="#">手机、</a><a href="#">数码、</a><a href="#">京东通信</a></li>
+            <li class="nav-list2"><a href="#">手机、</a><a href="#">数码、</a><a href="#">京东通信</a></li>
+            <li class="nav-list2"><a href="#">手机、</a><a href="#">数码、</a><a href="#">数码、</a><a href="#">通信</a></li>
+            <li class="nav-list2"><a href="#">手机、</a><a href="#">数码、</a><a href="#">数码、</a><a href="#">通信</a></li>
+            <li class="nav-list2"><a href="#">手机、</a><a href="#">数码、</a><a href="#">数码、</a><a href="#">通信</a></li>
+            <li class="nav-list2"><a href="#">手机、</a><a href="#">数码、</a><a href="#">数码、</a><a href="#">通信</a></li>
+            <li class="nav-list2"><a href="#">手机、</a><a href="#">数码、</a><a href="#">数码、</a><a href="#">通信</a></li>
+            <li class="nav-list2"><a href="#">手机、</a><a href="#">数码、</a><a href="#">数码、</a><a href="#">通信</a></li>
+            <li class="nav-list2"><a href="#">手机、</a><a href="#">数码、</a><a href="#">数码、</a><a href="#">通信</a></li>
+            <li class="nav-list2"><a href="#">手机、</a><a href="#">数码、</a><a href="#">数码、</a><a href="#">通信</a></li>
+            <li class="nav-list2"><a href="#">手机、</a><a href="#">数码、</a><a href="#">数码、</a><a href="#">通信</a></li>
+            <li class="nav-list2"><a href="#">手机、</a><a href="#">数码、</a><a href="#">数码、</a><a href="#">通信</a></li>
+            <li class="nav-list2"><a href="#">手机、</a><a href="#">数码、</a><a href="#">数码、</a><a href="#">通信</a></li>
+            <li class="nav-list2"><a href="#">手机、</a><a href="#">数码、</a><a href="#">数码、</a><a href="#">通信</a></li>
+    </ul>
+</div>
+<!--nav end-->
+<div class="nav-banner clearfix">
+		<a href="#" class="fl nav-b-1"><img src="img/image/sdfafdsa-1.jpg" /></a>
+        <div class="nav-b-2 fl">
+        		<ul class="nav-b-top">
+                		<li class="nav-b-top1 clearfix">
+                        		<p class="fl">京东快报</p>
+                                <a href="#" class="fr">更多 &gt;</a>
+                        </li>
+                        <li class="nav-b-top2"><a href="#"><span>【特惠】</span>土豪送礼 50万红包随意拿</a></li>
+                        <li class="nav-b-top2"><a href="#"><span>【特惠】</span>土豪送礼 50万红包随意拿</a></li>
+                        <li class="nav-b-top2"><a href="#"><span>【特惠】</span>土豪送礼 50万红包随意拿</a></li>
+                        <li class="nav-b-top2"><a href="#"><span>【特惠】</span>土豪送礼 50万红包随意拿</a></li>
+                        <li class="nav-b-top2"><a href="#"><span>【特惠】</span>土豪送礼 50万红包随意拿</a></li>
+                </ul>
+                <dl class="nav-b-bot clearfix">
+                		<dt class="nav-b-bot1 fl">生活服务</dt>
+                        <dd class="nav-b-bot2 fl"><a href="#" class="nav-b-bot3">话费</a></dd>
+                        <dd class="nav-b-bot2 fl"><a href="#" class="nav-b-bot3">话费</a></dd>
+                        <dd class="nav-b-bot2 fl"><a href="#" class="nav-b-bot3">话费</a></dd>
+                        <dd class="nav-b-bot2 fl"><a href="#" class="nav-b-bot4">游戏</a></dd>
+                        <dd class="nav-b-bot2 fl"><a href="#" class="nav-b-bot3">话费</a></dd>
+                        <dd class="nav-b-bot2 fl"><a href="#" class="nav-b-bot3">话费</a></dd>
+                        <dd class="nav-b-bot2 fl"><a href="#" class="nav-b-bot3">话费</a></dd>
+                        <dd class="nav-b-bot2 fl"><a href="#" class="nav-b-bot4">游戏</a></dd>
+                        <dd class="nav-b-bot2 fl"><a href="#" class="nav-b-bot3">话费</a></dd>
+                        <dd class="nav-b-bot2 fl"><a href="#" class="nav-b-bot3">话费</a></dd>
+                        <dd class="nav-b-bot2 fl"><a href="#" class="nav-b-bot3">话费</a></dd>
+                        <dd class="nav-b-bot2 fl"><a href="#" class="nav-b-bot5">白条</a></dd>
+                </dl>
+        </div>
+</div>
+<ul class="nav2-banner clearfix">
+		<li class="fl nav2-banner1"><a href="#"><img src="img/image/a1.jpg" /></a></li>
+        <li class="fl nav2-banner1"><a href="#"><img src="img/image/a1.jpg" /></a></li>
+        <li class="fl nav2-banner1"><a href="#"><img src="img/image/a1.jpg" /></a></li>
+        <li class="fl"><a href="#"><img src="img/image/a2.jpg" /></a></li>
+</ul>
+<!--nav-banner-->
+<div class="tit-nav">京东特色购</div>
+<ul class="main-1f clearfix">
+		<li class="fl"><a href="#" class="main-1f1">
+        					<img src="img/image/558d1989Nbc5c673a.jpg"  />
+                            <p class="main-1f2">品牌特卖</p>
+                            <p class="main-1f3">大牌键盘全程低至五折</p>
+                       </a>
+        </li>
+        <li class="fl"><a href="#" class="main-1f1 main-1f4">
+        					<img src="img/image/558df99fNb89e0012.jpg" />
+                            <p class="main-1f5">魅蓝Note现货</p>
+                            <p class="main-1f6 main-1f5">iphone最高减500</p>
+                            <p class="main-1f7">品牌街 &gt;</p>
+                       </a>
+        </li>
+        <li class="fl"><a href="#" class="main-1f8 main-1f1">
+        					<img src="img/image/558d1c8cN2be22bf6.jpg" />
+                            <p class="main-1f2 clearfix"><span class="main-1f2-sp1 fl">趣购</span><span class="main-1f2-sp2 fl">好东西</span></p>
+                            <p class="main-1f3">德国血统卡片手机满200减30</p>
+                       </a>
+        </li>
+         <li class="fl"><a href="#" class="main-1f8 main-1f1">
+        					<img src="img/image/558d1c8cN2be22bf6.jpg" />
+                            <p class="main-1f2 clearfix"><span class="main-1f2-sp1 fl">趣购</span><span class="main-1f2-sp2 fl">好东西</span></p>
+                            <p class="main-1f3">德国血统卡片手机满200减30</p>
+                       </a>
+        </li>
+         <li class="fl"><a href="#" class="main-1f8 main-1f1">
+        					<img src="img/image/558d1c8cN2be22bf6.jpg" />
+                            <p class="main-1f2 clearfix"><span class="main-1f2-sp1 fl">趣购</span><span class="main-1f2-sp2 fl">好东西</span></p>
+                            <p class="main-1f3">德国血统卡片手机满200减30</p>
+                       </a>
+        </li>
+        <li class="fl"><a href="#" class="main-1f1 main-1f9">
+        					<img src="img/image/558d1989Nbc5c673a.jpg"  />
+                            <p class="main-1f2">品牌特卖</p>
+                            <p class="main-1f3">大牌键盘全程低至五折</p>
+                       </a>
+        </li>
+        <li class="fl"><a href="#" class="main-1f1 main-1f10">
+        					<img src="img/image/558d1989Nbc5c673a.jpg"  />
+                            <p class="main-1f2">品牌特卖</p>
+                            <p class="main-1f3">大牌键盘全程低至五折</p>
+                       </a>
+        </li>
+         <li class="fl"><ul class="main-1f11">
+        					<li><a href="#"><img src="img/image/asfddf1.jpg"  /></a></li>
+                            <li><a href="#"><img src="img/image/asfddf1.jpg"  /></a></li>
+                            <li><a href="#"><img src="img/image/asfddf1.jpg"  /></a></li>
+                            <li><a href="#"><img src="img/image/asfddf1.jpg"  /></a></li>
+                            <li class="last"><a href="#"><img src="img/image/asfddf1.jpg"  /></a></li>
+                       </ul>
+        </li>
+        <li class="fl"><a href="#" class="main-1f12 main-1f1">
+        					<img src="img/image/558d1c8cN2be22bf6.jpg" />
+                            <p class="main-1f2 clearfix"><span class="main-1f2-sp1 fl">趣购</span><span class="main-1f2-sp2 fl">好东西</span></p>
+                            <p class="main-1f3">德国血统卡片手机满200减30</p>
+                       </a>
+        </li>
+        <li class="fl"><a href="#" class="main-1f12 main-1f1">
+        					<img src="img/image/558d1c8cN2be22bf6.jpg" />
+                            <p class="main-1f2 clearfix"><span class="main-1f2-sp1 fl">趣购</span><span class="main-1f2-sp2 fl">好东西</span></p>
+                            <p class="main-1f3">德国血统卡片手机满200减30</p>
+                       </a>
+        </li>
+        <li class="fl"><ul class="main-1f13">
+        					<li><a href="#"><img src="img/image/safdfdssfd.jpg" /></a></li>
+                            <li><a href="#"><img src="img/image/safdfdssfd.jpg" /></a></li>
+                            <li><a href="#"><img src="img/image/safdfdssfd.jpg" /></a></li>
+                            <li class="last"><a href="#"><img src="img/image/safdfdssfd.jpg" /></a></li>
+                       </ul>
+        </li>
+</ul>
+<!--speical shopping-->
+<div class="spe-shop-banner">
+	<ul class="clearfix">
+    		<li class="fl"><a href="#"><img src="img/image/qwe1.jpg"  /></a></li>
+            <li class="fl"><a href="#"><img src="img/image/qwe2.jpg"  /></a></li>
+            <li class="fl"><a href="#"><img src="img/image/qwe3.jpg"  /></a></li>
+    </ul>
+</div>
+<div class="main-2f clearfix">
+	<h3 class="fl clearfix"><i class="main-2f-icon1 fl">2F</i><i class="main-2f-icon2 fl">个人美妆</i></h3>
+    <ul class="main-2f1 fl clearfix">
+    		<li class="main-2f1-one fl">
+                    <a href="#" class="main-2f2 main-2f2-1">热门</a>
+                    <ul class="main-2f3 clearfix">
+                    		<li class="one fl"><a href="#"><img src="img/image/sd1.jpg" /></a></li>
+                            <li class="two fl"><a href="#"><img src="img/image/sd2.jpg" /></a></li>
+                            <li class="two three fl"><a href="#"><img src="img/image/sd2.jpg" /></a></li>
+                            <li class="four fl"><a href="#"><img src="img/image/sd3.jpg" /></a></li>
+                            <li class="five fl"><a href="#"><img src="img/image/sd4.jpg" /></a></li>
+                            <li class="six fl"><a href="#"><img src="img/image/sd4.jpg" /></a></li>
+                    </ul>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">国际大牌</a>
+                    <div class="main-2f1-box2 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">国妆名品</a>
+                    <div class="main-2f1-box2 main-2f1-box3 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">个人护理</a>
+                    <div class="main-2f1-box2 main-2f1-box4 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">清洁用品</a>
+                    <div class="main-2f1-box2 main-2f1-box5 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">纸品湿巾</a>
+                    <div class="main-2f1-box2 main-2f1-box6 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">香水彩妆</a>
+                    <div class="main-2f1-box2 main-2f1-box7 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">男士面膜</a>
+                    <div class="main-2f1-box2 main-2f1-box8 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2 last">热销精品</a>
+                    <div class="main-2f1-box2 main-2f1-box9 main-2f3"></div>
+           </li>
+    </ul>
+    <div class="main-2f4 fl">
+    		<a href="#" class="main-2f5"><img src="img/image/5689cfe9Na2097c82.jpg" /></a>
+            <div class="opa1"></div>
+            <div class="top-border"></div>
+            <div class="opa2"></div>
+            <ul class="box-opa1 clearfix">
+            		<li class="fl"><a href="#" class="box-opa1-a">美妆年货囤货买3送一&gt;</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a bottom">美妆年货囤货买3送一&gt;</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1 col">国际馆</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1">国妆馆</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1 ball">国家球馆</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1">国妆馆</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1 col">国际馆</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1">国妆馆</a></li>
+            </ul>
+            <ul class="box-opa2 clearfix">
+            		<li class="fl"><a href="#" class="box-opa2-a clearfix">
+                    					<i class="box-opa2-icon fl"></i>
+                                        <i class="box-opa2-text fl">美妆特卖</i>
+                                    </a></li>
+                   <li class="fl"><a href="#" class="box-opa2-a clearfix">
+                    					<i class="box-opa2-icon fl"></i>
+                                        <i class="box-opa2-text fl">美妆特卖</i>
+                                    </a></li>
+                   <li class="fl"><a href="#" class="box-opa2-a clearfix">
+                    					<i class="box-opa2-icon fl"></i>
+                                        <i class="box-opa2-text fl">美妆特卖</i>
+                                    </a></li>
+                   <li class="fl"><a href="#" class="box-opa2-a clearfix">
+                    					<i class="box-opa2-icon fl"></i>
+                                        <i class="box-opa2-text fl">美妆特卖</i>
+                                    </a></li>
+            </ul>
+    </div>
+</div>
+<div class="main-2f-banner1">
+	<a href="#"><img src="img/image/dfsasdf1.jpg" /></a>
+</div>
+<div class="main-2f-banner2">
+	<a href="#"><img src="img/image/mmm-2.jpg" /></a>
+</div>
+<div class="main-3f clearfix">
+	<h3 class="fl clearfix"><i class="main-3f-icon1 fl">3F</i><i class="main-3f-icon2 fl">手机通讯</i></h3>
+    <ul class="main-3f1 fl clearfix">
+    		<li class="main-3f1-one fl">
+                    <a href="#" class="main-3f2 main-3f2-1">热门</a>
+                    <ul class="main-3f3 clearfix">
+                    		<li class="one fl"><a href="#"><img src="img/image/sdaffsad3.jpg" /></a></li>
+                            <li class="two fl"><a href="#"><img src="img/image/3f2.jpg" /></a></li>
+                            <li class="two fl"><a href="#"><img src="img/image/3f2.jpg" /></a></li>
+                            <li class="four fl"><a href="#"><img src="img/image/3f3.jpg" /></a></li>
+                            <li class="four fl"><a href="#"><img src="img/image/3f3.jpg" /></a></li>
+                            <li class="four five fl"><a href="#"><img src="img/image/3f3.jpg" /></a></li>
+                    </ul>
+           </li>
+           <li class="main-3f1-one fl">
+           			<a href="#" class="main-3f2">大牌</a>
+                    <div class="main-3f1-box2 main-3f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-3f2">国妆名品</a>
+                    <div class="main-3f1-box2 main-3f1-box3 main-3f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-3f2">个人护理</a>
+                    <div class="main-3f1-box2 main-3f1-box4 main-3f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-3f2">清洁用品</a>
+                    <div class="main-3f1-box2 main-3f1-box5 main-3f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-3f2">纸品湿巾</a>
+                    <div class="main-3f1-box2 main-3f1-box6 main-3f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-3f2">香水彩妆</a>
+                    <div class="main-3f1-box2 main-3f1-box7 main-3f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-3f2 last">男士面膜</a>
+                    <div class="main-3f1-box2 main-3f1-box8 main-3f3"></div>
+           </li>
+           
+         
+    </ul>
+    <div class="main-3f4 fl">
+    		<a href="#" class="main-3f5"><img src="img/image/3fbg.jpg" /></a>
+            <div class="f3-opa1"></div>
+            <div class="f3-top-border"></div>
+            <div class="f3-opa2"></div>
+            <ul class="f3-box-opa1 clearfix">
+            		<li class="fl"><a href="#" class="f3-box-opa1-a">美妆年货囤货买3送一&gt;</a></li>
+                    <li class="fl"><a href="#" class="f3-box-opa1-a bottom">美妆年货囤货买3送一&gt;</a></li>
+                    <li class="fl"><a href="#" class="f3-box-opa1-a1 col">国际馆</a></li>
+                    <li class="fl"><a href="#" class="f3-box-opa1-a1">国妆馆</a></li>
+                    <li class="fl"><a href="#" class="f3-box-opa1-a1 ball">国家球馆</a></li>
+                    <li class="fl"><a href="#" class="f3-box-opa1-a1">国妆馆</a></li>
+                    <li class="fl"><a href="#" class="f3-box-opa1-a1 col">国际馆</a></li>
+                    <li class="fl"><a href="#" class="f3-box-opa1-a1">国妆馆</a></li>
+                    <li class="fl"><a href="#" class="f3-box-opa1-a1 col">国际馆</a></li>
+                    <li class="fl"><a href="#" class="f3-box-opa1-a1">国妆馆</a></li>
+            </ul>
+             <ul class="f3-box-opa1 f3-box-opa11 clearfix">
+            		<li class="fl"><a href="#" class="f3-box-opa1-a">美妆年货囤货买3送一&gt;</a></li>
+                    <li class="fl"><a href="#" class="f3-box-opa1-a bottom">美妆年货囤货买3送一&gt;</a></li>
+                    <li class="fl"><a href="#" class="f3-box-opa1-a1 col">国际馆</a></li>
+                    <li class="fl"><a href="#" class="f3-box-opa1-a1">国妆馆</a></li>
+                    <li class="fl"><a href="#" class="f3-box-opa1-a1 ball">国家球馆</a></li>
+                    <li class="fl"><a href="#" class="f3-box-opa1-a1">国妆馆</a></li>
+                    <li class="fl"><a href="#" class="f3-box-opa1-a1 col">国际馆</a></li>
+                    <li class="fl"><a href="#" class="f3-box-opa1-a1">国妆馆</a></li>
+                    <li class="fl"><a href="#" class="f3-box-opa1-a1 col">国际馆</a></li>
+                    <li class="fl"><a href="#" class="f3-box-opa1-a1">国妆馆</a></li>
+            </ul>
+            <ul class="f3-box-opa2 clearfix">
+            		<li class="fl"><a href="#" class="f3-box-opa2-a clearfix">
+                    					<i class="f3-box-opa2-icon fl"></i>
+                                        <i class="f3-box-opa2-text fl">美妆特卖</i>
+                                    </a></li>
+                   <li class="fl"><a href="#" class="f3-box-opa2-a clearfix">
+                    					<i class="f3-box-opa2-icon fl"></i>
+                                        <i class="f3-box-opa2-text fl">美妆特卖</i>
+                                    </a></li>
+                   <li class="fl"><a href="#" class="f3-box-opa2-a clearfix">
+                    					<i class="f3-box-opa2-icon fl"></i>
+                                        <i class="f3-box-opa2-text fl">美妆特卖</i>
+                                    </a></li>
+                  
+            </ul>
+    </div>
+</div>
+<div class="main-3f-banner1">
+	<a href="#"><img src="img/image/dfsasdf1.jpg" /></a>
+</div>
+<div class="main-3f-banner2">
+	<a href="#"><img src="img/image/mmm-2.jpg" /></a>
+</div>
+<div class="main-2f clearfix">
+	<h3 class="fl clearfix"><i class="main-2f-icon1 fl">6F</i><i class="main-2f-icon2 fl">个人美妆</i></h3>
+    <ul class="main-2f1 fl clearfix">
+    		<li class="main-2f1-one fl">
+                    <a href="#" class="main-2f2 main-2f2-1">热门</a>
+                    <ul class="main-2f3 clearfix">
+                    		<li class="one fl"><a href="#"><img src="img/image/sd1.jpg" /></a></li>
+                            <li class="two fl"><a href="#"><img src="img/image/sd2.jpg" /></a></li>
+                            <li class="two three fl"><a href="#"><img src="img/image/sd2.jpg" /></a></li>
+                            <li class="four fl"><a href="#"><img src="img/image/sd3.jpg" /></a></li>
+                            <li class="five fl"><a href="#"><img src="img/image/sd4.jpg" /></a></li>
+                            <li class="six fl"><a href="#"><img src="img/image/sd4.jpg" /></a></li>
+                    </ul>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">国际大牌</a>
+                    <div class="main-2f1-box2 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">国妆名品</a>
+                    <div class="main-2f1-box2 main-2f1-box3 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">个人护理</a>
+                    <div class="main-2f1-box2 main-2f1-box4 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">清洁用品</a>
+                    <div class="main-2f1-box2 main-2f1-box5 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">纸品湿巾</a>
+                    <div class="main-2f1-box2 main-2f1-box6 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">香水彩妆</a>
+                    <div class="main-2f1-box2 main-2f1-box7 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">男士面膜</a>
+                    <div class="main-2f1-box2 main-2f1-box8 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2 last">热销精品</a>
+                    <div class="main-2f1-box2 main-2f1-box9 main-2f3"></div>
+           </li>
+    </ul>
+    <div class="main-2f4 fl">
+    		<a href="#" class="main-2f5"><img src="img/image/5689cfe9Na2097c82.jpg" /></a>
+            <div class="opa1"></div>
+            <div class="top-border"></div>
+            <div class="opa2"></div>
+            <ul class="box-opa1 clearfix">
+            		<li class="fl"><a href="#" class="box-opa1-a">美妆年货囤货买3送一&gt;</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a bottom">美妆年货囤货买3送一&gt;</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1 col">国际馆</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1">国妆馆</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1 ball">国家球馆</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1">国妆馆</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1 col">国际馆</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1">国妆馆</a></li>
+            </ul>
+            <ul class="box-opa2 clearfix">
+            		<li class="fl"><a href="#" class="box-opa2-a clearfix">
+                    					<i class="box-opa2-icon fl"></i>
+                                        <i class="box-opa2-text fl">美妆特卖</i>
+                                    </a></li>
+                   <li class="fl"><a href="#" class="box-opa2-a clearfix">
+                    					<i class="box-opa2-icon fl"></i>
+                                        <i class="box-opa2-text fl">美妆特卖</i>
+                                    </a></li>
+                   <li class="fl"><a href="#" class="box-opa2-a clearfix">
+                    					<i class="box-opa2-icon fl"></i>
+                                        <i class="box-opa2-text fl">美妆特卖</i>
+                                    </a></li>
+                   <li class="fl"><a href="#" class="box-opa2-a clearfix">
+                    					<i class="box-opa2-icon fl"></i>
+                                        <i class="box-opa2-text fl">美妆特卖</i>
+                                    </a></li>
+            </ul>
+    </div>
+</div>
+<div class="main-2f-banner1">
+	<a href="#"><img src="img/image/dfsasdf1.jpg" /></a>
+</div>
+<div class="main-2f-banner2">
+	<a href="#"><img src="img/image/mmm-2.jpg" /></a>
+</div>
+<div class="main-2f clearfix">
+	<h3 class="fl clearfix"><i class="main-2f-icon1 fl">7F</i><i class="main-2f-icon2 fl">个人美妆</i></h3>
+    <ul class="main-2f1 fl clearfix">
+    		<li class="main-2f1-one fl">
+                    <a href="#" class="main-2f2 main-2f2-1">热门</a>
+                    <ul class="main-2f3 clearfix">
+                    		<li class="one fl"><a href="#"><img src="img/image/sd1.jpg" /></a></li>
+                            <li class="two fl"><a href="#"><img src="img/image/sd2.jpg" /></a></li>
+                            <li class="two three fl"><a href="#"><img src="img/image/sd2.jpg" /></a></li>
+                            <li class="four fl"><a href="#"><img src="img/image/sd3.jpg" /></a></li>
+                            <li class="five fl"><a href="#"><img src="img/image/sd4.jpg" /></a></li>
+                            <li class="six fl"><a href="#"><img src="img/image/sd4.jpg" /></a></li>
+                    </ul>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">国际大牌</a>
+                    <div class="main-2f1-box2 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">国妆名品</a>
+                    <div class="main-2f1-box2 main-2f1-box3 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">个人护理</a>
+                    <div class="main-2f1-box2 main-2f1-box4 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">清洁用品</a>
+                    <div class="main-2f1-box2 main-2f1-box5 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">纸品湿巾</a>
+                    <div class="main-2f1-box2 main-2f1-box6 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">香水彩妆</a>
+                    <div class="main-2f1-box2 main-2f1-box7 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">男士面膜</a>
+                    <div class="main-2f1-box2 main-2f1-box8 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2 last">热销精品</a>
+                    <div class="main-2f1-box2 main-2f1-box9 main-2f3"></div>
+           </li>
+    </ul>
+    <div class="main-2f4 fl">
+    		<a href="#" class="main-2f5"><img src="img/image/5689cfe9Na2097c82.jpg" /></a>
+            <div class="opa1"></div>
+            <div class="top-border"></div>
+            <div class="opa2"></div>
+            <ul class="box-opa1 clearfix">
+            		<li class="fl"><a href="#" class="box-opa1-a">美妆年货囤货买3送一&gt;</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a bottom">美妆年货囤货买3送一&gt;</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1 col">国际馆</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1">国妆馆</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1 ball">国家球馆</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1">国妆馆</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1 col">国际馆</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1">国妆馆</a></li>
+            </ul>
+            <ul class="box-opa2 clearfix">
+            		<li class="fl"><a href="#" class="box-opa2-a clearfix">
+                    					<i class="box-opa2-icon fl"></i>
+                                        <i class="box-opa2-text fl">美妆特卖</i>
+                                    </a></li>
+                   <li class="fl"><a href="#" class="box-opa2-a clearfix">
+                    					<i class="box-opa2-icon fl"></i>
+                                        <i class="box-opa2-text fl">美妆特卖</i>
+                                    </a></li>
+                   <li class="fl"><a href="#" class="box-opa2-a clearfix">
+                    					<i class="box-opa2-icon fl"></i>
+                                        <i class="box-opa2-text fl">美妆特卖</i>
+                                    </a></li>
+                   <li class="fl"><a href="#" class="box-opa2-a clearfix">
+                    					<i class="box-opa2-icon fl"></i>
+                                        <i class="box-opa2-text fl">美妆特卖</i>
+                                    </a></li>
+            </ul>
+    </div>
+</div>
+<div class="main-2f-banner1">
+	<a href="#"><img src="img/image/dfsasdf1.jpg" /></a>
+</div>
+<div class="main-2f-banner2">
+	<a href="#"><img src="img/image/mmm-2.jpg" /></a>
+</div>
+<div class="main-2f clearfix">
+	<h3 class="fl clearfix"><i class="main-2f-icon1 fl">8F</i><i class="main-2f-icon2 fl">个人美妆</i></h3>
+    <ul class="main-2f1 fl clearfix">
+    		<li class="main-2f1-one fl">
+                    <a href="#" class="main-2f2 main-2f2-1">热门</a>
+                    <ul class="main-2f3 clearfix">
+                    		<li class="one fl"><a href="#"><img src="img/image/sd1.jpg" /></a></li>
+                            <li class="two fl"><a href="#"><img src="img/image/sd2.jpg" /></a></li>
+                            <li class="two three fl"><a href="#"><img src="img/image/sd2.jpg" /></a></li>
+                            <li class="four fl"><a href="#"><img src="img/image/sd3.jpg" /></a></li>
+                            <li class="five fl"><a href="#"><img src="img/image/sd4.jpg" /></a></li>
+                            <li class="six fl"><a href="#"><img src="img/image/sd4.jpg" /></a></li>
+                    </ul>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">国际大牌</a>
+                    <div class="main-2f1-box2 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">国妆名品</a>
+                    <div class="main-2f1-box2 main-2f1-box3 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">个人护理</a>
+                    <div class="main-2f1-box2 main-2f1-box4 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">清洁用品</a>
+                    <div class="main-2f1-box2 main-2f1-box5 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">纸品湿巾</a>
+                    <div class="main-2f1-box2 main-2f1-box6 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">香水彩妆</a>
+                    <div class="main-2f1-box2 main-2f1-box7 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">男士面膜</a>
+                    <div class="main-2f1-box2 main-2f1-box8 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2 last">热销精品</a>
+                    <div class="main-2f1-box2 main-2f1-box9 main-2f3"></div>
+           </li>
+    </ul>
+    <div class="main-2f4 fl">
+    		<a href="#" class="main-2f5"><img src="img/image/5689cfe9Na2097c82.jpg" /></a>
+            <div class="opa1"></div>
+            <div class="top-border"></div>
+            <div class="opa2"></div>
+            <ul class="box-opa1 clearfix">
+            		<li class="fl"><a href="#" class="box-opa1-a">美妆年货囤货买3送一&gt;</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a bottom">美妆年货囤货买3送一&gt;</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1 col">国际馆</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1">国妆馆</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1 ball">国家球馆</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1">国妆馆</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1 col">国际馆</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1">国妆馆</a></li>
+            </ul>
+            <ul class="box-opa2 clearfix">
+            		<li class="fl"><a href="#" class="box-opa2-a clearfix">
+                    					<i class="box-opa2-icon fl"></i>
+                                        <i class="box-opa2-text fl">美妆特卖</i>
+                                    </a></li>
+                   <li class="fl"><a href="#" class="box-opa2-a clearfix">
+                    					<i class="box-opa2-icon fl"></i>
+                                        <i class="box-opa2-text fl">美妆特卖</i>
+                                    </a></li>
+                   <li class="fl"><a href="#" class="box-opa2-a clearfix">
+                    					<i class="box-opa2-icon fl"></i>
+                                        <i class="box-opa2-text fl">美妆特卖</i>
+                                    </a></li>
+                   <li class="fl"><a href="#" class="box-opa2-a clearfix">
+                    					<i class="box-opa2-icon fl"></i>
+                                        <i class="box-opa2-text fl">美妆特卖</i>
+                                    </a></li>
+            </ul>
+    </div>
+</div>
+<div class="main-2f-banner1">
+	<a href="#"><img src="img/image/dfsasdf1.jpg" /></a>
+</div>
+<div class="main-2f-banner2">
+	<a href="#"><img src="img/image/mmm-2.jpg" /></a>
+</div>
+<div class="main-2f clearfix">
+	<h3 class="fl clearfix"><i class="main-2f-icon1 fl">9F</i><i class="main-2f-icon2 fl">个人美妆</i></h3>
+    <ul class="main-2f1 fl clearfix">
+    		<li class="main-2f1-one fl">
+                    <a href="#" class="main-2f2 main-2f2-1">热门</a>
+                    <ul class="main-2f3 clearfix">
+                    		<li class="one fl"><a href="#"><img src="img/image/sd1.jpg" /></a></li>
+                            <li class="two fl"><a href="#"><img src="img/image/sd2.jpg" /></a></li>
+                            <li class="two three fl"><a href="#"><img src="img/image/sd2.jpg" /></a></li>
+                            <li class="four fl"><a href="#"><img src="img/image/sd3.jpg" /></a></li>
+                            <li class="five fl"><a href="#"><img src="img/image/sd4.jpg" /></a></li>
+                            <li class="six fl"><a href="#"><img src="img/image/sd4.jpg" /></a></li>
+                    </ul>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">国际大牌</a>
+                    <div class="main-2f1-box2 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">国妆名品</a>
+                    <div class="main-2f1-box2 main-2f1-box3 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">个人护理</a>
+                    <div class="main-2f1-box2 main-2f1-box4 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">清洁用品</a>
+                    <div class="main-2f1-box2 main-2f1-box5 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">纸品湿巾</a>
+                    <div class="main-2f1-box2 main-2f1-box6 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">香水彩妆</a>
+                    <div class="main-2f1-box2 main-2f1-box7 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">男士面膜</a>
+                    <div class="main-2f1-box2 main-2f1-box8 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2 last">热销精品</a>
+                    <div class="main-2f1-box2 main-2f1-box9 main-2f3"></div>
+           </li>
+    </ul>
+    <div class="main-2f4 fl">
+    		<a href="#" class="main-2f5"><img src="img/image/5689cfe9Na2097c82.jpg" /></a>
+            <div class="opa1"></div>
+            <div class="top-border"></div>
+            <div class="opa2"></div>
+            <ul class="box-opa1 clearfix">
+            		<li class="fl"><a href="#" class="box-opa1-a">美妆年货囤货买3送一&gt;</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a bottom">美妆年货囤货买3送一&gt;</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1 col">国际馆</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1">国妆馆</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1 ball">国家球馆</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1">国妆馆</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1 col">国际馆</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1">国妆馆</a></li>
+            </ul>
+            <ul class="box-opa2 clearfix">
+            		<li class="fl"><a href="#" class="box-opa2-a clearfix">
+                    					<i class="box-opa2-icon fl"></i>
+                                        <i class="box-opa2-text fl">美妆特卖</i>
+                                    </a></li>
+                   <li class="fl"><a href="#" class="box-opa2-a clearfix">
+                    					<i class="box-opa2-icon fl"></i>
+                                        <i class="box-opa2-text fl">美妆特卖</i>
+                                    </a></li>
+                   <li class="fl"><a href="#" class="box-opa2-a clearfix">
+                    					<i class="box-opa2-icon fl"></i>
+                                        <i class="box-opa2-text fl">美妆特卖</i>
+                                    </a></li>
+                   <li class="fl"><a href="#" class="box-opa2-a clearfix">
+                    					<i class="box-opa2-icon fl"></i>
+                                        <i class="box-opa2-text fl">美妆特卖</i>
+                                    </a></li>
+            </ul>
+    </div>
+</div>
+<div class="main-2f-banner1">
+	<a href="#"><img src="img/image/dfsasdf1.jpg" /></a>
+</div>
+<div class="main-2f-banner2">
+	<a href="#"><img src="img/image/mmm-2.jpg" /></a>
+</div>
+<div class="main-2f clearfix">
+	<h3 class="fl clearfix"><i class="main-2f-icon1 fl">10F</i><i class="main-2f-icon2 fl">个人美妆</i></h3>
+    <ul class="main-2f1 fl clearfix">
+    		<li class="main-2f1-one fl">
+                    <a href="#" class="main-2f2 main-2f2-1">热门</a>
+                    <ul class="main-2f3 clearfix">
+                    		<li class="one fl"><a href="#"><img src="img/image/sd1.jpg" /></a></li>
+                            <li class="two fl"><a href="#"><img src="img/image/sd2.jpg" /></a></li>
+                            <li class="two three fl"><a href="#"><img src="img/image/sd2.jpg" /></a></li>
+                            <li class="four fl"><a href="#"><img src="img/image/sd3.jpg" /></a></li>
+                            <li class="five fl"><a href="#"><img src="img/image/sd4.jpg" /></a></li>
+                            <li class="six fl"><a href="#"><img src="img/image/sd4.jpg" /></a></li>
+                    </ul>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">国际大牌</a>
+                    <div class="main-2f1-box2 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">国妆名品</a>
+                    <div class="main-2f1-box2 main-2f1-box3 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">个人护理</a>
+                    <div class="main-2f1-box2 main-2f1-box4 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">清洁用品</a>
+                    <div class="main-2f1-box2 main-2f1-box5 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">纸品湿巾</a>
+                    <div class="main-2f1-box2 main-2f1-box6 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">香水彩妆</a>
+                    <div class="main-2f1-box2 main-2f1-box7 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">男士面膜</a>
+                    <div class="main-2f1-box2 main-2f1-box8 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2 last">热销精品</a>
+                    <div class="main-2f1-box2 main-2f1-box9 main-2f3"></div>
+           </li>
+    </ul>
+    <div class="main-2f4 fl">
+    		<a href="#" class="main-2f5"><img src="img/image/5689cfe9Na2097c82.jpg" /></a>
+            <div class="opa1"></div>
+            <div class="top-border"></div>
+            <div class="opa2"></div>
+            <ul class="box-opa1 clearfix">
+            		<li class="fl"><a href="#" class="box-opa1-a">美妆年货囤货买3送一&gt;</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a bottom">美妆年货囤货买3送一&gt;</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1 col">国际馆</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1">国妆馆</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1 ball">国家球馆</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1">国妆馆</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1 col">国际馆</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1">国妆馆</a></li>
+            </ul>
+            <ul class="box-opa2 clearfix">
+            		<li class="fl"><a href="#" class="box-opa2-a clearfix">
+                    					<i class="box-opa2-icon fl"></i>
+                                        <i class="box-opa2-text fl">美妆特卖</i>
+                                    </a></li>
+                   <li class="fl"><a href="#" class="box-opa2-a clearfix">
+                    					<i class="box-opa2-icon fl"></i>
+                                        <i class="box-opa2-text fl">美妆特卖</i>
+                                    </a></li>
+                   <li class="fl"><a href="#" class="box-opa2-a clearfix">
+                    					<i class="box-opa2-icon fl"></i>
+                                        <i class="box-opa2-text fl">美妆特卖</i>
+                                    </a></li>
+                   <li class="fl"><a href="#" class="box-opa2-a clearfix">
+                    					<i class="box-opa2-icon fl"></i>
+                                        <i class="box-opa2-text fl">美妆特卖</i>
+                                    </a></li>
+            </ul>
+    </div>
+</div>
+<div class="main-2f-banner1">
+	<a href="#"><img src="img/image/dfsasdf1.jpg" /></a>
+</div>
+<div class="main-2f-banner2">
+	<a href="#"><img src="img/image/mmm-2.jpg" /></a>
+</div>
+<div class="main-2f clearfix">
+	<h3 class="fl clearfix"><i class="main-2f-icon1 fl">11F</i><i class="main-2f-icon2 fl">个人美妆</i></h3>
+    <ul class="main-2f1 fl clearfix">
+    		<li class="main-2f1-one fl">
+                    <a href="#" class="main-2f2 main-2f2-1">热门</a>
+                    <ul class="main-2f3 clearfix">
+                    		<li class="one fl"><a href="#"><img src="img/image/sd1.jpg" /></a></li>
+                            <li class="two fl"><a href="#"><img src="img/image/sd2.jpg" /></a></li>
+                            <li class="two three fl"><a href="#"><img src="img/image/sd2.jpg" /></a></li>
+                            <li class="four fl"><a href="#"><img src="img/image/sd3.jpg" /></a></li>
+                            <li class="five fl"><a href="#"><img src="img/image/sd4.jpg" /></a></li>
+                            <li class="six fl"><a href="#"><img src="img/image/sd4.jpg" /></a></li>
+                    </ul>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">国际大牌</a>
+                    <div class="main-2f1-box2 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">国妆名品</a>
+                    <div class="main-2f1-box2 main-2f1-box3 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">个人护理</a>
+                    <div class="main-2f1-box2 main-2f1-box4 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">清洁用品</a>
+                    <div class="main-2f1-box2 main-2f1-box5 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">纸品湿巾</a>
+                    <div class="main-2f1-box2 main-2f1-box6 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">香水彩妆</a>
+                    <div class="main-2f1-box2 main-2f1-box7 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2">男士面膜</a>
+                    <div class="main-2f1-box2 main-2f1-box8 main-2f3"></div>
+           </li>
+           <li class="fl">
+           			<a href="#" class="main-2f2 last">热销精品</a>
+                    <div class="main-2f1-box2 main-2f1-box9 main-2f3"></div>
+           </li>
+    </ul>
+    <div class="main-2f4 fl">
+    		<a href="#" class="main-2f5"><img src="img/image/5689cfe9Na2097c82.jpg" /></a>
+            <div class="opa1"></div>
+            <div class="top-border"></div>
+            <div class="opa2"></div>
+            <ul class="box-opa1 clearfix">
+            		<li class="fl"><a href="#" class="box-opa1-a">美妆年货囤货买3送一&gt;</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a bottom">美妆年货囤货买3送一&gt;</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1 col">国际馆</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1">国妆馆</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1 ball">国家球馆</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1">国妆馆</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1 col">国际馆</a></li>
+                    <li class="fl"><a href="#" class="box-opa1-a1">国妆馆</a></li>
+            </ul>
+            <ul class="box-opa2 clearfix">
+            		<li class="fl"><a href="#" class="box-opa2-a clearfix">
+                    					<i class="box-opa2-icon fl"></i>
+                                        <i class="box-opa2-text fl">美妆特卖</i>
+                                    </a></li>
+                   <li class="fl"><a href="#" class="box-opa2-a clearfix">
+                    					<i class="box-opa2-icon fl"></i>
+                                        <i class="box-opa2-text fl">美妆特卖</i>
+                                    </a></li>
+                   <li class="fl"><a href="#" class="box-opa2-a clearfix">
+                    					<i class="box-opa2-icon fl"></i>
+                                        <i class="box-opa2-text fl">美妆特卖</i>
+                                    </a></li>
+                   <li class="fl"><a href="#" class="box-opa2-a clearfix">
+                    					<i class="box-opa2-icon fl"></i>
+                                        <i class="box-opa2-text fl">美妆特卖</i>
+                                    </a></li>
+            </ul>
+    </div>
+</div>
+<div class="main-2f-banner1">
+	<a href="#"><img src="img/image/dfsasdf1.jpg" /></a>
+</div>
+<div class="tit-nav-last clearfix">
+			<div class="tit-cheap fl">天天低价</div>
+            <div class="tit-cheap1 fl">热门晒单</div>
+</div>
+<ul class="cheap-shop clearfix">
+		<li class="fl"><a href="#" class="cheap-shop1"><img src="img/image/cheap-1.jpg" /></a></li>
+        <li class="fr"><a href="#" class="cheap-shop2"><img src="img/image/cheap33-4.jpg" /></a></li>
+        <li class="fl"><a href="#" class="cheap-shop3"><img src="img/image/cheap1-2.jpg" /></a></li>
+        <li class="fl"><a href="#" class="cheap-shop3"><img src="img/image/cheap1-2.jpg" /></a></li>
+        <li class="fl"><a href="#" class="cheap-shop3 cheap-shop4"><img src="img/image/cheap1-2.jpg" /></a></li>
+        <li class="fl"><a href="#" class="cheap-shop3 cheap-shop4"><img src="img/image/cheap1-2.jpg" /></a></li>
+</ul>
+<div class="last-banner">
+		<div class="last-banner1"><img src="img/image/last-banner5.jpg" /></div>
+</div>
+<div class="service clearfix">
+		<ul class="fl">
+        		<li class="ser-tit">购物指南</li>
+                <li><a href="#" class="ser-tit1">购物流程</a></li>
+                <li><a href="#" class="ser-tit1">购物流程</a></li>
+                <li><a href="#" class="ser-tit1">购物流程</a></li>
+                <li><a href="#" class="ser-tit1">购物流程/团购</a></li>
+                <li><a href="#" class="ser-tit1">购物流程</a></li>
+                <li><a href="#" class="ser-tit1">购物流程</a></li>
+        </ul>
+        <ul class="fl">
+        		<li class="ser-tit">购物指南</li>
+                <li><a href="#" class="ser-tit1">购物流程</a></li>
+                <li><a href="#" class="ser-tit1">购物流程</a></li>
+                <li><a href="#" class="ser-tit1">购物流程</a></li>
+                <li><a href="#" class="ser-tit1">购物流程/团购</a></li>
+                <li><a href="#" class="ser-tit1">购物流程</a></li>
+                <li><a href="#" class="ser-tit1">购物流程</a></li>
+        </ul>
+        <ul class="fl">
+        		<li class="ser-tit">购物指南</li>
+                <li><a href="#" class="ser-tit1">购物流程</a></li>
+                <li><a href="#" class="ser-tit1">购物流程</a></li>
+                <li><a href="#" class="ser-tit1">购物流程</a></li>
+                <li><a href="#" class="ser-tit1">购物流程/团购</a></li>
+                <li><a href="#" class="ser-tit1">购物流程</a></li>
+                <li><a href="#" class="ser-tit1">购物流程</a></li>
+        </ul>
+        <ul class="fl">
+        		<li class="ser-tit">购物指南</li>
+                <li><a href="#" class="ser-tit1">购物流程</a></li>
+                <li><a href="#" class="ser-tit1">购物流程</a></li>
+                <li><a href="#" class="ser-tit1">购物流程</a></li>
+                <li><a href="#" class="ser-tit1">购物流程/团购</a></li>
+                <li><a href="#" class="ser-tit1">购物流程</a></li>
+                <li><a href="#" class="ser-tit1">购物流程</a></li>
+        </ul>
+        <ul class="fl">
+        		<li class="ser-tit">购物指南</li>
+                <li><a href="#" class="ser-tit1">购物流程</a></li>
+                <li><a href="#" class="ser-tit1">购物流程</a></li>
+                <li><a href="#" class="ser-tit1">购物流程</a></li>
+                <li><a href="#" class="ser-tit1">购物流程/团购</a></li>
+                <li><a href="#" class="ser-tit1">购物流程</a></li>
+                <li><a href="#" class="ser-tit1">购物流程</a></li>
+        </ul>
+        <div class="fl">
+        		<h4 class="ser-tit ser-tit2 fl">京东自营覆盖区县</h4>
+                <p class="fl">购物流程购物流程购物流程购物流程流程购物流程购物流程购物流程购物流程</p>
+                <a href="#" class="fr">查看详情&gt;</a>
+        </div>
+</div>
+<ul class="friendlink clearfix">
+		<li class="fl"><a href="#">关于我们</a></li>
+        <li class="fl"><a href="#">关于我们</a></li>
+        <li class="fl"><a href="#">关于我们</a></li>
+        <li class="fl"><a href="#">关于我们</a></li>
+        <li class="fl"><a href="#">关于我们</a></li>
+        <li class="fl"><a href="#">关于我们</a></li>
+        <li class="fl"><a href="#">关于我们</a></li>
+        <li class="fl"><a href="#">关于我们</a></li>
+        <li class="fl"><a href="#">关于我们</a></li>
+        <li class="fl"><a href="#" class="link-a">English Site</a></li>
+        <li class="fl"><a href="#" class="link-a last">English Site</a></li>
+</ul>
+<p class="note1">
+		<a href="#" class="p-a">北京公安局朝阳分局备编案号110105014669</a>
+        <a href="#" class="p-a">北京局备编案号110105014669</a>
+        <a href="#" class="p-a">北京公安局朝阳分局备编案号110105014669</a>
+        <a href="#" class="p-a">北阳分局备编案号110105014669</a>
+</p>
+<p class="note1">
+		<a href="#" class="p-a">北京公安局朝阳分局备编案号110105014669</a>
+        <a href="#" class="p-a">北京局备编案号110105014669</a>
+        <a href="#" class="p-a">北京公安局朝阳分局备编案号110105014669</a>
+        <a href="#" class="p-a">北阳分局备编案号110105014669</a>
+</p>
+<p class="note1">
+		<a href="#" class="p-a">北京公安局朝阳分局备编案号110105014669</a>
+        <a href="#" class="p-a">北京局备编案号110105014669</a>
+        <a href="#" class="p-a">北京公安局朝阳分局备编案号110105014669</a>
+        <a href="#" class="p-a">北阳分局备编案号110105014669</a>
+</p>
+<p class="note2">
+		京东旗下：<a href="#" class="p-a">拍拍网</a>
+        <a href="#" class="p-a">拍拍网</a>
+       <a href="#" class="p-a">拍拍网</a>
+</p>
+<ul class="bot-logo clearfix">
+		<li><a href="#"><img src="img/image/last-logo6.jpg" /></a></li>
+        <li><a href="#"><img src="img/image/last-logo6.jpg" /></a></li>
+        <li><a href="#"><img src="img/image/last-logo6.jpg" /></a></li>
+        <li><a href="#"><img src="img/image/last-logo6.jpg" /></a></li>
+        <li class="lat"><a href="#"><img src="img/image/last-logo7.jpg" /></a></li>
+</ul>
+</body>
+</html>

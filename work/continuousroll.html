@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>无缝轮播图</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        body{
+            background: #000;
+        }
+        #box{
+            width: 600px;
+            height: 400px;
+            margin: 50px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        #ul1{
+            position: relative;
+        }
+        #ul1 li{
+            width: 600px;
+            height: 400px;
+            position: absolute;
+            left: 600px;
+            top: 0;
+        }
+        #ul1 li.active{
+            left: 0;
+        }
+        #ol1{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+        #ol1 li{
+            width: 30px;
+            height: 30px;
+            background: #2acfff;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        #ol1 li.active{
+            background: #fff;
+        }
+        #box a{
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background: rgba(204, 102, 204, 0.8);
+            position: absolute;
+            top: 50%;
+            margin-top: -25px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 30px;
+            transition: .4s all ease;
+            z-index: 99;
+        }
+        #box a:hover{
+            background: #2acfff;
+        }
+        #left{
+            left: 0;
+        }
+        #right{
+            right: 0;
+        }
+    </style>
+    <script src="move1.js"></script>
+    <script>
+        window.onload = function () {
+            var oBox=document.getElementById('box');
+            var oLeft=document.getElementById('left');
+            var oRight=document.getElementById('right');
+            var oUl=document.getElementById('ul1');
+            var aLi=oUl.children;
+            var oOl=document.getElementById('ol1');
+            var aBtn=oOl.children;
+
+            // 右
+            var iNow=0;
+            var width=aLi[0].offsetWidth;
+            oRight.onclick=next;
+            // 左边
+            oLeft.onclick=prev;
+            function next(){
+                // 当前这张走
+                move(aLi[iNow], {left: -width});
+                // 为下一张做准备
+                iNow++;
+                if(iNow>aLi.length-1){
+                    iNow=0;
+                }
+                aLi[iNow].style.left=width+'px';
+                move(aLi[iNow], {left: 0});
+                tab();
+            }
+            function prev(){
+                move(aLi[iNow], {left: width});
+                // 为前一张左准备
+                iNow--;
+                if(iNow<0){
+                    iNow=aLi.length-1;
+                }
+                aLi[iNow].style.left=-width+'px';
+                move(aLi[iNow], {left: 0});
+                tab();
+            }
+            function tab(){
+                for(var i=0; i<aBtn.length; i++){
+                    aBtn[i].className='';
+                }
+                aBtn[iNow].className='active';
+            }
+            // 原点
+            for(var i=0; i<aBtn.length; i++){
+                aBtn[i].index=i;
+                aBtn[i].onclick=function(){
+                    // 左边
+                    if(this.index<iNow){
+                        move(aLi[iNow], {left: width});
+                        aLi[this.index].style.left=-width+'px';
+                        move(aLi[this.index], {left: 0});
+                    // 右边
+                    }else if(this.index>iNow){
+                        move(aLi[iNow], {left: -width});
+                        aLi[this.index].style.left=width+'px';
+                        move(aLi[this.index], {left: 0});
+                    }
+                    iNow=this.index;
+                    tab();
+                };
+            }
+        };
+    </script>
+</head>
+<body>
+    <div id="box">
+        <a href="javascript:;" id="left">←</a>
+        <a href="javascript:;" id="right">→</a>
+        <ul id="ul1">
+            <li class="active"><img src="img2/0.jpg"></li>
+            <li><img src="img2/1.jpg"></li>
+            <li><img src="img2/2.jpg"></li>
+            <li><img src="img2/3.jpg"></li>
+        </ul>
+        <ol id="ol1">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </div>
+</body>
+</html>

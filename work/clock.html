@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>运动时钟</title>
+    <style>
+        #ul{
+            margin:100px auto;
+            overflow: hidden;
+            width: 200px;
+            padding:0;
+            height: 35px;
+        }
+        li{
+            width: 24px;
+            height: 35px;
+            float: left;
+            list-style: none;
+            font-size:30px;
+            position:relative;
+        }
+        img{
+            position:absolute;
+            top:0;
+            left:0;
+        }
+    </style>
+    <script src="move1.js"></script>
+    <script>
+        function toDou(a){
+            if(a<10){
+                return '0'+a;
+            }else{
+                return ''+a;
+            }
+        }
+        window.onload=function(){
+            var oUl=document.getElementById('ul');
+            var aImg=oUl.getElementsByTagName('img');
+            function clock(){
+                var oDate=new Date();
+                var str=toDou(oDate.getHours())+toDou(oDate.getMinutes())+toDou(oDate.getSeconds());
+                for(var i=0;i<aImg.length;i++){
+                    move(aImg[i],{top:-35*str.charAt(i)},{duration:1000,easing:'ease-out'});
+                }
+            }
+            clock();
+            setInterval(clock,1000);
+
+        }
+    </script>
+</head>
+<body>
+<ul id="ul">
+    <li><img src="num.png" alt=""/></li>
+    <li><img src="num.png" alt=""/></li>
+    <li>:</li>
+    <li><img src="num.png" alt=""/></li>
+    <li><img src="num.png" alt=""/></li>
+    <li>:</li>
+    <li><img src="num.png" alt=""/></li>
+    <li><img src="num.png" alt=""/></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>百度糯米</title>
+    <link rel="stylesheet" href="css/bese.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script>
+        window.onload=function(){
+            var oBtn=document.getElementById('nav_btn');
+            var aBtn=oBtn.getElementsByTagName('a');
+            for(var i=0;i<aBtn.length;i++){
+                aBtn[i].onmouseover=function(){
+                    for(var i=0;i<aBtn.length;i++){
+                        aBtn[i].className='';
+                    }
+                    this.className='current';
+                }
+//城市
+                var oCt=document.getElementById('ct_btn')
+                var oCb=document.getElementById('ct_box');
+            }
+
+    </script>
+</head>
+<body>
+
+<!--顶部导航-->
+<div class="top_nav_bg">
+    <div class="top_nav_wrapper clearfix">
+        <ul class="top_nav_l fl">
+            <li>
+                <span>北京</span>
+            </li>
+            <li class="city_box">
+                <a href="#" id="ct_btn">[切换城市]</a>
+                <div class="city" id="ct_box">
+                    <a href="#">北京</a>
+                    <a href="#">上海</a>
+                    <a href="#">杭州</a>
+                    <a href="#">深圳</a>
+                    <a href="#">广州</a>
+                    <a href="#">温州</a>
+                    <a href="#">丽江</a>
+                    <a href="#">河南</a>
+                </div>
+            </li>
+        </ul>
+        <ul class="top_nav_r fr">
+            <li>
+                <a href="#">我的订单</a><span>|</span>
+            </li>
+            <li class="clearfix">
+                <a href="#" class="fl pad_r">我的糯米</a><i class="menu_up fr"></i><span class="fl mt7">|</span>
+            </li>
+            <li>
+                <a href="#">登录</a><span>|</span>
+            </li>
+            <li>
+                <a href="#">注册</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!--logo行-->
+
+<div class="logo_wrapper clearfix">
+    <h1>
+        <a href="#">糯米网</a>
+    </h1>
+    <div class="line"></div>
+    <div class="search clearfix">
+       <div class="search_box clearfix">
+            <input type="text" value="小吃快餐" name="搜索"/>
+            <a href="#" class="btn"><i class="search_icon fl"></i><b class="fl">搜索</b></a>
+        </div>
+        <ul class="menu_name">
+            <li>
+                <a href="#">火锅</a>
+            </li>
+            <li>
+                <a href="#">蛋糕</a>
+            </li>
+            <li>
+                <a href="#">杨国福麻辣烫</a>
+            </li>
+            <li>
+                <a href="#">东方宫中国兰州牛肉拉面</a>
+            </li>
+        </ul>
+    </div>
+    <span class="icon_aq"></span>
+    <p class="lg_font"> 全场随便退独家承诺&gt;</p>
+</div>
+
+<!--主导航-->
+
+<div class="main_bg">
+    <div class="main_wrapper clearfix">
+        <div class="main_l fl">
+            <a href="#">全部团购分类</a>
+            <i class="pos_r"></i>
+        </div>
+        <ul class="main_m fl">
+            <li>
+                <a href="#">首页</a>
+            </li>
+            <li>
+                <a href="#">精选品牌</a>
+            </li>
+            <li>
+                <a href="#">购物</a>
+            </li>
+            <li>
+                <a href="#" class="ps_r">电影
+                    <i class="pos_dz"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">酒店</a>
+            </li>
+            <li>
+                <a href="#">今日新单</a>
+            </li>
+            <li>
+                <a href="#">外卖</a>
+            </li>
+        </ul>
+        <ul class="main_r fl">
+            <li>
+                <a href="#"><i class="down_phone"></i><span>下载手机版</span></a>
+            </li>
+            <li>
+                <a href="#"><span class="ml_14">最近浏览</span><i class="menu_down"></i></a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<!--侧导航和banner-->
+<div class="main_content_bg">
+    <div class="main_content_wrapper clearfix">
+        <div class="sidenav fl">
+            <ul class="clearfix" >
+                <li>
+                    <h2 class="clearfix"><i class="icon_ms"></i><span>美食</span></h2>
+                    <p class="food_name clearfix">
+                        <a href="#">精选品牌</a>
+                        <a href="#"> 自助餐</a>
+                        <a href="#">甜点饮品</a>
+                    </p>
+                </li>
+                <li>
+                    <h2 class="clearfix"><i class="icon_ms"></i><span>美食</span></h2>
+                    <p class="food_name clearfix">
+                        <a href="#">精选品牌</a>
+                        <a href="#"> 自助餐</a>
+                        <a href="#">甜点饮品</a>
+                    </p>
+                </li>
+                <li>
+                    <h2 class="clearfix"><i class="icon_ms"></i><span>美食</span></h2>
+                    <p class="food_name clearfix">
+                        <a href="#">精选品牌</a>
+                        <a href="#"> 自助餐</a>
+                        <a href="#">甜点饮品</a>
+                    </p>
+                </li>
+                <li>
+                    <h2 class="clearfix"><i class="icon_ms"></i><span>美食</span></h2>
+                    <p class="food_name clearfix">
+                        <a href="#">精选品牌</a>
+                        <a href="#"> 自助餐</a>
+                        <a href="#">甜点饮品</a>
+                    </p>
+                </li>
+                <li>
+                    <h2 class="clearfix"><i class="icon_ms"></i><span>美食</span></h2>
+                    <p class="food_name clearfix">
+                        <a href="#">精选品牌</a>
+                        <a href="#"> 自助餐</a>
+                        <a href="#">甜点饮品</a>
+                    </p>
+                </li>
+                <li>
+                    <h2 class="clearfix"><i class="icon_ms"></i><span>美食</span></h2>
+                    <p class="food_name clearfix">
+                        <a href="#">精选品牌</a>
+                        <a href="#"> 自助餐</a>
+                        <a href="#">甜点饮品</a>
+                    </p>
+                </li>
+                <li>
+                    <h2 class="clearfix"><i class="icon_ms"></i><span>美食</span></h2>
+                    <p class="food_name clearfix">
+                        <a href="#">精选品牌</a>
+                        <a href="#"> 自助餐</a>
+                        <a href="#">甜点饮品</a>
+                    </p>
+                </li>
+                <li class="last_sidenav">
+                    <h2 class="clearfix"><i class="icon_ms"></i><span>美食</span></h2>
+                    <p class="food_name clearfix">
+                        <a href="#">精选品牌</a>
+                        <a href="#"> 自助餐</a>
+                        <a href="#">甜点饮品</a>
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="main_ct_r fl">
+            <ul class="clearfix mr22 nav_sm">
+                <li>
+                    <span class="col">热门团购：</span>
+                </li>
+                <li>
+                    <a href="#">电影</a>
+                </li>
+                <li>
+                    <a href="#" class="red">自助餐</a>
+                </li>
+                <li>
+                    <a href="#"> KTV</a>
+                </li>
+                <li>
+                    <a href="#">火锅</a>
+                </li>
+                <li>
+                    <a href="#">蛋糕</a>
+                </li>
+                <li>
+                    <a href="#">小吃快餐</a>
+                </li>
+                <li>
+                    <a href="#">西餐</a>
+                </li>
+                <li>
+                    <a href="#">川菜</a>
+                </li>
+                <li>
+                    <a href="#">家居家纺</a>
+                </li>
+                <li>
+                    <a href="#">烧烤</a>
+                </li>
+                <li>
+                    <a href="#">韩国料理</a>
+                </li>
+            </ul>
+            <div class="line"></div>
+            <ul class="clearfix mr22 nav_sm">
+                <li>
+                    <span class="col">热门团购：</span>
+                </li>
+                <li>
+                    <a href="#">电影</a>
+                </li>
+                <li>
+                    <a href="#" class="red">自助餐</a>
+                </li>
+                <li>
+                    <a href="#"> KTV</a>
+                </li>
+                <li>
+                    <a href="#">火锅</a>
+                </li>
+                <li>
+                    <a href="#">蛋糕</a>
+                </li>
+                <li>
+                    <a href="#">小吃快餐</a>
+                </li>
+                <li>
+                    <a href="#">西餐</a>
+                </li>
+                <li>
+                    <a href="#">川菜</a>
+                </li>
+                <li>
+                    <a href="#">家居家纺</a>
+                </li>
+                <li>
+                    <a href="#">烧烤</a>
+                </li>
+                <li>
+                    <a href="#">韩国料理</a>
+                </li>
+            </ul>
+            <div class="line"></div>
+            <ul class="clearfix mr22 nav_sm">
+                <li>
+                    <span class="col">热门团购：</span>
+                </li>
+                <li>
+                    <a href="#">电影</a>
+                </li>
+                <li>
+                    <a href="#" class="red">自助餐</a>
+                </li>
+                <li>
+                    <a href="#"> KTV</a>
+                </li>
+                <li>
+                    <a href="#">火锅</a>
+                </li>
+                <li>
+                    <a href="#">蛋糕</a>
+                </li>
+                <li>
+                    <a href="#">小吃快餐</a>
+                </li>
+                <li>
+                    <a href="#">西餐</a>
+                </li>
+                <li>
+                    <a href="#">川菜</a>
+                </li>
+                <li>
+                    <a href="#">家居家纺</a>
+                </li>
+                <li>
+                    <a href="#">烧烤</a>
+                </li>
+                <li>
+                    <a href="#">韩国料理</a>
+                </li>
+            </ul>
+            <div class="line"></div>
+            <div class="main_tit clearfix">
+                <h3 class="fl">
+                    <i class="star"></i>
+                    <span class="jx">本周精选</span>
+                </h3>
+                <div class="btn_box fr clearfix " id="nav_btn">
+                    <a href="#" class="current"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                </div>
+            </div>
+            <div class="banner">
+                <a href="#">
+                    <img src="img/banner.jpg" alt="挂了" title="banner"/>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--精选品牌-->
+
+<div class="jx_box_bg">
+    <div class="jx_box_wrapper">
+        <div class="jx_box">
+            <div class="jx_box_tit clearfix">
+                <h3 class="fl">精选品牌</h3>
+                <div class="time fl clearfix">
+                    <span>距开始</span><em><i>00</i><b>:</b><i>22</i><b>:</b><i>00</i></em>
+                </div>
+                <a href="#" class="fr jx_more">更多&gt;</a>
+            </div>
+            <ul class="jx_pt clearfix">
+                <li>
+                    <a href="#"><img src="img/ima_01.jpg" alt="图挂了" title="tp" /></a>
+                    <p class="pt_tit">
+                        百叶居  <span>百叶居75元</span>
+                    </p>
+                    <p class="price">
+                        <span><b>￥</b>55</span><i>价值<del>100</del></i>
+                    </p>
+                </li>
+                <li>
+                    <a href="#"><img src="img/ima_01.jpg" alt="图挂了" title="tp" /></a>
+                    <p class="pt_tit">
+                        百叶居  <span>百叶居75元</span>
+                    </p>
+                    <p class="price">
+                        <span><b>￥</b>55</span><i>价值<del>100</del></i>
+                    </p>
+                </li>
+                <li>
+                    <a href="#"><img src="img/ima_01.jpg" alt="图挂了" title="tp" /></a>
+                    <p class="pt_tit">
+                        百叶居  <span>百叶居75元</span>
+                    </p>
+                    <p class="price">
+                        <span><b>￥</b>55</span><i>价值<del>100</del></i>
+                    </p>
+                </li>
+                <li>
+                    <img src="img/ima_01.jpg" alt="图挂了" title="tp" />
+                    <p class="pt_tit">
+                        百叶居  <span>百叶居75元</span>
+                    </p>
+                    <p class="price">
+                        <span><b>￥</b>55</span><i>价值<del>100</del></i>
+                    </p>
+                </li>
+            </ul>
+
+        </div>
+        <div class="jx_bottom clearfix">
+            <ul class="jx_bottom_l fl">
+                <li>
+                    <a href="#" class="pink_col">默认</a>
+                </li>
+                <li class="clearfix">
+                    <a href="#" class="fl">销量</a><i class="down_menu fl"></i>
+                </li>
+                <li class="clearfix">
+                    <a href="#" class="fl">价格</a><i class="dp_menu fl"></i>
+                </li>
+                <li class="clearfix">
+                    <a href="#"  class="fl">折扣</a><i class="up_menu fl"></i>
+                </li>
+                <li class="clearfix">
+                    <a href="#"  class="fl">最新发布</a><i class="up_menu fl"></i>
+                </li>
+            </ul>
+            <ul class="jx_bottom_m fl">
+                <li class="clearfix">
+                    <input type="checkbox" name="btn" value="按钮" class="fl" />
+                    <a href="#" class="fl">免预约</a>
+                </li>
+                <li class="clearfix">
+                    <input type="checkbox" name="btn" value="按钮" class="fl" />
+                    <a href="#" class="fl">代金劵</a>
+                </li>
+                <li class="clearfix">
+                    <input type="checkbox" name="btn" value="按钮" class="fl" />
+                    <a href="#" class="fl">全网低价</a>
+                    <i class="hot_jx"></i>
+                </li>
+            </ul>
+            <ul class="jx_bottom_r fr">
+                <li>
+                    <i class="l_arrow fl"></i><a href="#" class="fl glad">上一页</a>
+                </li>
+                <li>
+                    <a href="#"><span class="col_w_red">1</span>/494</a>
+                </li>
+                <li>
+                    <a href="#" class="fl clear_mr">下一页</a> <i class="r_arrow fl"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--食物产品-->
+<div class="food_bg">
+    <div class="food_wrapper clearfix">
+        <ul class="food_l fl">
+            <li>
+                <a href="#"><img src="img/img_02.jpg" alt="图挂了" title="tp" /></a>
+                <div class="bor_rl">
+                    <h4>
+                        <a href="#">【多店通用】吉野家】</a>
+                    </h4>
+                    <p class="sbj_col">
+                        三杯鸡(含米饭)！入味美鸡肉，精心制作，美味不容错过
+                    </p>
+                    <p class="price">
+                        <span><b>￥</b>14.5</span><i>价值<del>99</del></i>
+                    </p>
+                    <p class="tg_num" >3974人已团购</p>
+                </div>
+                <div class="pos_tp"></div>
+                <div class="pos_bt"></div>
+            </li>
+            <li>
+                <a href="#"><img src="img/img_02.jpg" alt="图挂了" title="tp" /></a>
+                <div class="bor_rl">
+                    <h4>
+                        <a href="#">【多店通用】吉野家】</a>
+                    </h4>
+                    <p class="sbj_col">
+                        三杯鸡(含米饭)！入味美鸡肉，精心制作，美味不容错过
+                    </p>
+                    <p class="price">
+                        <span><b>￥</b>14.5</span><i>价值<del>99</del></i>
+                    </p>
+                    <p class="tg_num" >3974人已团购</p>
+                </div>
+                <div class="pos_tp"></div>
+                <div class="pos_bt"></div>
+            </li>
+            <li>
+                <a href="#"><img src="img/img_02.jpg" alt="图挂了" title="tp" /></a>
+                <div class="bor_rl">
+                    <h4>
+                        <a href="#">【多店通用】吉野家】</a>
+                    </h4>
+                    <p class="sbj_col">
+                        三杯鸡(含米饭)！入味美鸡肉，精心制作，美味不容错过
+                    </p>
+                    <p class="price">
+                        <span><b>￥</b>14.5</span><i>价值<del>99</del></i>
+                    </p>
+                    <p class="tg_num" >3974人已团购</p>
+                </div>
+                <div class="pos_tp"></div>
+                <div class="pos_bt"></div>
+            </li>
+            <li>
+                <a href="#"><img src="img/img_02.jpg" alt="图挂了" title="tp" /></a>
+                <div class="bor_rl">
+                    <h4>
+                        <a href="#">【多店通用】吉野家】</a>
+                    </h4>
+                    <p class="sbj_col">
+                        三杯鸡(含米饭)！入味美鸡肉，精心制作，美味不容错过
+                    </p>
+                    <p class="price">
+                        <span><b>￥</b>14.5</span><i>价值<del>99</del></i>
+                    </p>
+                    <p class="tg_num" >3974人已团购</p>
+                </div>
+                <div class="pos_tp"></div>
+                <div class="pos_bt"></div>
+            </li>
+            <li>
+                <a href="#"><img src="img/img_02.jpg" alt="图挂了" title="tp" /></a>
+                <div class="bor_rl">
+                    <h4>
+                        <a href="#">【多店通用】吉野家】</a>
+                    </h4>
+                    <p class="sbj_col">
+                        三杯鸡(含米饭)！入味美鸡肉，精心制作，美味不容错过
+                    </p>
+                    <p class="price">
+                        <span><b>￥</b>14.5</span><i>价值<del>99</del></i>
+                    </p>
+                    <p class="tg_num" >3974人已团购</p>
+                </div>
+                <div class="pos_tp"></div>
+                <div class="pos_bt"></div>
+            </li>
+            <li>
+                <a href="#"><img src="img/img_02.jpg" alt="图挂了" title="tp" /></a>
+                <div class="bor_rl">
+                    <h4>
+                        <a href="#">【多店通用】吉野家】</a>
+                    </h4>
+                    <p class="sbj_col">
+                        三杯鸡(含米饭)！入味美鸡肉，精心制作，美味不容错过
+                    </p>
+                    <p class="price">
+                        <span><b>￥</b>14.5</span><i>价值<del>99</del></i>
+                    </p>
+                    <p class="tg_num" >3974人已团购</p>
+                </div>
+                <div class="pos_tp"></div>
+                <div class="pos_bt"></div>
+            </li>
+            <li>
+                <a href="#"><img src="img/img_02.jpg" alt="图挂了" title="tp" /></a>
+                <div class="bor_rl">
+                    <h4>
+                        <a href="#">【多店通用】吉野家】</a>
+                    </h4>
+                    <p class="sbj_col">
+                        三杯鸡(含米饭)！入味美鸡肉，精心制作，美味不容错过
+                    </p>
+                    <p class="price">
+                        <span><b>￥</b>14.5</span><i>价值<del>99</del></i>
+                    </p>
+                    <p class="tg_num" >3974人已团购</p>
+                </div>
+                <div class="pos_tp"></div>
+                <div class="pos_bt"></div>
+            </li>
+            <li>
+                <a href="#"><img src="img/img_02.jpg" alt="图挂了" title="tp" /></a>
+                <div class="bor_rl">
+                    <h4>
+                        <a href="#">【多店通用】吉野家】</a>
+                    </h4>
+                    <p class="sbj_col">
+                        三杯鸡(含米饭)！入味美鸡肉，精心制作，美味不容错过
+                    </p>
+                    <p class="price">
+                        <span><b>￥</b>14.5</span><i>价值<del>99</del></i>
+                    </p>
+                    <p class="tg_num" >3974人已团购</p>
+                </div>
+                <div class="pos_tp"></div>
+                <div class="pos_bt"></div>
+            </li>
+            <li>
+                <a href="#"><img src="img/img_02.jpg" alt="图挂了" title="tp" /></a>
+                <div class="bor_rl">
+                    <h4>
+                        <a href="#">【多店通用】吉野家】</a>
+                    </h4>
+                    <p class="sbj_col">
+                        三杯鸡(含米饭)！入味美鸡肉，精心制作，美味不容错过
+                    </p>
+                    <p class="price">
+                        <span><b>￥</b>14.5</span><i>价值<del>99</del></i>
+                    </p>
+                    <p class="tg_num" >3974人已团购</p>
+                </div>
+                <div class="pos_tp"></div>
+                <div class="pos_bt"></div>
+            </li>
+            <li>
+                <a href="#"><img src="img/img_02.jpg" alt="图挂了" title="tp" /></a>
+                <div class="bor_rl">
+                    <h4>
+                        <a href="#">【多店通用】吉野家】</a>
+                    </h4>
+                    <p class="sbj_col">
+                        三杯鸡(含米饭)！入味美鸡肉，精心制作，美味不容错过
+                    </p>
+                    <p class="price">
+                        <span><b>￥</b>14.5</span><i>价值<del>99</del></i>
+                    </p>
+                    <p class="tg_num" >3974人已团购</p>
+                </div>
+                <div class="pos_tp"></div>
+                <div class="pos_bt"></div>
+            </li>
+        </ul>
+        <div class="food_r fr">
+            <ul class="clearfix">
+                <li>
+                    <a href="#">
+                        <img src="img/img_04.jpg" alt="图挂了" title="很好" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/img_05.jpg" alt="图挂了" title="很好" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/img_06.jpg" alt="图挂了" title="很好" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/img_07.jpg" alt="图挂了" title="很好" />
+                    </a>
+                </li>
+            </ul>
+            <h3>热门专题</h3>
+            <div class="hot_box clearfix">
+                <span class="fl icon_hot"></span>
+                <div class="hot_font fl">
+                    <p class="f_big">热辣火锅</p>
+                    <p class="f_sm">从嘴暖到心</p>
+                    <p class="f_col"><i>2706614</i>人团购</p>
+                </div>
+            </div>
+            <div class="hot_box clearfix">
+                <span class="fl icon_hot"></span>
+                <div class="hot_font fl">
+                    <p class="f_big">热辣火锅</p>
+                    <p class="f_sm">从嘴暖到心</p>
+                    <p class="f_col"><i>2706614</i>人团购</p>
+                </div>
+            </div>
+            <div class="hot_box clearfix">
+                <span class="fl icon_hot"></span>
+                <div class="hot_font fl">
+                    <p class="f_big">热辣火锅</p>
+                    <p class="f_sm">从嘴暖到心</p>
+                    <p class="f_col"><i>2706614</i>人团购</p>
+                </div>
+            </div>
+            <div class="hot_box clearfix">
+                <span class="fl icon_hot"></span>
+                <div class="hot_font fl">
+                    <p class="f_big">热辣火锅</p>
+                    <p class="f_sm">从嘴暖到心</p>
+                    <p class="f_col"><i>2706614</i>人团购</p>
+                </div>
+            </div>
+            <div class="hot_box clear_bt clearfix">
+                <span class="fl icon_hot"></span>
+                <div class="hot_font fl ">
+                    <p class="f_big">热辣火锅</p>
+                    <p class="f_sm">从嘴暖到心</p>
+                    <p class="f_col"><i>2706614</i>人团购</p>
+                </div>
+            </div>
+            <h3 class="hot_list">热门排行榜</h3>
+            <ul class="cofe">
+                <li>
+                    <a href="#"><img src="img/img_08.jpg" alt="图挂了" title="tp" /></a>
+                    <div class="cofe_box">
+                        <h4>
+                            <a href="#">【COSTA COFFEE】手调类饮品</a>
+                        </h4>
+                        <p class="cofe_it">
+                            1杯！英伦第一品牌，7城联动
+                        </p>
+                        <p class="price_cofe clearfix">
+                            <span class="fl"><b>￥</b>25</span><i class="fr">每天<span>13974</span>人已团购</i>
+                        </p>
+                    </div>
+                    <div class="cofe_pos"></div>
+                </li>
+                <li>
+                    <a href="#"><img src="img/img_08.jpg" alt="图挂了" title="tp" /></a>
+                    <div class="cofe_box">
+                        <h4>
+                            <a href="#">【COSTA COFFEE】手调类饮品</a>
+                        </h4>
+                        <p class="cofe_it">
+                            1杯！英伦第一品牌，7城联动
+                        </p>
+                        <p class="price_cofe clearfix">
+                            <span class="fl"><b>￥</b>25</span><i class="fr">每天<span>13974</span>人已团购</i>
+                        </p>
+                    </div>
+                    <div class="cofe_pos"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<!--预览食品-->
+
+<div class="yl_food_bg">
+    <div class="yl_food_wrapper">
+        <ul class="yl_food clearfix">
+            <li>
+            <a href="#"><img src="img/img_13.jpg" alt="图挂了" title="tp" /></a>
+            <div class="bor_rl">
+                <h4>
+                    <a href="#">【北太平庄】北太平庄</a>
+                </h4>
+                <p class="sbj_col">
+                    单人电影票(含3D)！豪华音响设备，震撼试听想，服务周到，快来欣赏！
+                </p>
+                <p class="price">
+                    <span><b>￥</b>14.5</span><i>价值<del>99</del></i>
+                </p>
+                <p class="tg_num" >3974人已团购</p>
+            </div>
+            <div class="pos_tp"></div>
+            <div class="pos_bt"></div>
+        </li>
+            <li>
+                <a href="#"><img src="img/img_13.jpg" alt="图挂了" title="tp" /></a>
+                <div class="bor_rl">
+                    <h4>
+                        <a href="#">【北太平庄】北太平庄</a>
+                    </h4>
+                    <p class="sbj_col">
+                        单人电影票(含3D)！豪华音响设备，震撼试听想，服务周到，快来欣赏！
+                    </p>
+                    <p class="price">
+                        <span><b>￥</b>14.5</span><i>价值<del>99</del></i>
+                    </p>
+                    <p class="tg_num" >3974人已团购</p>
+                </div>
+                <div class="pos_tp"></div>
+                <div class="pos_bt"></div>
+            </li>
+            <li>
+                <a href="#"><img src="img/img_13.jpg" alt="图挂了" title="tp" /></a>
+                <div class="bor_rl">
+                    <h4>
+                        <a href="#">【北太平庄】北太平庄</a>
+                    </h4>
+                    <p class="sbj_col">
+                        单人电影票(含3D)！豪华音响设备，震撼试听想，服务周到，快来欣赏！
+                    </p>
+                    <p class="price">
+                        <span><b>￥</b>14.5</span><i>价值<del>99</del></i>
+                    </p>
+                    <p class="tg_num" >3974人已团购</p>
+                </div>
+                <div class="pos_tp"></div>
+                <div class="pos_bt"></div>
+            </li>
+            <li>
+                <a href="#"><img src="img/img_13.jpg" alt="图挂了" title="tp" /></a>
+                <div class="bor_rl">
+                    <h4>
+                        <a href="#">【北太平庄】北太平庄</a>
+                    </h4>
+                    <p class="sbj_col">
+                        单人电影票(含3D)！豪华音响设备，震撼试听想，服务周到，快来欣赏！
+                    </p>
+                    <p class="price">
+                        <span><b>￥</b>14.5</span><i>价值<del>99</del></i>
+                    </p>
+                    <p class="tg_num" >3974人已团购</p>
+                </div>
+                <div class="pos_tp"></div>
+                <div class="pos_bt"></div>
+            </li>
+            <li>
+                <a href="#"><img src="img/img_13.jpg" alt="图挂了" title="tp" /></a>
+                <div class="bor_rl">
+                    <h4>
+                        <a href="#">【北太平庄】北太平庄</a>
+                    </h4>
+                    <p class="sbj_col">
+                        单人电影票(含3D)！豪华音响设备，震撼试听想，服务周到，快来欣赏！
+                    </p>
+                    <p class="price">
+                        <span><b>￥</b>14.5</span><i>价值<del>99</del></i>
+                    </p>
+                    <p class="tg_num" >3974人已团购</p>
+                </div>
+                <div class="pos_tp"></div>
+                <div class="pos_bt"></div>
+            </li>
+            <li>
+                <a href="#"><img src="img/img_13.jpg" alt="图挂了" title="tp" /></a>
+                <div class="bor_rl">
+                    <h4>
+                        <a href="#">【北太平庄】北太平庄</a>
+                    </h4>
+                    <p class="sbj_col">
+                        单人电影票(含3D)！豪华音响设备，震撼试听想，服务周到，快来欣赏！
+                    </p>
+                    <p class="price">
+                        <span><b>￥</b>14.5</span><i>价值<del>99</del></i>
+                    </p>
+                    <p class="tg_num" >3974人已团购</p>
+                </div>
+                <div class="pos_tp"></div>
+                <div class="pos_bt"></div>
+            </li>
+            <li>
+                <a href="#"><img src="img/img_13.jpg" alt="图挂了" title="tp" /></a>
+                <div class="bor_rl">
+                    <h4>
+                        <a href="#">【北太平庄】北太平庄</a>
+                    </h4>
+                    <p class="sbj_col">
+                        单人电影票(含3D)！豪华音响设备，震撼试听想，服务周到，快来欣赏！
+                    </p>
+                    <p class="price">
+                        <span><b>￥</b>14.5</span><i>价值<del>99</del></i>
+                    </p>
+                    <p class="tg_num" >3974人已团购</p>
+                </div>
+                <div class="pos_tp"></div>
+                <div class="pos_bt"></div>
+            </li>
+            <li>
+                <a href="#"><img src="img/img_13.jpg" alt="图挂了" title="tp" /></a>
+                <div class="bor_rl">
+                    <h4>
+                        <a href="#">【北太平庄】北太平庄</a>
+                    </h4>
+                    <p class="sbj_col">
+                        单人电影票(含3D)！豪华音响设备，震撼试听想，服务周到，快来欣赏！
+                    </p>
+                    <p class="price">
+                        <span><b>￥</b>14.5</span><i>价值<del>99</del></i>
+                    </p>
+                    <p class="tg_num" >3974人已团购</p>
+                </div>
+                <div class="pos_tp"></div>
+                <div class="pos_bt"></div>
+            </li>
+            <li>
+                <a href="#"><img src="img/img_13.jpg" alt="图挂了" title="tp" /></a>
+                <div class="bor_rl">
+                    <h4>
+                        <a href="#">【北太平庄】北太平庄</a>
+                    </h4>
+                    <p class="sbj_col">
+                        单人电影票(含3D)！豪华音响设备，震撼试听想，服务周到，快来欣赏！
+                    </p>
+                    <p class="price">
+                        <span><b>￥</b>14.5</span><i>价值<del>99</del></i>
+                    </p>
+                    <p class="tg_num" >3974人已团购</p>
+                </div>
+                <div class="pos_tp"></div>
+                <div class="pos_bt"></div>
+            </li>
+        </ul>
+        <div class="web_num clearfix">
+            <span class="all_num fl">共 <i class="num_col">44439</i> 条/每页 90 条</span>
+            <ul class="num fl">
+                <li>
+                    <a href="#">1</a>
+                </li>
+                <li>
+                    <a href="#">2</a>
+                </li>
+                <li>
+                    <a href="#">3</a>
+                </li>
+                <li>
+                    <a href="#">4</a>
+                </li>
+                <li>
+                    <a href="#">5</a>
+                </li>
+                <li>
+                    <a href="#">6</a>
+                </li>
+                <li>
+                    <a href="#">7</a>
+                </li>
+                <li>
+                    <a href="#">8</a>
+                </li>
+                <li>
+                    <a href="#">9</a>
+                </li>
+                <li>
+                    <a href="#">10</a>
+                </li>
+                <li>
+                    <a href="#" class="last_web"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--页脚-->
+<div class="footer_bg">
+    <div class="footer_wrapper clearfix">
+        <dl>
+            <dt>用户帮助</dt>
+            <dd>
+                <a href="#">常见团购问题</a>
+            </dd>
+            <dd>
+                <a href="#">开放API</a>
+            </dd>
+            <dd>
+                <a href="#">站点地图</a>
+            </dd>
+        </dl>
+        <dl>
+            <dt>手机百度助手</dt>
+            <dd>
+                <a href="#">百度糯米触屏版</a>
+            </dd>
+            <dd>
+                <a href="#">下载手机版</a>
+            </dd>
+        </dl>
+        <dl>
+            <dt>商务合作</dt>
+            <dd>
+                <a href="#">友情链接</a>
+            </dd>
+            <dd>
+                <a href="#">市场合作</a>
+            </dd>
+            <dd>
+                <a href="#">公司信息</a>
+            </dd>
+        </dl>
+        <dl>
+            <dt>关于百度糯米</dt>
+            <dd>
+                <a href="#">百度糯米新浪微博</a>
+            </dd>
+            <dd>
+                <a href="#">违规投诉&廉政举报</a>
+            </dd>
+            <dd>
+                <a href="#">廉政反馈</a>
+            </dd>
+        </dl>
+        <div class="lianxi_we fl">
+            <span class="phone_num clearfix"><i class="fl"></i><em class="fl">4006-888-887</em></span>
+            <p class="week">周一至周日 9:00-22:00 客服电话 免长途费</p>
+            <a href="#">
+                <img src="img/img_09.jpg" alt="图挂了" title="大" />
+            </a>
+        </div>
+    </div>
+    <div class="copyright_wrapper">
+        <div class="copyright">
+            <ul class="clearfix">
+                <li>
+                    <a href="#">
+                    <img src="img/img_10.jpg" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/img_11.jpg" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/img_12.jpg" />
+                    </a>
+                </li>
+            </ul>
+            <p>©2015 nuomi.com  京ICP证030173号  京公网安备11010802014106号  互联网药品信息服务资格证编号（京-经营性-2011-0009）</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

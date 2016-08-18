@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>苹果菜单效果模拟</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #box{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+        #box img{
+            width: 64px;
+        }
+    </style>
+    <script>
+        function getPos(obj){
+            var l=0;
+            var t=0;
+            while(obj){
+                l+=obj.offsetLeft;
+                t+=obj.offsetTop;
+
+                obj=obj.offsetParent;
+            }
+            return {left: l, top: t};
+        }
+        window.onload = function () {
+            var oBox=document.getElementById('box');
+            var aImg=oBox.children;
+            var aInput=document.getElementsByTagName('input');
+
+            document.onmousemove=function(ev){
+                var oEvent=ev || event;
+
+                for(var i=0; i<aImg.length; i++){
+                    // left差
+                    var a=getPos(aImg[i]).left+aImg[i].offsetWidth/2-oEvent.clientX;
+                    // top差
+                    var b=getPos(aImg[i]).top+aImg[i].offsetHeight/2-oEvent.clientY;
+                    // 鼠标距离中心点的距离
+                    var c=Math.sqrt(a*a+b*b);
+                    // 比例   500：感应距离
+                    var scale=1-c/500;
+                    scale<0.5 && (scale=0.5);
+                    aImg[i].style.width=128*scale+'px';
+                    aInput[i].value=scale;
+                }
+            };
+        };
+    </script>
+</head>
+<body>
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <div id="box">
+        <img src="img3/1.png">
+        <img src="img3/2.png">
+        <img src="img3/3.png">
+        <img src="img3/4.png">
+        <img src="img3/5.png">
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+.bf-imge{ width: 980px;height: 101px; margin: 0 auto;padding-bottom: 40px;}
+.bfnav{height: 48px; width: 980px; margin: 0 auto; border-bottom: 2px solid #8ac024;position: relative; margin-bottom: 28px;}
+.bfnav h3{background: url(../img/bf-aiqiyi-3.jpg) no-repeat 0 7px;padding-left: 18px; font-size: 28px; color:#8ac024;}
+.bfnav h3 a{color:#8ac024;font-size: 15px;}
+.bfnav1{height: 16px; position: absolute;left: 174px;bottom: 12px;}
+.bfnav1 li a{padding: 0 15px; font-size: 15px;}
+li:hover a{color:#8ac024;}
+.bfnav2{width: 190px; height: 41px; border: 1px solid #ccc; position: absolute;right:0;bottom: 2px;background: url(../img/cbf-5.jpg) 160px 0 no-repeat;padding: 3px 5px;}
+.bfnav2 p{font-size: 14px; color: #8ac024;}
+.bfnav2 span{font-size:8px;color: #666;}
+.bfcontent{height: 376px;width: 980px; margin:0 auto;position: relative;}
+.bf-c1{width: 381px; height: 326px;background: #f2f2f2;position: absolute;left:0;top: 0;}
+.bc11{padding-left: 5px;font-size: 14px; color: #000;line-height:30px;}
+.bc12{padding-left: 5px; font-size: 12px; color: #666;line-height:21px;}
+.bf-c2{width: 580px; height: 326px;position:absolute;top:0; right: 0;}
+.bf-c2 li{width: 180px; height: 156px;background: #f2f2f2;margin-right: 13px;margin-bottom: 16px;}
+.bc-c2 .bc-c22{margin-right: 0;}
+.bfe11{font-size: 13px;color: #000;line-height:25px;}
+.bf-content2{width: 980px; height: 326px; margin: 0 auto; margin-bottom: 30px;}
+.bf-content2 li{width:180px;height: 156px; background: #f2f2f2; margin-right:20px;margin-bottom: 10px;}
+.bf-content2 .bfcc{margin-right: 0;}
+.bf-content2 .bcff0{background: #76b300; color: #fff;font-size: 22px; line-height: 156px; text-align: center;}
+.bf-content3{width: 926px; height: 136px;border: 1px solid #8ac024; margin: 0 auto;padding: 12px 27px;margin-bottom: 50px; position: relative;}
+.bf-content3 li{margin-right: 17px;}
+.bf-content3 .cbf009{margin-right: 0;}
+.bf-content3 .cbf001{margin-right: 0; width: 84px; height: 24px;background: #8ac024;position: absolute;left:0;top :-25px; line-height: 24px; text-align: center;font-size: 12px;font-family: 'Î¢ÈíÑÅºÚ';color:#fff;}
+.cbf002{margin-right: 0;position: absolute;left:0;top :68px;}
+.cbf003{margin-right: 0;position: absolute;right:-19px;top :68px;}

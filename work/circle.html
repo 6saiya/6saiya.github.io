@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>圆形运动</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #box{
+            width: 300px;
+            height: 300px;
+            border: 1px solid #000;
+            border-radius: 50%;
+            margin: 50px auto;
+            position: relative;
+        }
+        #box span{
+            width: 50px;
+            height: 50px;
+            background: red;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            margin: -25px 0 0 -25px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oBox=document.getElementById('box');
+            var oSpan=oBox.children[0];
+
+            var N=15;
+            for(var i=0; i<N; i++){
+                var oSpan=document.createElement('span');
+                oBox.appendChild(oSpan);
+            }
+            var aSpan=oBox.children;
+            var bFlag=true;
+            oBox.onclick=function(){
+                if(bFlag){
+                    for(var i=0; i<aSpan.length; i++){
+                        var d=360/N*i;
+                        cirMove(aSpan[i], d);
+                    }
+                }else{
+                    for(var i=0; i<aSpan.length; i++){
+                        cirMove(aSpan[i], 0);
+                    }
+                }
+                bFlag=!bFlag;
+            };
+
+            var R=oBox.offsetWidth/2;
+            function cirMove(obj, iTarget){
+                // 角度
+                obj.a=obj.a || 0;
+                var start=obj.a;
+                var dis=iTarget-start;
+
+                var count=Math.floor(1000/30);
+                var n=0;
+                clearInterval(obj.timer);
+                obj.timer=setInterval(function(){
+                    n++;
+
+                    var a=n/count;
+                    var cur=start+dis*a;
+                    // 更新角度
+                    obj.a=cur;
+                    var x=R+R*Math.sin(cur*Math.PI/180);
+                    var y=R-R*Math.cos(cur*Math.PI/180);
+                    obj.style.left=x+'px';
+                    obj.style.top=y+'px';
+                    if(n==count){
+                        clearInterval(obj.timer);
+                    }
+                }, 30);
+            }
+        };
+    </script>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>

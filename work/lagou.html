@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拉钩网划入效果</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #ul1{
+            width: 680px;
+            margin: 50px auto;
+        }
+        #ul1 li{
+            width: 150px;
+            height: 150px;
+            float: left;
+            margin: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        #ul1 li img{
+            width: 100%;
+        }
+        #ul1 li span{
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 0, 0, .6);
+            position: absolute;
+            left: 200px;
+            top: 0;
+            color: #fff;
+            font-size: 50px;
+            text-align: center;
+            line-height: 150px;
+        }
+    </style>
+    <script src="move1.js"></script>
+    <script>
+        function hoverDir(obj, ev){
+            var x=obj.offsetLeft+obj.offsetWidth/2-ev.clientX;
+            var y=obj.offsetTop+obj.offsetHeight/2-ev.clientY;
+
+            return Math.round((Math.atan2(y, x)*180/Math.PI+180)/90)%4;
+        }
+        window.onload = function () {
+            var oUl=document.getElementById('ul1');
+            var aLi=oUl.children;
+
+            for(var i=0; i<aLi.length; i++){
+                aLi[i].onmouseenter=function(ev){
+                    var oEvent=ev || event;
+                    var n=hoverDir(this, oEvent);
+                    var oSpan=this.children[1];
+                    switch(n){
+                        case 0:
+                            oSpan.style.left='200px';
+                            oSpan.style.top=0;
+                            break;
+                        case 1:
+                            oSpan.style.left=0;
+                            oSpan.style.top='200px';
+                            break;
+                        case 2:
+                            oSpan.style.left='-200px';
+                            oSpan.style.top=0;
+                            break;
+                        case 3:
+                            oSpan.style.left=0;
+                            oSpan.style.top='-200px';
+                            break;
+                    }
+                    move(oSpan, {left: 0, top: 0});
+                };
+                aLi[i].onmouseleave=function(ev){
+                    var oEvent=ev || event;
+                    var n=hoverDir(this, oEvent);
+
+                    var oSpan=this.children[1];
+                    switch(n){
+                        case 0:
+                            move(oSpan, {left: 200, top: 0});
+                            break;
+                        case 1:
+                            move(oSpan, {left: 0, top: 200});
+                            break;
+                        case 2:
+                            move(oSpan, {left: -200, top: 0});
+                            break;
+                        case 3:
+                            move(oSpan, {left: 0, top: -200});
+                            break;
+                    }
+                };
+            }
+        };
+    </script>
+</head>
+<body>
+    <ul id="ul1">
+        <li><img src="cat/1.jpg"><span>猫一</span></li>
+        <li><img src="cat/2.jpg"><span>猫二</span></li>
+        <li><img src="cat/3.jpg"><span>猫三</span></li>
+        <li><img src="cat/4.jpg"><span>猫四</span></li>
+        <li><img src="cat/5.jpg"><span>猫五</span></li>
+        <li><img src="cat/6.jpg"><span>猫六</span></li>
+        <li><img src="cat/7.jpg"><span>猫七</span></li>
+        <li><img src="cat/8.jpg"><span>猫八</span></li>
+    </ul>
+</body>
+</html>

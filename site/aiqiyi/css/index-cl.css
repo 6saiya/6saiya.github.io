@@ -1,0 +1,61 @@
+*{font-family:"微软雅黑";}
+.cl-focal{height:455px; width:980px; margin:0 auto;}
+.cl-focal-l{width:410px; height:455px;}
+.cl-focal-top{width:382px; height:34px; border-bottom:2px #85ba4d solid; padding-top:30px; overflow:hidden;}
+.cl-focal-top .tit a{font-size:24px; color:#699f00; font-weight:normal;}
+.cl-focal-top .tit span{padding-left:8px;}
+.cl-focal-top .un{margin-top:5px;}
+.cl-focal-bot{width:400px; height:389px;}
+.cl-focal-bot1 a{display:block; font-size:18px; text-align:center; padding-top:12px; padding-bottom:10px;}
+.cl-new a{font-size:16px; line-height:32px; color:#333333;}
+.cl-new img{margin-top:9px; margin-right:6px;}
+a:hover{color:#699f00;}
+.cl-focal-foot1{width:180px; height:126px; padding-top:10px; margin-right:20px;}
+.cl-focal-foot2{width:180px; height:126px;  padding-top:10px;}
+.cl-focal-foot1 p,.cl-focal-foot2 p{ text-align:center; background:#f2f2f2; line-height:30px;}
+.cl-focal-m{width:380px; height:455px;  overflow:hidden;}
+.cl-focal-m1{width:380px; height:252px; margin-top:24px; margin-bottom:10px;}
+.cl-focal-m2{width:380px; height:175px;}
+.cl-focal-m2 a{font-size:16px; line-height:34px;}
+.cl-focal-m2 span{width:14px; height:13px; background:url(../img-cl/cl-new.jpg) no-repeat; float:left; margin-top:12px; margin-right:8px;}
+.cl-focal-r{width:180px; height:455px; padding-left:10px;}
+.cl-focal-r1{width:180px; height:126px; margin-top:24px;}
+.cl-focal-r2{width:180px; height:126px; margin-top:25px;}
+.cl-focal-r3{width:180px; height:126px; margin-top:25px;}
+.cl-focal-r1 p,.cl-focal-r2 p,.cl-focal-r3{ text-align:center; background:#f2f2f2; line-height:30px;}
+.cl-art{width:980px; height:446px; margin:0 auto;}
+.cl-art-l{width:800px; height:446px;}
+.cl-art-l-t{width:780px; height:92px; border-bottom:2px #8ac024 solid;}
+.cl-art-l-t h2{position:relative; font-size:28px; color:#699f00; padding-left:20px; padding-top:47px;font-weight:normal;}
+.cl-art-l-t span{width:15px; height:25px; position:absolute; left:0; top:55px; background:url(../img-cl/cl-art0.jpg);}
+.cl-art-l-t a{color:#699f00; padding-left:17px;}
+.cl-art-l-t ul{padding-left:30px; padding-top:65px;}
+.cl-art-l-t ul li{float:left; margin-right:10px;}
+.cl-art-l-t li a{color:#666; padding-right:8px;}
+.cl-art-l-t li a:hover{color:#699f00; font-size:14px;}
+.cl-art-l-t img{padding-top:56px; margin-left:10px;}
+.cl-art-l-b1{width:380px; height:352px;}
+.cl-art-l-b1 img{padding-top:25px;}
+.cl-no1{color:#333333; background:#f2f2f2; padding-top:10px; padding-left:5px;}
+.cl-no2{color:#999999; background:#f2f2f2; padding-top:8px; padding-left:5px; padding-bottom:7px;}
+.cl-art-l-b2{width:400px; height:327px; padding-left:20px; padding-top:25px;}
+.cl-one{width:180px; height:156px; margin-bottom:15px; margin-right:20px;}
+.cl-art-l-b2 .cl-no2{padding-bottom:5px;}
+.cl-art-r{width:180px; height:446px;}
+.cl-art-r1 h2{position:relative; font-size:28px; color:#699f00; padding-left:20px; padding-top:47px; padding-bottom:8px; font-weight:normal; border-bottom:2px #8ac024 solid;}
+.cl-art-r1 span{width:15px; height:25px; position:absolute; left:0; top:55px; background:url(../img-cl/cl-art0.jpg);}
+.cl-art-r1 a{color:#699f00; padding-left:17px;}
+.cl-art-r2{width:180px; height:327px; background:#f2f2f2; margin-top:25px;}
+.cl-art-r2 h3{width:170px; height:40px; line-height:40px; border-bottom:1px #CCCCCC dashed; margin-left:10px; font-size:14px;}
+.cl-art-r2 span{width:6px; height:6px; position:absolute; left:-15px; top:15px; background:url(../img-cl/dian.jpg);}
+.cl-art-r2 li{position:relative; margin-left:30px; line-height:36px;}
+.cl-run{width:980px; height:250px; margin:0 auto;}
+.run-t h2{position:relative; font-size:28px; color:#699f00; padding-top:22px;font-weight:normal; padding-bottom:12px; border-bottom:1px #CCCCCC solid;}
+.run-t span{width:33px; height:19px; position:absolute; background:url(../img-cl/run.jpg); left:235px; top:35px;}
+.run-t a{color:#699f00; padding-left:60px;}
+.run-b{width:980px; height:184px; margin-top:16px;}
+.cl-run1{width:180px; height:156px; background:#f2f2f2; float:left; margin-right:20px;}
+.cl-run1 .btn{width:54px; height:18px; border:1px #CCCCCC solid; color:#699f00; background:#fff; margin:6px; }
+.cl-run1{ font-size:14px; margin-top:10px;}
+.run-b .last{margin-right:0;}
+.show{margin-top:20px; margin-bottom:48px;}

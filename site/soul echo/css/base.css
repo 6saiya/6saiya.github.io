@@ -1,0 +1,33 @@
+	*{margin:0; padding:0;font-size:12px;}
+	h1,h2,h3,h4,h5,h6{font-weight:normal;}
+	a{text-decoration:none; color:#666;}
+	a img{border:0;}
+	ul,ol,dl,dt,dd{margin:0; padding:0;}
+	li{list-style:none;}
+	i,em{font-style:normal;}
+	b,strong{font-weight:normal;}
+	img{vertical-align:top; }
+
+	.fl{float:left;}
+	.fr{float:right;}
+	.clearfix:after{display:block; content:''; clear:both;}
+	.clearfix{zoom:1;}
+
+	input{outline:none;}
+	table{border-collapse: collapse;}
+	th,td{border:1px solid #000; padding:0;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

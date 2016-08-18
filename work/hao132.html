@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>好123</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            list-style:none;
+        }
+        ul{
+            overflow: hidden;
+        }
+        li{
+            width: 200px;
+            height: 50px;
+            border: 3px dashed #999;
+            margin:10px;
+            line-height: 50px;
+            overflow: hidden;
+            background:#ccc;
+            float:left;
+        }
+        li span{
+            float:right;
+            margin:3px;
+            cursor: pointer;
+        }
+        li a{
+            text-decoration: none;
+            color:#333;
+            font-size:20px;
+        }
+        #change{
+            display:none;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var aInput=document.getElementsByTagName('input');
+            var oUl=document.getElementById('ul');
+            aInput[2].onclick=function(){
+                var oLi=document.createElement('li');
+                oLi.innerHTML='<a href="'+aInput[1].value+'">'+aInput[0].value+'</a><span>删除</span><span>修改</span>';
+                oUl.appendChild(oLi);
+                aInput[1].value='';
+                aInput[0].value='';
+                var aSp=oLi.getElementsByTagName('span');
+                aSp[0].onclick=function(){
+                    var oLipar=this.parentNode;
+                    oUl.removeChild(oLipar);
+                }
+                aSp[1].onclick=function(){
+                    var oLipar=this.parentNode;
+                    var oA=oLipar.getEldmentsByTagName('a')[0];
+                    aInput[1].value=oA.getAttribute('href');
+                    aInput[0].value=oA.innerHTML;
+                    aInput[2].style.display='none';
+                    aInput[3].style.display='inline-block';
+                    aInput[3].onclick=function(){
+                        oA.href=aInput[1].value;
+                        oA.innerHTML=aInput[0].value;
+                        aInput[3].style.display='none';
+                        aInput[2].style.display='inline-block';
+                        aInput[1].value='';
+                        aInput[0].value='';
+                    }
+                }
+            }
+            var aSpan=oUl.getElementsByTagName('span');
+            for(var i=0;i<aSpan.length;i++){
+                if(i%2){
+                    //修改
+                    aSpan[i].onclick=function(){
+                        var oLipar=this.parentNode;
+                        var oA=oLipar.getElementsByTagName('a')[0];
+                        aInput[1].value=oA.getAttribute('href');
+                        aInput[0].value=oA.innerHTML;
+                        aInput[2].style.display='none';
+                        aInput[3].style.display='inline-block';
+                        aInput[3].onclick=function(){
+                            oA.href=aInput[1].value;
+                            oA.innerHTML=aInput[0].value;
+                            aInput[3].style.display='none';
+                            aInput[2].style.display='inline-block';
+                            aInput[1].value='';
+                            aInput[0].value='';
+                        }
+                    }
+                }else{
+                    //删除
+                    aSpan[i].onclick=function(){
+                        var oLipar=this.parentNode;
+                        oUl.removeChild(oLipar);
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<span>网站名称</span>
+<input type="text"/>
+<span>网址</span>
+<input type="text"/>
+<input type="button" value="添加"/>
+<input type="button" value="修改" id="change"/>
+<hr/>
+<ul id="ul">
+    <li><a href="http://www.baidu.com">百度</a><span>删除</span><span>修改</span></li>
+    <li><a href="http://www.taobao.com">淘宝</a><span>删除</span><span>修改</span></li>
+    <li><a href="http://www.hao123.com">好123</a><span>删除</span><span>修改</span></li>
+</ul>
+</body>
+</html>
