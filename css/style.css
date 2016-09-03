@@ -70,7 +70,7 @@ a{
 .logo2{
     width: 170px;
     position:absolute;
-    top:10%;
+    top:0%;
     left:12%;
     transition: 0.8s all ease-out;
 }
