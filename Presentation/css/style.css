@@ -134,7 +134,7 @@ a{
     font-family:'ExLightCom',"Microsoft YaHei";
     color:#fff;
     position:absolute;
-    top:26%;
+    top:20%;
     left:30%;
     opacity: 0.9;
     filter:alpha(opacity=90);
@@ -144,7 +144,7 @@ a{
     font-family:'ExLightCom',"Microsoft YaHei";
     color:#fff;
     position:absolute;
-    top:52%;
+    top:42%;
     left:20%;
     opacity: 0.9;
     filter:alpha(opacity=90);
@@ -210,7 +210,7 @@ a{
     border:1px solid green;
     position:absolute;
     left:23%;
-    top:30%;
+    top:35%;
     overflow: hidden;
 
 }
@@ -225,7 +225,7 @@ a{
     border:1px solid green;
     position:absolute;
     left:48%;
-    top:30%;
+    top:35%;
     overflow: hidden;
 
 }
@@ -240,7 +240,7 @@ a{
     border:1px solid green;
     position:absolute;
     left:73%;
-    top:30%;
+    top:35%;
     overflow: hidden;
 
 }
@@ -339,10 +339,10 @@ a{
 }
 .conbox h3{
     color:#fff;
-    font-size:28px;
+    font-size:24px;
     font-family: "Raleway", Arial, sans-serif;
     position:absolute;
-    top:40px;
+    top:10px;
     left:30px;
 }
 .conbox p{
