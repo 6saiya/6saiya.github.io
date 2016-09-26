@@ -1,0 +1,72 @@
+step1:
+	1、创建JSGame的Web项目
+	2、导入项目的素材 image文件夹
+	3、构建游戏页面，在index.html
+		 编写html代码
+		 <div id="content">
+				<div id="start">
+					<button onclick="begin()">开始游戏</button>
+				</div>
+				<div id="main">
+					<div id="score">
+						<label>分数:</label>
+						<label>0</label>
+					</div>
+					<div id="menu">
+						<button>继续</button>
+						<button>重新开始</button>
+						<button>回到主页</button>
+					</div>
+					<div id="end">
+						<p>飞机大战分数</p>
+						<p>0</p>
+						<button>继续</button>
+					</div>
+				</div>
+			</div>
+			
+			添加相应的CSS样式
+			<style type="text/css">
+			*{ margin:0; padding: 0;}
+			#content{ position: absolute; left: 500px;}
+			#start{ width: 320px; height: 568px; background-image: url(image/开始背景.png);}
+			#start button{position: absolute; top: 500px; left: 82px; width: 150px; height: 30px; 
+				border: 1px solid #000; border-radius: 30px; background-color: #c4c9ca;
+			 }
+			 #main{ display: none;  width: 320px; height: 568px; background-image: url(image/background_1.png); }
+			 #main *{position: absolute;}
+			 #score{display: none;}
+			 #menu{display: none;}
+			 #end{display: none;}
+			</style>
+		4、编写代码，实现游戏的开始界面切换。
+			 隐藏之前的开始画面 start_div
+			 显示游戏运行的主界面  main_div
+			 
+			 开始按钮 通过onclick调用 开始begin()函数
+			 <button onclick="begin()">开始游戏</button>
+			 创建开始函数 begin()
+			 <script type="text/javascript">
+				var start_div = document.getElementById("start");   //获得游戏开始的div
+				var main_div = document.getElementById("main");   //获得游戏运行的主界面层
+				
+				function begin(){
+					start_div.style.display = "none";			//隐藏游戏开始界面
+					main_div.style.display = "block";		    //显示游戏运行的主界面
+				}
+			</script>
+			 
+step2:
+step3:
+step4:
+step5:
+step6:
+step7:
+step8:
+step9:
+step10:
+step11:
+step12:
+step13:
+step14:
+step15:

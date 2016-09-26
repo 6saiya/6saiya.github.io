@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{margin: 0px;padding: 0px;}
+			body{width: 100%;height: 900px; background: url(image/warbg.jpg) no-repeat center center;}
+			#contenet{position: absolute;left: 500px;}
+			#contenet #start{width: 320px;height: 568px; background-image: url(image/开始背景.png);}
+			#start button{position: absolute;top: 500px;left: 82px;width: 150px;height: 30px;
+						  border: 1px solid #000;border-radius: 30px;background-color: #c4c9ca;}
+			#main{width: 320px;height: 568px;background-image: url(image/background_1.png);display: none;}
+			#main *{position: absolute;}
+			#score{width: 100px;height: 20px;}
+			#score #score02{left: 100px;}
+			#menu{width: 150px;height: 60px;top: 200px; position: relative;margin:0 auto;z-index: 98;}
+			#menu button{position: relative; width:150px;height: 20px;margin-bottom: 15px;}
+			#end{left: 70px;top: 200px;width:180px;height: 100px;background-color: #eee;}
+			#end p{position: relative;margin: 0 auto;text-align: center;}
+			#player{position: absolute;top: 485px;left: 120px; background-image: url(image/我的飞机.gif);}  //设置我的飞机样式
+		</style>
+	</head>
+	<body>
+		<div id="contenet">
+			
+			<div id="start">
+				<button onclick="begin()">开始游戏</button>
+			</div>
+			
+			<div id="main">
+				<div id="score">
+					<label>分数：</label>
+					<label id="score02">0</label>
+				</div>
+				<div id="menu"style="display: none;">
+					<button>继续</button><br />
+					<button>重新开始</button><br />
+					<button>回到主页</button>
+				</div>
+				<div id="end"style="display: none;z-index: 99;">
+					<br />
+					<p>飞机大战分数</p>
+					<p id="max_score">0</p>
+					<p onclick="continue_game()">继续</p>
+					<p onclick="re_set()">在玩一次</p>
+				</div>
+				<!--添加我的飞机图层div-->
+				<div id="player"style="width: 66px;height: 80px;background-image: url(image/我的飞机.gif);"></div>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			var start_div = document.getElementById("start");  //获取游戏开始界面的div
+			var main_div = document.getElementById("main");	   //获得游戏运行画面的div
+			var score = document.getElementById("score02");  //获得分数显示的标签label
+			var end_div = document.getElementById("end");    //获得游戏结束时界面的div
+			var max_score = document.getElementById("max_score");  //获得每次游戏结束时的最大值
+			var menu_div = document.getElementById("menu");    //获得menu界面的div
+			var backgroundPosY = 0;							   //定义游戏背景图层的纵坐标，默认初始为0
+			var interVal = null;							   //游戏计算器
+			
+			var player = document.getElementById("player");    //获得 我的飞机 躲在的div对象
+			main_div.addEventListener("mousemove",move);       //添加鼠标移动事件mousemove，给游戏主界面main_div
+			
+			var bullets = [];			//子弹数组
+			var enemys = [];			//敌机数组
+			var count = 0;				//每20ms添加一个子弹即count+=1
+			var flag = false;		    //我方飞机是否爆炸的标志
+			var invincible_flag = false;	//无敌标志
+			var invincible_time = 0;	//无敌持续时间
+			var playerDieTime = 0;		//我方飞机被敌机碰住后消失时间
+			//开始界面与游戏运行界面的切换
+			function begin(){
+				start_div.style.display = "none";
+				main_div.style.display = "block";
+				interVal = window.setInterval("start()",20);
+			}
+			var stop_conti_flag = true;
+			document.body.onkeypress =  function (){
+				if(stop_conti_flag){
+					window.clearInterval(interVal);
+					menu_div.style.display = "block";
+					stop_conti_flag = false;
+				}else{
+					interVal = window.setInterval("start()",20);
+					menu_div.style.display = "none";
+					stop_conti_flag = true;
+				}
+			}
+			
+			//游戏运行界面的滚动
+			function start(){	
+//				main_div.style.backgroundPositionY = backgroundPosY+"px";
+//				Firefox浏览器没有backgroundPositionY属性，可以使用backgroundposition属性
+				main_div.style.backgroundPosition = "0px "+backgroundPosY+"px";  
+				backgroundPosY+=0.5;
+				if(backgroundPosY == 568){backgroundPosY = 0;}
+				count++;
+				if(count%5==0 && flag == false){//获取飞机位置，从该位置创建子弹（判断子弹的频率与飞机是否存在）
+						bullets.push(add_bullet(parseInt(player.style.left )+30,parseInt(player.style.top) -15));
+					}
+				for(i=0;i<bullets.length;i++){
+						//让界面内的子弹每隔一定时间都要进行移动
+						bullets[i].move();
+						//判断飞出界的子弹，移除该子弹的<img>标记
+						if(bullets[i].bulletElement.offsetTop < 0){
+							main_div.removeChild(bullets[i].bulletElement);   //将飞出界的子弹从界面中删掉
+							//splice(index,c);  index从下标几开始   c删除几个
+							bullets.splice(i,1);			//将飞出界的子弹也从数组中删掉
+						}
+					}
+				//计数器每到60添加一架敌机，然后清空计数器
+				if(count%60 == 0){
+					//hp,min,max,width,height,score,diedtime,speed,boomimage,imagesrc
+					enemys.push(add_enemy(1,3,290,34,24,100,360,random(1,4),"image/小飞机爆炸.gif","image/enemy1_fly_1.png"));
+				}
+				if(count%180 == 0){
+					enemys.push(add_enemy(8,3,290,46,60,500,360,random(1,3),"image/中飞机爆炸.gif","image/enemy3_fly_1.png")); 
+				}
+				if(count == 360){
+					enemys.push(add_enemy(18,3,255,110,164,1000,460,random(1,2),"image/大飞机爆炸.gif","image/enemy2_fly_1.png"));
+					count = 0; 
+				}
+				for(j = 0;j<enemys.length;j++){
+					if(enemys[j].isdie!="true"){
+						enemys[j].move();
+					}
+					if(enemys[j].enemyElement.offsetTop > 568){
+						main_div.removeChild(enemys[j].enemyElement);//删除飞出界的敌机
+						enemys.splice(j,1);			//从敌机数组中删除
+					}
+					//从敌机数组中删除死亡的飞机
+					if(enemys[j].isdie){
+						enemys[j].dietimes+=20;
+						//敌机每死亡一架分值进行一次加值
+						if(enemys[j].dietimes==20){
+							score.innerText = parseInt(score.firstChild.nodeValue)+enemys[j].score;
+						}
+						if(enemys[j].dietimes >= enemys[j].diedtime){
+							main_div.removeChild(enemys[j].enemyElement);
+							enemys.splice(j,1);
+						}
+					}
+					
+				}
+				//判断敌机是否被击中与我方飞机是否被击中
+				for(x=0;x<bullets.length;x++){
+					for(y=0;y<enemys.length;y++){
+						if(bullets[x].bulletElement.offsetLeft+bullets[x].width>enemys[y].enemyElement.offsetLeft&&
+						bullets[x].bulletElement.offsetLeft<=enemys[y].enemyElement.offsetLeft+enemys[y].width&&
+						bullets[x].bulletElement.offsetTop+bullets[x].height>=enemys[y].enemyElement.offsetTop&&
+						bullets[x].bulletElement.offsetTop<=enemys[y].enemyElement.offsetTop+enemys[y].height){
+							enemys[y].hp = enemys[y].hp-bullets[x].bulletAttach;
+							if(enemys[y].hp == 0){
+								enemys[y].enemyElement.src = enemys[y].boomimage;
+								enemys[y].isdie = true;
+							}
+							main_div.removeChild(bullets[x].bulletElement);
+							bullets.splice(x,1);
+						}
+						//首先进行无敌时间的判定，如果是无敌，则不判断飞机是否与敌机相撞
+						if(invincible_flag == false){
+							if(enemys[y].enemyElement.offsetLeft+enemys[y].width>player.offsetLeft&&
+							enemys[y].enemyElement.offsetLeft<player.offsetLeft+66&&
+							enemys[y].enemyElement.offsetTop+enemys[y].height>=player.offsetTop&&
+							enemys[y].enemyElement.offsetTop<=player.offsetTop+80){
+//								document.title = player.offsetTop;
+								player.style.backgroundImage = "url(image/本方飞机爆炸.gif)";
+								flag = true;
+							}
+						}else{
+							invincible_time ++;
+						}
+					}
+				}
+				
+				if(invincible_time >1000){
+					invincible_flag = false;
+//					alert(invincible_time);
+					invincible_time = 0;
+				}
+				if(flag){
+					playerDieTime+=20;
+					if(playerDieTime >= 500){
+						player.style.display = "none";
+						max_score.innerText = parseInt(score.firstChild.nodeValue);
+						end_div.style.display = "block";
+						playerDieTime = 0;
+					}		
+				}
+				
+			}
+			function continue_game(){
+				end_div.style.display = "none";
+				//准备清空敌机数组之前，首先要把敌机定时添加的那段程序停掉，要不然不能清空
+//				for(j=0;j<enemys.length;j++){
+//					main_div.remove(enemys[j].enemyElement);
+//					enemys.splice(j,1);
+//				}
+//				alert(enemys.length);
+				player.style.backgroundImage = "url(image/我的飞机.gif)";
+				player.style.display = "block";
+				flag = false;
+				invincible_flag = true;
+//				score.innerText = 0;
+			}
+			
+			//死亡后点击在玩一次重新开始游戏的函数
+			function re_set(){
+				window.location.reload();	
+			}
+			
+			//我的飞机移动函数
+			function move(){
+				var event_obj = event;
+//					var x = event_obj.clientX;
+//					var y = event_obj.clientY;
+					var x = event.x+document.body.scrollLeft;   //document.body.scrollLeft获取页面文档向右滚动过的像素数。
+					var y = event.y+document.body.scrollTop;    //document.body.scrollTop获取页面文档向下滚动过的像素数。
+//					document.title = x;
+					player.style.left = (x -500) - (66/2)+"px";
+					player.style.top = y - (80/2)+"px";
+			}
+			
+			//控制我的飞机飞行的范围只能在main_div中
+			document.body.onmousemove = function (){
+				var event_obj = event;
+				var x = event_obj.clientX;
+				var y = event_obj.clientY;
+				
+				if(x<=530 || x>=820-33 || y<=0 || y>=568-40){
+					main_div.removeEventListener("mousemove",move);
+				}else{
+					main_div.addEventListener("mousemove",move);
+				}
+			}
+			
+			//创建子弹的函数
+			//JSON对象：属性：位置x,y;width,height,子弹路径imagesrc <img>标记对象  威力
+			function create_bullet(x,y,width,height,imagesrc){
+				var bullet = {"x":x,"y":y,"width":width,"height":height,"src":imagesrc,"bulletElement":null,"bulletAttach":1,
+							  "init":function(){
+									this.bulletElement = document.createElement("img");
+									this.bulletElement.style.left = this.x+"px";
+									this.bulletElement.style.top = this.y+"px";
+									this.bulletElement.src = this.src;
+									main_div.appendChild(this.bulletElement);
+							  },
+							  "move":function(){
+							  		this.bulletElement.style.top = this.bulletElement.offsetTop-20+"px";
+							  }};
+				bullet.init();
+				return bullet;
+			}
+			
+			//添加子弹的函数
+			function add_bullet(x,y){
+				return create_bullet(x,y,6,14,"image/bullet1.png")
+			}
+			
+			//创建敌机的函数
+			//JSON对象：属性：血量hp,位置x,y,宽width,高height,分值score,动画事件（死亡时间），<img>标记对象，速度speed，爆炸图片，原图
+			//初始化 移动
+			function create_enemy(hp,x,y,width,height,score,diedtime,speed,boomimage,imagesrc){
+				var enemy = {"hp":hp,"x":x,"y":y,"width":width,"height":height,"score":score,"diedtime":diedtime,
+					"speed":speed,"boomimage":boomimage,"imagesrc":imagesrc,"enemyElement":null,"isdie":false,"dietimes":0,
+					"init":function(){
+						this.enemyElement = document.createElement("img");
+						this.enemyElement.style.left = this.x +"px";
+						this.enemyElement.style.top = this.y+"px";
+						this.enemyElement.src = imagesrc;
+						main_div.appendChild(this.enemyElement);
+						
+					},"move":function(){
+						this.enemyElement.style.top = this.enemyElement.offsetTop+this.speed+"px";
+					}
+				}
+				enemy.init();
+				return enemy;
+			}
+			
+			//添加敌机的函数
+			function add_enemy(hp,min,max,width,height,score,diedtime,speed,boomimage,imagesrc){
+				return create_enemy(hp,random(min,max),-100,width,height,score,diedtime,speed,boomimage,imagesrc)
+			}
+			
+			//创建一个随机数的函数
+			function random(min,max){
+				return Math.floor(min+Math.random()*(max-min));
+			}
+			
+		</script>
+		
+	</body>
+</html>
