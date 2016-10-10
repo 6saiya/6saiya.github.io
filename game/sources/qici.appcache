@@ -1,0 +1,25 @@
+CACHE MANIFEST
+#VERSION 20161010130135
+Assets/meta/globalUrlMap.js
+Assets/css/style.css
+http://engine.zuoyouxi.com/lib/1.1.6/phaser.min.js
+http://engine.zuoyouxi.com/lib/1.1.6/webfontloader.js
+http://engine.zuoyouxi.com/lib/1.1.6/qc-core.js
+http://engine.zuoyouxi.com/lib/1.1.6/qc-loading.js
+http://engine.zuoyouxi.com/lib/qc-webgl.js
+
+js/game-scripts-mini-1.0.js
+Assets/scene/Sources.bin
+Assets/audio/sourcesBackground.mp3
+Assets/audio/sourcesBackground.mp3.bin
+Assets/audio/sourcesBackground.ogg
+Assets/audio/sourcesBackground.ogg.bin
+Assets/atlas/sources.bin
+Assets/prefabs/sourcesAnimal.bin
+Assets/audio/explode.mp3
+Assets/audio/explode.mp3.bin
+Assets/audio/explode.ogg
+Assets/audio/explode.ogg.bin
+
+NETWORK:
+*

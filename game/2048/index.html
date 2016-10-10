@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<!-- saved from url=(0065)http://home.ustc.edu.cn/~chairman/?from=timeline&isappinstalled=0 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>2048 | 续命版</title>
+
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="logo1.ico">
+    <link rel="apple-touch-icon" href="logo1.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+
+    <meta property="og:title" content="haha game">
+    <meta property="og:site_name" content="haha game">
+<body>
+<div id="wx_logo" style="margin:0 auto;display:none;">
+    <img src="favicon.ico">
+</div>
+<div class="container">
+    <div class="heading">
+            <img src="logo1.png" width="60px" style="float:left;">
+            <p class="game-intro">回溯时光，到波澜壮阔的1996年，共同经历六秩风雨。</p>
+    </div>
+
+    <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">续1秒</div>
+
+    </div>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <div class="game-container">
+        <div class="game-message">
+            <p></p>
+            <div class="lower">
+                <a class="keep-playing-button">续时 Θ..Θ！</a>
+                <div class="score-sharing" data-clipboard-text=" "></div>
+                <hr />
+                <a class="retry-button" style="#f59563">重新开始</a>
+            </div>
+        </div>
+
+        <div class="grid-container">
+            <div class="grid-row">
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+            </div>
+            <div class="grid-row">
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+            </div>
+            <div class="grid-row">
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+            </div>
+            <div class="grid-row">
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+            </div>
+        </div>
+
+        <div class="tile-container"><div class="tile tile-2 tile-position-3-2 tile-new"><div class="tile-inner"></div></div><div class="tile tile-2 tile-position-4-2 tile-new"><div class="tile-inner"></div></div></div>
+
+    </div>
+    <div class="total-container">
+        <center>
+            <br />
+            已有<strong id="person_count"></strong>人贡献生命！<br />
+            最多续时：<span id="highest_score"></span><br/>
+            总共续时：<span id="score_count"></span>
+        </center>
+    </div>
+    </p>
+    <p style="margin-bottom:25px">
+        <strong class="important">如何献时:</strong> 滑动<strong>手指</strong>或用你的</strong> <strong>方向键 </strong> 加入时间筹划，当<strong>两个相同方块碰撞</strong>在一起，将进入下一个建设阶段。
+        如果每个人都参与到时间筹划中来，必定成为<strong>世界一流的领导</strong>！
+    </p>
+    <hr>
+    <p>
+        <center>
+            
+        </center>
+    </p>
+</div>
+<p>&nbsp;</p>
+<hr />
+<div id="SOHUCS" sid="uestc2048" ></div>
+<script type="text/javascript">
+    (function(){
+        var appid = 'cysC96CKT';
+        var conf = 'prod_094e0f522c4a5a5a10e1f28a8931900d';
+        var width = window.innerWidth || document.documentElement.clientWidth;
+        if (width < 960) {
+            window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })();
+</script>
+<script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/clipboard.js/1.5.12/clipboard.min.js"></script>
+<script src="index_files/animframe_polyfill.js"></script>
+<script src="index_files/keyboard_input_manager.js"></script>
+<script src="index_files/html_actuator_1.js"></script>
+<script src="index_files/grid.js"></script>
+<script src="index_files/tile.js"></script>
+<script src="index_files/local_score_manager.js"></script>
+<script src="index_files/game_manager_1.js"></script>
+<script src="index_files/application.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"> </script>
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        wx.config({
+                    debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+                    appId: 'wxe7be878bc28d5763', // 必填，公众号的唯一标识
+                    timestamp: 1474901560, // 必填，生成签名的时间戳
+                nonceStr: 'DaGz0ZAyuFRwg4rM', // 必填，生成签名的随机串
+                signature: '0b1bab8909292a049929d5b536a87b021e0a5606',// 必填，签名，见附录1
+                jsApiList: ['onMenuShareTimeline',
+                    'onMenuShareAppMessage',
+                    'onMenuShareQQ',
+                    'onMenuShareWeibo',
+                    'onMenuShareQZone','showOptionMenu'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+            });
+
+        $.post("count.php",
+            {
+                api:'personCount',
+                id: 1
+            },
+            function(data,status){
+                $.post("count.php",
+                    {
+                        api:'getCount'
+                    },
+                    function(data,status){
+                        $("#person_count").text(data.person_count);
+                        $("#highest_score").text(data.highest_score);
+                        $("#score_count").text(data.score_count);
+                    },
+                    'json'
+                );
+            },
+            'json'
+        );
+    });
+</script>
+<div style="display:none">
+    <script src="http://s4.cnzz.com/z_stat.php?id=1260465843&web_id=1260465843" language="JavaScript"></script>
+</div>
+</body></html>
