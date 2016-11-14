@@ -1,0 +1,61 @@
+#maingame {
+	left: 100%;
+	top: 100%;
+}
+
+#mainMenu {
+	display: none;
+	margin-left: 10%;
+	margin-top: 10%;
+	width: 640px;
+	height: 480px;
+	text-align:center;
+	color:red;
+	border: 1px solid white;
+	background-image: url(../img/startBG.png);
+	background-size:640px 480px;
+}
+
+#mainBg {
+	margin-left: 10%;
+	margin-top: 10%;
+	width: 640px;
+	height: 480px;
+	display: none;
+	background-image: url(../img/gameBG.png);
+	background-size:640px 480px;
+}
+
+#help {
+	display: none;
+	margin-left: 10%;
+	margin-top: 10%;
+	width: 640px;
+	height: 480px;
+	text-align:center;
+	background-image: url(../img/helpBG.png);
+	background-size:640px 480px;
+}
+
+#qizi{
+	width: 50px;
+	height: 50px;
+}
+
+.startButton {
+	width: 100px;
+	height: 35px;
+	margin-left: 400px;
+	margin-top: 308px;
+}
+
+.helpButton {
+	width: 100px;
+	height: 35px;
+	margin-left: 400px;
+	margin-top: 20px;
+}
+#setQipan{
+	margin-left: : center;
+	margin-top: center;
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>new skill test</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//定时器 异步运行 
+		function hello(){ 
+		console.log("hello");
+		alert("hello"); 
+		} 
+		//使用方法名字执行方法 
+		// var t1 = window.setTimeout(hello,1000); 
+		var t2 = window.setTimeout("hello()",3000);//使用字符串执行方法 
+		window.clearTimeout(t1);//去掉定时器 
+	</script>
+</body>
+</html>
