@@ -1,43 +1,74 @@
-window.onload = function() {
+// window.onload = function() {
+// 	console.log("aaa");
+// };
+
+// $(function() {
+// 	console.log("aaa");
+// });
+
+// $(document).ready(function() {
+// 	console.log("aaa");
+// });
+
+$(function() {
+	var gameQipanlenth = 4;
+	var gamedefenrotNUM = 4;
+	var gameFlag = 1;
+
+
 	function game(qipanlenth, defenrotNUM) {
-		// body...
+		var qiziMode = ["img/whiteQizi.png", "img/blackQizi.png", "img/errorQizi.png"];
 
-		// var qipanlenth = 4;
-		var qiziMode = ["img/whiteQizi.png", "img/blackQizi.png", "img/errorQizi.png"]
-			// var defenrotNUM = 4;
+		var qusetion = initQipanSize(qipanlenth, qipanlenth);
+		var answer = initQipanSize(qipanlenth, qipanlenth);
+
 		var pageFlag = 0;
-		var qusetion = [
-			[0, 0, 0, 0],
-			[0, 0, 0, 0],
-			[0, 0, 0, 0],
-			[0, 0, 0, 0]
-
-		];
-		var answer = [
-			[0, 0, 0, 0],
-			[0, 0, 0, 0],
-			[0, 0, 0, 0],
-			[0, 0, 0, 0]
-		];
-		// for (var i = 0; i < qipanlenth; i++) {
-		// 	for (var j = 0; j < qipanlenth; j++) {
-		// 		qusetion[i][j].push(0);
-		// 		answer[i][j].push(0);
-		// 	}
-		// }
 
 		//UI主菜单
 		// document.getElementById("canshu").write("难度:"+defenrotNUM+"回合：得分：");
 
-		$(document).ready(function() {
-			show(0);
-			$(".startButton").click(function() {
-				show(1);
-			});
-			$(".helpButton").click(function() {
-				show(2);
-			});
+		$(".startButton").click(function() {
+			show(1);
 		});
+		$(".helpButton").click(function() {
+			show(2);
+		});
+		show(0);
+
+		B_init();
+
+		chuti(qipanlenth);
+
+		//获取鼠标位置
+		// document.onmouseup = function() {
+		// 	var event_obj = event;
+		// 	mouseX = event_obj.clientX;
+		// 	mouseY = event_obj.clientY;
+		// 	console.log(mouseX + "+" + mouseY);
+		// }
+
+		document.addEventListener("mouseup", function(e) {
+			// var event_obj = event;
+			mouseX = e.clientX;
+			mouseY = e.clientY;
+			console.log(mouseX + "+" + mouseY);
+		});
+
+		//初始棋盘大小
+		function initQipanSize(row, col) {
+			var arr = [];
+			var temp;
+			for (var i = 0; i < row; i++) {
+				temp = [];
+				arr.push(temp);
+
+				for (var j = 0; j < col; j++) {
+					temp.push(0);
+				}
+			}
+
+			return arr;
+		}
 
 		function show(flag) {
 			pageFlag = flag;
@@ -46,6 +77,7 @@ window.onload = function() {
 				$("#mainBg").hide();
 				$("#help").hide();
 				$(".victoryForm").hide();
+				$(".error").hide();
 			}
 			if (pageFlag == 1) {
 				$("#mainMenu").hide();
@@ -53,64 +85,87 @@ window.onload = function() {
 				$("#help").hide();
 				$(".victoryForm").hide();
 				$("#Qipan").show();
+				$(".error").hide();
 
-				var t1 = window.setTimeout(function() {
-					showQusetion();
-				}, 5);
+				// var t1 = window.setTimeout(function() {
+				// 	showQusetion();
+				// }, 5);
+
+				var t1 = setTimeout(showQusetion, 5);
 				console.log("showQusetion" + t1);
-				var t2 = window.setTimeout(function() {
-					showAnswer();
-				}, 4000);
+
+				// var t2 = window.setTimeout(function() {
+				// 	showAnswer();
+				// }, 2000);
+
+				var t2 = setTimeout(showAnswer, 2000);
 				console.log("showAnswer" + t2);
-
-
 			}
 			if (pageFlag == 2) {
 				$("#mainMenu").hide();
 				$("#mainBg").hide();
 				$("#help").show();
 				$(".victoryForm").hide();
+				$(".error").hide();
 			}
 			if (pageFlag == 3) {
 				$("#mainMenu").hide();
 				$("#mainBg").show();
 				$("#Qipan").hide();
 				$("#help").hide();
+				$(".error").hide();
 				$(".victoryForm").show();
-				var t1 = window.setTimeout(function() {
+				setTimeout(function() {
 					show(0);
+					gameQipanlenth++;
+					gamedefenrotNUM++;
+					if (gameQipanlenth > 8) {
+						gameQipanlenth = 8;
+					}
+					gameFlag = 1;
+					console.log("gameQipanlenth" + gameQipanlenth);
+					console.log("gamedefenrotNUM" + gamedefenrotNUM);
+					game(gameQipanlenth, gamedefenrotNUM);
 				}, 2000);
+
 			}
 		}
+
 		//主游戏建盘
 		function B_init() {
-			for (var i = 0; i < defenrotNUM; i++) {
-				var row = document.createElement("tr"); //创建行
-				for (j = 0; j < defenrotNUM; j++) {
+			var qipan = $("#Qipan").empty();
+
+			for (var i = 0; i < qipanlenth; i++) {
+				var tr = document.createElement("tr"); //创建行
+				for (j = 0; j < qipanlenth; j++) {
 					var cell = document.createElement("td"); //创建列
-					cell.setAttribute("id", (i * defenrotNUM) + j);
-					cell.setAttribute("class", 0);
-					cell.setAttribute("width", 50);
-					cell.setAttribute("height", 50);
-					cell.setAttribute("border", 0);
-					cell.setAttribute("margin", 0);
-					cell.setAttribute("padding", 0);
+					cell.id = (i * qipanlenth) + j;
+					cell.dataset.row = i;
+					cell.dataset.col = j;
+					cell.style.height = "50px";
+					cell.style.width = "50px";
+					cell.style.border = "none";
+					cell.style.margin = "0";
+					// cell.setAttribute("id", (i * defenrotNUM) + j);
+					// cell.setAttribute("width", 50);
+					// cell.setAttribute("height", 50);
+
+					cell.addEventListener("click", qiziClick);
 
 					// cell.setAttribute("style", "background-color: red;");
-					row.appendChild(cell);
+					tr.appendChild(cell);
 				}
-				document.getElementById("Qipan").appendChild(row);
+				qipan[0].appendChild(tr);
 
 			}
 		}
-		B_init();
 
 		//出題的函數
 		function setupQizi() {
 			var qiziX = 0;
 			var qiziY = 0;
-			qiziX = Math.floor(Math.random() * (4 - 1 + 1));
-			qiziY = Math.floor(Math.random() * (4 - 1 + 1));
+			qiziX = Math.floor(Math.random() * (qipanlenth - 1 + 1));
+			qiziY = Math.floor(Math.random() * (qipanlenth - 1 + 1));
 			qusetion[qiziX][qiziY] = 1;
 		}
 
@@ -130,13 +185,12 @@ window.onload = function() {
 				setupQizi();
 			}
 		}
-		chuti(qipanlenth);
+
 		//建立棋盤
 		function showQusetion() {
-
 			for (var i = 0; i < qipanlenth; i++) {
 				for (var j = 0; j < qipanlenth; j++) {
-					var id = "#" + (i * 4 + j);
+					var id = "#" + (i * qipanlenth + j);
 					$($(id)[0]).html('<img src = "' + qiziMode[qusetion[i][j]] + '">');
 				}
 			}
@@ -145,7 +199,7 @@ window.onload = function() {
 		function showAnswer() {
 			for (var i = 0; i < qipanlenth; i++) {
 				for (var j = 0; j < qipanlenth; j++) {
-					var id = "#" + (i * 4 + j);
+					var id = "#" + (i * qipanlenth + j);
 					$($(id)[0]).html('<img src = "' + qiziMode[answer[i][j]] + '">');
 				}
 			}
@@ -153,63 +207,8 @@ window.onload = function() {
 		}
 		//showQusetion();
 
-		//获取鼠标位置
-		document.onmouseup = function() {
-			var event_obj = event;
-			mouseX = event_obj.clientX;
-			mouseY = event_obj.clientY;
-			console.log(mouseX + "+" + mouseY);
-		}
-
 		/////////////   finished   //////////////
 
-		//answer chick
-		/*
-		获取点击div event {
-			answer[][] = 1;
-			if（ answer[][] == qusetion[][]） {
-				showAnswer();
-			}
-			else {
-				answer[][] = 2;
-			}
-			if (answer == qusetion) {
-				defenrotNUM++;
-				qipanlenth++;
-				if (qipanlenth > 8) {
-					qipanlenth = 8;
-				}
-				var t1 = window.setTimeout(function() {
-					$("#victory").show();
-				}, 5);
-				show(1);
-			}
-		}
-		*/
-		/*
-		function testNew() {
-			for (var i = 0; i < qipanlenth; i++) {
-				for (var j = 0; j < qipanlenth; j++) {
-					answer[i][j] = qusetion[i][j];
-				}
-			}
-			console.log("testNew");
-
-			// if (answer == qusetion) {
-			// 	defenrotNUM++;
-			// 	qipanlenth++;
-			// 	if (qipanlenth > 8) {
-			// 		qipanlenth = 8;
-			// 	}
-			console.log("victory");
-			$("#victory").show();
-			var t1 = window.setTimeout(function() {
-				show(1);
-				$("#victory").hide();
-			}, 3000);
-			console.log("over");
-		}
-		*/
 		function panduanAAQ() {
 			for (var i = 0; i < qipanlenth; i++) {
 				for (var j = 0; j < qipanlenth; j++) {
@@ -220,14 +219,20 @@ window.onload = function() {
 			}
 			return true;
 		}
-		//div onclick event
-		$('#0').click(function() {
-			if (qusetion[0][0] == 1) {
-				answer[0][0] = 1;
+
+		//row: 行
+		//col: 列
+		function qiziClick(e) {
+			var qizi = this;
+			var row = qizi.dataset.row;
+			var col = qizi.dataset.col;
+
+			if (qusetion[row][col] == 1) {
+				answer[row][col] = 1;
 			} else {
-				answer[0][0] = 2;
+				answer[row][col] = 2;
 			}
-			console.log("onclick" + answer[0][0]);
+			console.log("onclick" + answer[row][col]);
 			showAnswer();
 			if (panduanAAQ()) {
 				console.log("win");
@@ -237,264 +242,16 @@ window.onload = function() {
 			} else {
 				console.log("error")
 			}
-		})
-		$('#1').click(function() {
-			if (qusetion[0][1] == 1) {
-				answer[0][1] = 1;
-			} else {
-				answer[0][1] = 2;
-			}
-			console.log("onclick" + answer[0][1]);
-			showAnswer();
-			if (panduanAAQ()) {
-				console.log("win");
-				$(document).ready(function() {
-					show(3);
-				});
-			} else {
-				console.log("error")
-			}
-		})
-		$('#2').click(function() {
-			if (qusetion[0][2] == 1) {
-				answer[0][2] = 1;
-			} else {
-				answer[0][2] = 2;
-			}
-			console.log("onclick" + answer[0][2]);
-			showAnswer();
-			if (panduanAAQ()) {
-				console.log("win");
-				$(document).ready(function() {
-					show(3);
-				});
-			} else {
-				console.log("error")
-			}
-		})
-		$('#3').click(function() {
-			if (qusetion[0][3] == 1) {
-				answer[0][3] = 1;
-			} else {
-				answer[0][3] = 2;
-			}
-			console.log("onclick" + answer[0][3]);
-			showAnswer();
-			if (panduanAAQ()) {
-				console.log("win");
-				$(document).ready(function() {
-					show(3);
-				});
-			} else {
-				console.log("error")
-			}
-		})
-		$('#4').click(function() {
-			if (qusetion[1][0] == 1) {
-				answer[1][0] = 1;
-			} else {
-				answer[1][0] = 2;
-			}
-			console.log("onclick" + answer[1][0]);
-			showAnswer();
-			if (panduanAAQ()) {
-				console.log("win");
-				$(document).ready(function() {
-					show(3);
-				});
-			} else {
-				console.log("error")
-			}
-		})
-		$('#5').click(function() {
-			if (qusetion[1][1] == 1) {
-				answer[1][1] = 1;
-			} else {
-				answer[1][1] = 2;
-			}
-			console.log("onclick" + answer[1][1]);
-			showAnswer();
-			if (panduanAAQ()) {
-				console.log("win");
-				$(document).ready(function() {
-					show(3);
-				});
-			} else {
-				console.log("error")
-			}
-		})
-		$('#6').click(function() {
-			if (qusetion[1][2] == 1) {
-				answer[1][2] = 1;
-			} else {
-				answer[1][2] = 2;
-			}
-			console.log("onclick" + answer[1][2]);
-			showAnswer();
-			if (panduanAAQ()) {
-				console.log("win");
-				$(document).ready(function() {
-					show(3);
-				});
-			} else {
-				console.log("error")
-			}
-		})
-		$('#7').click(function() {
-			if (qusetion[1][3] == 1) {
-				answer[1][3] = 1;
-			} else {
-				answer[1][3] = 2;
-			}
-			console.log("onclick" + answer[1][3]);
-			showAnswer();
-			if (panduanAAQ()) {
-				console.log("win");
-				$(document).ready(function() {
-					show(3);
-				});
-			} else {
-				console.log("error")
-			}
-		})
-		$('#8').click(function() {
-			if (qusetion[2][0] == 1) {
-				answer[2][0] = 1;
-			} else {
-				answer[2][0] = 2;
-			}
-			console.log("onclick" + answer[2][0]);
-			showAnswer();
-			if (panduanAAQ()) {
-				console.log("win");
-				$(document).ready(function() {
-					show(3);
-				});
-			} else {
-				console.log("error")
-			}
-		})
-		$('#9').click(function() {
-			if (qusetion[2][1] == 1) {
-				answer[2][1] = 1;
-			} else {
-				answer[2][1] = 2;
-			}
-			console.log("onclick" + answer[2][1]);
-			showAnswer();
-			if (panduanAAQ()) {
-				console.log("win");
-				$(document).ready(function() {
-					show(3);
-				});
-			} else {
-				console.log("error")
-			}
-		})
-		$('#10').click(function() {
-			if (qusetion[2][2] == 1) {
-				answer[2][2] = 1;
-			} else {
-				answer[2][2] = 2;
-			}
-			console.log("onclick" + answer[2][2]);
-			showAnswer();
-			if (panduanAAQ()) {
-				console.log("win");
-				$(document).ready(function() {
-					show(3);
-				});
-			} else {
-				console.log("error")
-			}
-		})
-		$('#11').click(function() {
-			if (qusetion[2][3] == 1) {
-				answer[2][3] = 1;
-			} else {
-				answer[2][3] = 2;
-			}
-			console.log("onclick" + answer[2][3]);
-			showAnswer();
-			if (panduanAAQ()) {
-				console.log("win");
-				$(document).ready(function() {
-					show(3);
-				});
-			} else {
-				console.log("error")
-			}
-		})
-		$('#12').click(function() {
-			if (qusetion[3][0] == 1) {
-				answer[3][0] = 1;
-			} else {
-				answer[3][0] = 2;
-			}
-			console.log("onclick" + answer[3][0]);
-			showAnswer();
-			if (panduanAAQ()) {
-				console.log("win");
-				$(document).ready(function() {
-					show(3);
-				});
-			} else {
-				console.log("error")
-			}
-		})
-		$('#13').click(function() {
-			if (qusetion[3][1] == 1) {
-				answer[3][1] = 1;
-			} else {
-				answer[3][1] = 2;
-			}
-			console.log("onclick" + answer[3][1]);
-			showAnswer();
-			if (panduanAAQ()) {
-				console.log("win");
-				$(document).ready(function() {
-					show(3);
-				});
-			} else {
-				console.log("error")
-			}
-		})
-		$('#14').click(function() {
-			if (qusetion[3][2] == 1) {
-				answer[3][2] = 1;
-			} else {
-				answer[3][2] = 2;
-			}
-			console.log("onclick" + answer[3][2]);
-			showAnswer();
-			if (panduanAAQ()) {
-				console.log("win");
-				$(document).ready(function() {
-					show(3);
-				});
-			} else {
-				console.log("error")
-			}
-		})
-		$('#15').click(function() {
-			if (qusetion[3][3] == 1) {
-				answer[3][3] = 1;
-			} else {
-				answer[3][3] = 2;
-			}
-			console.log("onclick" + answer[3][3]);
-			showAnswer();
-			if (panduanAAQ()) {
-				console.log("win");
-				$(document).ready(function() {
-					show(3);
-				});
-			} else {
-				console.log("error")
-			}
-		});
+		}
 	}
+
 	game(4, 4);
 
+	// while (1) {
+	// 	if (gameFlag == 1) {
+	// 		gameFlag = 0;
+	// 		game(gameQipanlenth, gamedefenrotNUM);
+	// 	}
+	// }
 
-}
+});
