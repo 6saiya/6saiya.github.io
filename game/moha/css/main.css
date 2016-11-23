@@ -1,0 +1,97 @@
+#maingame {
+	left: 100%;
+	top: 100%;
+}
+
+#mainMenu {
+	display: none;
+	margin-left: 10%;
+	margin-top: 10%;
+	width: 640px;
+	height: 480px;
+	text-align:center;
+	color:red;
+	border: 1px solid white;
+	background-image: url(../img/startBG.png);
+	background-size:640px 480px;
+}
+
+#mainBg {
+	margin-left: 10%;
+	margin-top: 10%;
+	width: 640px;
+	height: 480px;
+	display: none;
+	background-image: url(../img/gameBG.jpg);
+	background-size:640px 480px;
+	position: relative;
+}
+
+#help {
+	display: none;
+	margin-left: 10%;
+	margin-top: 10%;
+	width: 640px;
+	height: 480px;
+	text-align:center;
+	background-image: url(../img/helpBG.png);
+	background-size:640px 480px;
+}
+
+#qizi{
+	width: 50px;
+	height: 50px;
+}
+
+.startButton {
+	width: 100px;
+	height: 35px;
+	margin-left: 400px;
+	margin-top: 308px;
+}
+
+.helpButton {
+	width: 100px;
+	height: 35px;
+	margin-left: 400px;
+	margin-top: 20px;
+}
+
+#Qipan{
+	margin-left: : 210px;
+	margin-top: 130px;
+}
+
+.victoryForm{
+	width: 320px;
+	height: 240px;
+	/*margin-top: 120px;*/
+	/*margin-left: 160px;*/
+	background-image: url(../img/image.jpg);
+	background-size:320px 240px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform:translate(-50%,-50%);
+	/*display: none;*/
+}
+
+#setQipan{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform:translate(-50%,-50%);
+}			
+
+.error{
+	width: 120px;
+	height: 150px;
+	/*margin-top: 120px;*/
+	/*margin-left: 160px;*/
+	background-image: url(../img/error.jpg);
+	background-size:120px 150px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform:translate(-50%,-50%);
+	/*display: none;*/
