@@ -1,0 +1,548 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta property="qc:admins" content="75562472276356272746375" />
+<meta property="wb:webmaster" content="222d93f574ed1dab" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" name="baidu-tc-cerfication" data-appid="6734902" src="http://apps.bdimg.com/cloudaapi/lightapp.js"></script>
+
+<meta content="智能硬件 开发交流 流程图编程 开发平台" name="keywords">
+<meta content="啃萝卜智能硬件平台致力于打造中国第一大简单快捷实用的智能硬件交流分享学习开发平台" name="description">
+<meta property="wb:webmaster" content="32bced26d6ae5770" />
+<link href="http://www.kenrobot.com/addons/theme/stv1/_static/image/favicon.ico?v=1480500919" type="image/x-icon" rel="shortcut icon">
+<link href="http://www.kenrobot.com/addons/theme/stv1/_static/css/css.php?t=css&f=global.css,module.css,menu.css,form.css,jquery.atwho.css&v=1480500919.css" rel="stylesheet" type="text/css" />
+<link href="http://www.kenrobot.com/addons/theme/stv1/_static/css/index.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="http://www.kenrobot.com/addons/theme/stv1/_static/css/compile/global2.css">
+<link href="http://cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
+<link rel="stylesheet" href="http://www.kenrobot.com/addons/theme/stv1/_static/js/uploadify/uploadify.css?v=1480500919" type="text/css">
+<link href="http://www.kenrobot.com/addons/theme/stv1/_static/css/kenrobot.css" rel="stylesheet" type="text/css" />
+
+<link href="http://www.kenrobot.com/addons/theme/stv1/_static/css/compile/index.css?v=1480500919" rel="stylesheet" type="text/css"/>
+<script src="//hm.baidu.com/hm?8f9659f7aa2c7a08b7e609ec228cc2d9" async></script>
+<script>
+/**
+ * 全局变量
+ */
+var SITE_URL  = 'http://www.kenrobot.com';
+var UPLOAD_URL= 'http://www.kenrobot.com/data/upload';
+var THEME_URL = 'http://www.kenrobot.com/addons/theme/stv1/_static';
+var APPNAME   = 'public';
+var MID       = '0';
+var UID       = '0';
+var initNums  =  '200';
+var SYS_VERSION = '1480500919'
+var UMEDITOR_HOME_URL = 'http://www.kenrobot.com/addons/theme/stv1/_static/js/um/';
+var _CP       = 'TS4_';
+// Js语言变量
+var LANG = new Array();
+var allquesion = [ 0 , 0 ];
+</script>
+<script src="http://www.kenrobot.com/data/lang/public_zh-cn.js?v=1480500919"></script>
+<script src="http://www.kenrobot.com/addons/theme/stv1/_static/js/jquery-1.7.1.min.js?v=1480500919"></script>
+<script src="http://www.kenrobot.com/addons/theme/stv1/_static/js/jquery.form.js?v=1480500919"></script>
+<script src="http://www.kenrobot.com/addons/theme/stv1/_static/js/common.js?v=1480500919"></script>
+<script src="http://www.kenrobot.com/addons/theme/stv1/_static/js/core.js?v=1480500919"></script>
+<script src="http://www.kenrobot.com/addons/theme/stv1/_static/js/module.js?v=1480500919"></script>
+<script src="http://www.kenrobot.com/addons/theme/stv1/_static/js/module.common.js?v=1480500919"></script>
+<script src="http://www.kenrobot.com/addons/theme/stv1/_static/js/jwidget_1.0.0.js?v=1480500919"></script>
+<script src="http://www.kenrobot.com/addons/theme/stv1/_static/js/jquery.atwho.js?v=1480500919"></script>
+<script src="http://www.kenrobot.com/addons/theme/stv1/_static/js/jquery.caret.js?v=1480500919"></script>
+<script src="http://www.kenrobot.com/addons/theme/stv1/_static/js/ui.core.js?v=1480500919"></script>
+<script src="http://www.kenrobot.com/addons/theme/stv1/_static/js/ui.draggable.js?v=1480500919"></script>
+<script src="http://www.kenrobot.com/addons/theme/stv1/_static/js/plugins/core.comment.js?v=1480500919"></script>
+<script src="http://www.kenrobot.com/addons/theme/stv1/_static/js/plugins/core.digg.js?v=1480500919"></script>
+<!--<script src="http://www.kenrobot.com/addons/theme/stv1/_static/js/js.php?t=js&f=jquery-1.7.1.min.js,jquery.form.js,common.js,core.js,module.js,module.common.js,jwidget_1.0.0.js,jquery.atwho.js,jquery.caret.js,ui.core.js,ui.draggable.js,plugins/core.comment.js,plugins/core.digg.js&v=1480500919.js"></script>
+-->
+<script src="http://www.kenrobot.com/addons/theme/stv1/_static/js/plugins/core.comment.js?v=1480500919"></script>
+<script src="http://www.kenrobot.com/addons/theme/stv1/_static/js/plugins/core.digg.js?v=1480500919"></script>
+    <title>啃萝卜考试页</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <!-- <script type="text/javascript" src="js/main.js"></script> -->
+    <script src="js/highlight.js"></script>
+    <script src="js/lang-js.js"></script>
+    <script src="js/helpers.js"></script>
+    <script src="js/arduino.js"></script>
+    <script type="text/javascript" src="js/arduino.js"></script>
+    <script type="text/javascript" src="js/kenrobotTest010101.js"></script>
+    <script src="js/jquery-ui-1.9.2-min.js"></script>
+    <script src="js/jquery.jsPlumb-1.4.0-all.js"></script>
+    <script type="text/javascript" src="js/new-hardware.js"></script>
+
+</head>
+<body onload="DlHighlight.HELPERS.highlightByName('fooname', 'pre');">
+
+
+<div id="body_page" name='body_page'>
+    <div id="body-bg">
+        <div id="top" style="display: none;"></div>
+                        <div class="nologin-box">
+            <div class="box">
+                <div class="box-wrap login-dialog">
+                    <i class="kenrobot ken-close close" onclick="nologinclose();"></i>
+                    <ul class="switch">
+                        <li class="account active" data-action="account"></li>
+                        <li class="weixin" data-action="weixin"></li>
+                    </ul>
+                    <div class="logo"></div>
+                    <div class="seperator"></div>
+                    <div class="wrap">
+                        <div class="tab tab-account active">
+                            <div class="title">账号登录</div>
+                            <form id="ajax_login_form" method="POST" action="http://www.kenrobot.com/index.php?app=public&mod=Passport&act=doLogin">
+                                <div class="field">
+                                    <span class="icon"><i class="kenrobot ken-user"></i></span>
+                                    <input class="email" type="email" name="login_email" placeholder="邮箱地址/手机号码" autocomplete="off" />
+                                </div>
+                                <div class="field">
+                                    <span class="icon"><i class="kenrobot ken-password"></i></span>
+                                    <input class="password" type="password" name="login_password" placeholder="密码" />
+                                </div>
+                                <div class="message">
+                                    <div id="js_login_input"></div>
+                                </div>
+                                <input class="login-btn" id="login_qkbox" type="button" value="登录" />
+                            </form>
+                        </div>
+                        <div class="tab tab-weixin">
+                            <div class="scan"></div>
+                            <input class="qrcode-key" type="hidden" value="73982" data-valid-url="http://www.kenrobot.com/index.php?app=public&mod=Passport&act=validwx"><img class="qrcode" alt="微信扫码" src="https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQEM8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAydmcycUJzU3U4OFAxc1R4NzFvMTIAAgS3pj5YAwSAOgkA" />                            <div class="login-tips my-tips active">
+                                请使用微信扫一扫<br />扫码关注后即可直接登录
+                            </div>
+                            <div class="register-tips my-tips">
+                                推荐使用微信扫码功能<br />扫码后将完成注册并登录
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-footer">
+                        <div class="my-login-footer active">
+                            <a class="forget-password" href="http://www.kenrobot.com/index.php?app=public&mod=Passport&act=findPassword">忘记密码</a>
+                            <a class="register" href="http://www.kenrobot.com/index.php?app=public&mod=Register&act=index">点击注册</a>
+                            <span class="no-account">还没有啃萝卜账号？</span>
+                        </div>
+                        <div class="register-footer">
+                            <span class="no-account">不使用微信？前往</span>
+                            <a class="register" href="http://www.kenrobot.com/index.php?app=public&mod=Register&act=index">网站注册</a>
+                        </div>
+                    </div>
+                    <script src="http://www.kenrobot.com/addons/theme/stv1/_static/js/jsencrypt.js" type="text/javascript"></script>
+                    <script>
+                        function toggleActive(target, collapseMode) {
+                            if (target.hasClass("active")) {
+                                return;
+                            }
+
+                            target.siblings(".active").removeClass("active");
+                            target.addClass("active");
+                        }
+
+                        var dialog = $('.login-dialog');
+                        var scan = $('.scan', dialog);
+
+                        $('.switch li', dialog).on('click', function() {
+                            var li = $(this);
+                            var action = li.data("action");
+                            var tab = $('.tab-' + action, dialog);
+
+                            toggleActive(tab);
+                            toggleActive(li);
+
+                            if(action == "weixin") {
+                                setWeixinLoginCheck(true);
+                            } else {
+                                $('.email', dialog).focus();
+                                setWeixinLoginCheck(false);
+                            }
+                        });
+
+                        $('.login-btn', dialog).on('click', function() {
+                            $("#ajax_login_form").submit();
+                        });
+
+                        $('.qrcode', dialog).hover(function(e) {
+                            if(dialog.is(':animated')) {
+                                return;
+                            }
+
+                            scan.stop().show().removeClass("x-fadeOut").addClass("x-fadeIn");
+                        }, function(e) {
+                            if(dialog.is(':animated')) {
+                                return;
+                            }
+
+                            scan.removeClass("x-fadeIn").addClass("x-fadeOut").delay(400).queue(function() {
+                                scan.hide();
+                            });
+                        });
+
+                        $('form', dialog).on('keyup', function(e) {
+                            if(e.keyCode != 13) {
+                                return;
+                            }
+
+                            if(!$(".tab-account", dialog).hasClass("active")) {
+                                return;
+                            }
+
+                            $(".login-btn", dialog).trigger("click");
+                        }); 
+                    </script>
+                </div>
+            </div>
+            <div class="mbblack"></div>
+        </div>
+        <div id="header" name="header">
+            <div class="header-wrap">
+                <div class="head-bd" style="color: #333;"> 
+                    <a href="http://www.kenrobot.com/index.php?app=square&mod=Index&act=index" class="logo"></a>
+                    <div class="nav">
+                        <ul>
+                            <li id="sec-nav-12" >
+                                <a href="http://www.kenrobot.com/" target="_self"  class=" ">首页</a>
+                            </li><li id="sec-nav-55" >
+                                <a href="http://edu.kenrobot.com/#f=master" target="_blank"  class=" ">教育版</a>
+                            </li><li id="sec-nav-14" >
+                                <a href="http://ide.kenrobot.com/#f=master" target="_self"  class=" app  ">开发版</a>
+                            </li><li id="sec-nav-57" >
+                                <a href="http://www.kenrobot.com/index.php?app=square&mod=Index&act=help" target="_blank"  class=" ">帮助</a>
+                            </li>                           <li class="search" style="display: none;">
+                                <div id="mod-search" model-node="drop_search">
+                                    <form name="search_feed" id="search_feed" method="get" action="http://www.kenrobot.com/index.php?app=public&mod=Search&act=index">
+                                        <input name="app" value="public" type="hidden"/>
+                                        <input name="mod" value="Search" type="hidden"/>
+                                        <input type="hidden" name="t" value="2"/>
+                                        <input type="hidden" name="a" value="public"/>
+                                        <dl>
+                                            <dt class="clearfix">
+                                                <input id="search_input" class="s-txt left"  type="text" placeholder="搜索..." value="" event-node="searchKey" name='k'  autocomplete="off"  onFocus="$('.search-btn').addClass('search-hover')" onblur="$('.search-hover').removeClass('search-hover')">
+                                                <i class="app search-btn"><span class="serach"></span></i>
+                                            </dt>
+                                        </dl>
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="person">
+                    <ul class="clearfix">
+
+                    <li model-node="person" class="dorp-right"><a href="javascript:login()" class="app name login">登录</a></li>
+                    <li class="dorp-right"><a href="javascript:login('', true)" class="app name register">免费注册</a></li>
+                        
+                    </ul>
+                    </div>
+                </div>
+                <div>
+                <p style="margin-left:5%;font-family:Times New Roman;"><img src="img/positionred.png"><a href="http://www.kenrobot.com">首页</a> > <a href="http://ide.kenrobot.com">Arduino第一章</a> > 第一节Blink</p>
+                    
+                </div>
+            </div>
+        </div>
+    <div class="newindex-content">
+
+
+
+
+
+
+
+    <div id="main">
+<!-- 任务目标 -->
+        <div id="flex-container">
+            <div id="flex-nav">
+                <div class="col-xs-12">
+                    <h1 class="text-center">Arduino Blink</h1>
+                    <hr>
+                    <div class="challenge-instructions">
+                        <p class="wrappable">arduino入门考试——Blink</p>
+                        <p class="wrappable">将会用到<code>digitalWrite</code>函数和<code>delay</code>函数。</p>
+                        <p class="wrappable"><code>digitalWrite(pin,val)</code>函数有两个参数，<code>pin</code>为引脚，<code>val</code>为高低电平。</p>
+                        <p class="wrappable"><code>delay(val)</code>函数有一个参数。<code>val</code>为延时的时长，单位为毫秒。</p>
+                    </div>
+                </div>
+                <hr>
+                <div id="codeNav">
+                Code部分
+                </div> 
+                </br>
+                <div id="HardwareNav">
+                Hardware部分
+                </div>
+            </div>
+<!-- 任务目标 -->
+<!-- 硬件连接 -->
+            <div id="flex-HardwareCsonnection">
+                <div id="UNO">
+                    <div id="LED">
+                    </div>
+                    <div id="CsonnectionPoint13">
+                    </div>
+                    <div id="CsonnectionPointGnd">
+                    </div>
+                </div>
+            </div>
+<!-- 硬件连接 -->
+<!-- 代码部分 -->
+            <div id="flex-code">
+                <script>
+                            function test() {
+                              var code = document.getElementById("foo").value;
+                              var hl = new DlHighlight({ lang        :'js',
+                                                         lineNumbers : true});
+                              var formatted = hl.doItNow(code);
+                              var pre = document.getElementById("output");
+                              pre.className = "DlHighlight";
+                              pre.innerHTML = "<pre>" + formatted + "</pre>";
+                              ArduinoHighlight();
+                              kenrobotTest();
+                            }
+                            function loadCode(val) {
+                              if (!val)
+                                return;
+                              var req;
+                              if (window.ActiveXObject)
+                                req = new ActiveXObject("Microsoft.XMLHTTP");
+                              else if (window.XMLHttpRequest)
+                                req = new XMLHttpRequest();
+                              else
+                                throw "Browser does not support XMLHttpRequest";
+                              var a = val.split(/:/);
+                              var url = a[0];
+                              var lang = a[1];
+                              document.getElementById("lang").value = lang;
+                              req.open("GET", url, false);
+                              req.send();
+                              document.getElementById("foo").value = req.responseText;
+                              document.getElementById("output").innerHTML = "";
+                            }
+                  </script>
+                    <p>
+                    <div class="rightonbutton" id="submitButton" onclick="test()">提交代码</div>
+                    <div class="rightonbutton" id="clearCodeButton" onclick="document.getElementById('foo').value = ''">Clear code</div>
+                    </p>
+                <textarea id="foo" rows="10" style="width:100%">
+/************************************************************
+ * Copyright(C), 2016-2038, KenRobot.com
+ * FileName: 我的项目.ino
+ * Author: 啃萝卜
+ */
+
+void setup(){
+// put your setup code here, to run once:
+    pinMode(13,1);              
+}
+
+void loop(){ 
+// put your main code here, to run repeatedly:
+    digitalWrite(13,1);
+    delay(1000);
+    digitalWrite(13,0);
+    delay(1000);            
+}
+                </textarea>
+                <pre id="output"></pre>
+            </div>
+            <!-- 代码部分 -->
+        </div>  
+<!-- 实践部分 -->
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="platform-link">
+        <div class="link-bg">
+            <div class="inner-bg"></div>
+        </div>
+       
+    </div>
+    <div class="experts-recommend">
+        <div class="experts-bg">
+        </div>
+        
+    </div>
+   
+</div>
+<script src="http://www.kenrobot.com/addons/theme/stv1/_static/js/jquery.nav.js" type="text/javascript"></script>
+<script type="text/javascript">
+//切换
+$('.experts-recommend .wrap').nav({
+    t: 6000,
+    a: 300
+});
+
+//
+$('.tabpages .tabitem a').click(function() {
+    if ($(this).hasClass('disabled')) {
+        return;
+    }
+    var id = $(this).attr('data-tab-id');
+    var t = $('.tabpages .tabitem a').removeClass('current');
+    $(this).addClass('current');
+    $('.platform-content .item').removeClass('current');
+    $('.platform-content #item' + id).addClass('current');
+});
+
+$('.play-video a').click(function() {
+    $('.videobox').show();
+})
+
+$('#stop-demo-video').click(function() {
+    var video = $('#demo-video')[0];
+    video.currentTime = 0;
+    video.pause();
+    $('.videobox').hide();
+});
+</script>
+<script src="http://www.kenrobot.com/addons/theme/stv1/_static/js/login.js" type="text/javascript"></script>
+<footer>
+    <div class="footer1">
+        <div class="footer-wrap">
+            <div class="logo">
+            </div>
+            <div class="info">
+                <div class="copy-right">© 2016 KenRobot | 京 ICP备15039570号</div>
+                <div class="address">北京市海淀区天秀路10号中国农大国际创业园1号楼526</div>
+            </div>
+
+            <div class="kenrobot_weixin ">
+                    <div class="content">
+                        <img src="http://www.kenrobot.com/addons/theme/stv1/_static/image/wwwkenrobot_new_logo.jpg">
+                    </div>
+                    <div class="arrow">
+                    </div>
+            </div>
+            
+        </div>
+    </div>
+    <style type="text/css">
+    .kenrobot_weixin {
+        background-color: transparent;
+        height: 150px;
+        width: 140px;
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+        vertical-align: middle;
+        z-index: 1002;
+        display: none;
+    }
+    
+    .kenrobot_weixin .content {
+        background-color: #ffffff;
+        width: 140px;
+        height: 135px;
+        margin: 0 auto;
+        padding-top: 5px;
+    }
+    
+    .kenrobot_weixin .content img {
+        width: 130px;
+        height: 130px;
+    }
+    
+    .kenrobot_weixin .arrow {
+        width: 0;
+        height: 0;
+        font-size: 0;
+        border: solid 10px;
+        border-color: #ffffff transparent transparent transparent;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    
+    .a-fadeinT {
+        -webkit-animation: fadeinT 1s ease-out backwards;
+        -moz-animation: fadeinT 1s ease-out backwards;
+        -ms-animation: fadeinT 1s ease-out backwards;
+        animation: fadeinT 1s ease-out backwards;
+    }
+    /* 淡入-从上 */
+    
+    @-webkit-keyframes fadeinT {
+        0% {
+            opacity: 0;
+            -webkit-transform: translateY(-30px);
+        }
+        100% {
+            opacity: 1;
+            -webkit-transform: translateY(0);
+        }
+    }
+    
+    @-moz-keyframes fadeinT {
+        0% {
+            opacity: 0;
+            -moz-transform: translateY(-30px);
+        }
+        100% {
+            opacity: 1;
+            -moz-transform: translateY(0);
+        }
+    }
+    
+    @-ms-keyframes fadeinT {
+        0% {
+            opacity: 0;
+            -ms-transform: translateY(-30px);
+        }
+        100% {
+            opacity: 1;
+            -ms-transform: translateY(0);
+        }
+    }
+    
+    @keyframes fadeinT {
+        0% {
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    </style>
+    <script type="text/javascript">
+    // $('.footer-wrap .logo').mouseenter(function() {
+    //     var top = $(this).position().top - 160;
+    //     top = top > 0 ? top : 0;
+    //     $('.kenrobot_weixin').css('top', top).show().addClass("a-fadeinT");
+    // }).mouseleave(function() {
+    //     $('.kenrobot_weixin').hide();
+    // });
+    </script>
+</footer>
+<!--page end-->
+<!-- 统计代码-->
+<div id="site_analytics_code" style="display:none;"> <!-- <script src="http://s11.cnzz.com/stat.php?id=1254932726&web_id=1254932726" language="JavaScript"></script> --> </div>
+<script src="http://www.kenrobot.com/online_check.php?uid=0&uname=&mod=Passport&app=public&act=login&action=trace"></script><script>
+//底部置底
+var head_height = $("#body-bg").css("padding-top");
+var footer_height = $(".footer-wrap").height();
+var footer_margin_top = $(".footer-wrap").css("margin-top");
+var content_height = $("#page-wrap").height();
+
+var window_height = $(window).height();
+var min_height = Number(window_height) - parseInt(head_height) - Number(footer_height) - parseInt(footer_margin_top) - 1;
+if (content_height < min_height) {
+    if ($("#main-wrap").length > 0) {
+        $("#main-wrap").css("min-height", min_height);
+    } else {
+        $("#page-wrap").css("min-height", min_height);
+    }
+}
+</script>
+</body>
+
+</html>

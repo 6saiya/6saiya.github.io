@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="jquery.js"></script>
+    <script src="jquery-ui-1.9.2-min.js"></script>
+    <script src="jquery.jsPlumb-1.4.0-all.js"></script>
+    <style type="text/css">
+        .dragActive { border:2px dotted orange; }
+        .dropHover { border:1px dotted red; }
+        .item {
+            border: 1px solid black;
+            background-color: #ddddff;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+        #state1 {
+            left: 100px;
+            top: 100px;
+        }
+        #state2 {
+            left: 250px;
+            top: 250px;
+        }
+        #state3 {
+            left: 100px;
+            top: 250px;
+        }
+        #state4 {
+            left: 250px;
+            top: 100px;
+        }
+    </style>
+    <script type="text/javascript" src="demo2.js"></script>
+</head>
+<body>
+<div id="state1" class="item"><!-- state1 --></div>
+<div id="state2" class="item"><!-- state2 --></div>
+<div id="state3" class="item"><!-- state3 --></div>
+<div id="state4" class="item"><!-- state4 --></div>
+
+</body>
+
+</html>
