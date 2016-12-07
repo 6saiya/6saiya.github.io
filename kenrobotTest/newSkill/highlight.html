@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>代码实现查找关键字高亮显示</title>
+<style type="text/css">
+     #box{ 
+           height:200px; 
+           width:500px;
+           margin:50px auto;
+           border:2px solid #eee;
+           text-indent:20px;}
+    #inpt{
+          text-align:center;
+          }
+           
+</style>
+</head>
+
+<body>
+    <div id="box">
+      在4月15日首个全民国家安全教育日到来之际，中共中央总书记、国家主席、中央军委主席、中央国安委主席习近平作出重要指示。
+      他强调，国泰民安是人民群众最基本、最普遍的愿望。实现中华民族伟大复兴的中国梦，保证人民安居乐业，国家安全是头等大事。
+      要以设立全民国家安全教育日为契机，以总体国家安全观为指导，全面实施国家安全法，深入开展国家安全宣传教育，切实增强全
+      民国家安全意识。要坚持国家安全一切为了人民、一切依靠人民，动员全党全社会共同努力，汇聚起维护国家安全的强大力量，
+      夯实国家安全的社会基础，防范化解各类安全风险，不断提高人民群众的安全感、幸福感。
+    </div>
+    <div id="inpt">
+       <input type="text" id="txt" placeholder="请输入关键字"/>                          
+       <input type="button" id="btn" value="确定"/>
+    </div>
+    
+    <script type="text/javascript">
+         var oBox= document.getElementById("box");  
+         var oCont=oBox.innerHTML;
+         
+         var oTxt=document.getElementById("txt");
+         var oBn=document.getElementById("btn");
+         
+         oBn.onclick= function(){
+             var val=oTxt.value;
+             var fen=oCont.split(val);
+             oBox.innerHTML = fen.join('<span style="background:#cfc;">' + val + '</span> ');
+
+         };
+
+    </script>
+</body>
+</html>

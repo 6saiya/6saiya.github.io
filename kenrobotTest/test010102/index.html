@@ -59,7 +59,19 @@ var allquesion = [ 0 , 0 ];
     <title>啃萝卜考试页</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+    <script type="text/javascript" src="../lib/jquery.js"></script>
+    <!-- <script type="text/javascript" src="js/main.js"></script> -->
+    <script type="text/javascript" src="../lib/highlight.js"></script>
+    <script type="text/javascript" src="../lib/lang-js.js"></script>
+    <script type="text/javascript" src="../lib/helpers.js"></script>
+    <script type="text/javascript" src="../lib/arduino.js"></script>
+    <script type="text/javascript" src="../lib/arduino.js"></script>
+    <script type="text/javascript" src="../lib/jquery-ui-1.9.2-min.js"></script>
+    <script type="text/javascript" src="../lib/jquery.jsPlumb-1.4.0-all.js"></script>
+    <script type="text/javascript" src="js/hardwareTeest010102.js"></script>
+    <script type="text/javascript" src="js/codeTest010102.js"></script>
+    <script type="text/javascript" src="js/pass.js"></script>
 
 </head>
 <body onload="DlHighlight.HELPERS.highlightByName('fooname', 'pre');">
@@ -224,19 +236,140 @@ var allquesion = [ 0 , 0 ];
                     </ul>
                     </div>
                 </div>
+                <div>
+                <p style="margin-left:5%;font-family:Times New Roman;"><img src="../img/positionred.png"><a href="http://www.kenrobot.com">首页</a> > <a href="http://ide.kenrobot.com">Arduino第一章</a> > 第一节Blink</p>
+                    
+                </div>
             </div>
         </div>
     <div class="newindex-content">
+
+
+
+
+
+
+
     <div id="main">
-        <div id="sbIntroduce">
-            <h1 class="Introduceh1">Arduino入门训练</h1>
-            <hr>
-            <p class="Introducep">像玩游戏一样学习Arduino</p>
-        </div>
-        <div id="starButton">
-            <a href="test010101/index.html">开 始 闯 关</a>
-        </div> 
+<!-- 任务目标 -->
+        <div id="flex-container">
+            <div id="flex-nav">
+                <div class="col-xs-12">
+                    <h1 class="text-center">Arduino Breathing lamp</h1>
+                    <hr>
+                    <div class="challenge-instructions">
+                        <p class="wrappable">arduino入门考试——PWM输出</p>
+                        <p class="wrappable">PWM输出又称占空比输出，balabala……</p>
+                        <p class="wrappable">Arduino提供的PWM引脚为带~的引脚，既<code>3，5，6，9，10，11，</code>我们此次实验用3号脚</p>
+                        <p class="wrappable">我们将会用到<code>analogWrite</code>函数和<code>for</code>函数。</p>
+                        <p class="wrappable"><code>digitalWrite(pin,val)</code>函数有两个参数，<code>pin</code>为引脚，<code>val</code>为输出值。范围在<code>0~255.</code></p>
+                        <p class="wrappable"><code>for(int i = 0 ;i < val ;i++)</code>函数有两个参数，<code>i</code>为变量，<code>val</code>为最大值。</p>
+                        <p class="wrappable">任务目标：</p>
+                        <p class="wrappable"> 让LED灯闪从全灭(<code>0</code>)到最亮(<code>255</code>),每一个亮度20ms</p>
+                        <p class="wrappable"> 再让LED灯闪从最亮(<code>255</code>)到全灭(<code>0</code>),每一个亮度20ms</p>
+                    </div>
+                </div>
+                <hr>
+                <div id="codeNav">
+                Code部分
+                </div> 
+                </br>
+                <div id="HardwareNav">
+                Hardware部分
+                </div>
+            </div>
+<!-- 任务目标 -->
+<!-- 硬件连接 -->
+            <div id="flex-HardwareCsonnection">
+                <div id="UNO">
+                    <div id="LED">
+                    </div>
+                    <div id="CsonnectionPoint3">
+                    </div>
+                </div>
+            </div>
+<!-- 硬件连接 -->
+<!-- 代码部分 -->
+            <div id="flex-code">
+                <script>
+                            function test() {
+                              var code = document.getElementById("foo").value;
+                              var hl = new DlHighlight({ lang        :'js',
+                                                         lineNumbers : true});
+                              var formatted = hl.doItNow(code);
+                              var pre = document.getElementById("output");
+                              pre.className = "DlHighlight";
+                              pre.innerHTML = "<pre>" + formatted + "</pre>";
+                              ArduinoHighlight();
+                              kenrobotTest();
+                            }
+                            function loadCode(val) {
+                              if (!val)
+                                return;
+                              var req;
+                              if (window.ActiveXObject)
+                                req = new ActiveXObject("Microsoft.XMLHTTP");
+                              else if (window.XMLHttpRequest)
+                                req = new XMLHttpRequest();
+                              else
+                                throw "Browser does not support XMLHttpRequest";
+                              var a = val.split(/:/);
+                              var url = a[0];
+                              var lang = a[1];
+                              document.getElementById("lang").value = lang;
+                              req.open("GET", url, false);
+                              req.send();
+                              document.getElementById("foo").value = req.responseText;
+                              document.getElementById("output").innerHTML = "";
+                            }
+                  </script>
+                    <p>
+                    <div class="rightonbutton" id="submitButton" onclick="test()">提交代码</div>
+                    <div class="rightonbutton" id="clearCodeButton" onclick="document.getElementById('foo').value = ''">Clear code</div>
+                    </p>
+                <textarea id="foo" rows="10" style="width:100%">
+/************************************************************
+ * Copyright(C), 2016-2038, KenRobot.com
+ * Author: 啃萝卜
+ */
+
+void setup(){
+// put your setup code here, to run once:
+    pinMode(3,1);              
+}
+
+void loop(){ 
+// put your main code here, to run repeatedly:
+    for(int i = 0 ;i < 255 ;i++){
+    analogWrite(3,i);
+    delay(20);
+    }            
+}
+    for(int i = 255;i>0 ;i--){
+    analogWrite(3,i);
+    delay(20);
+    }    
+                </textarea>
+                <pre id="output"></pre>
+            </div>
+            <!-- 代码部分 -->
+        </div>  
+<!-- 实践部分 -->
     </div>
+    <div id="passPage">
+        <h1 class="passPageh1">Congratulations</h1>
+        <h1 class="passPageh1">Clearance</h1>
+        <div class="passPagea">
+            <a href="../test010103"><img src="../img/right.png">点击进入下一题</a>
+        </div>
+    </div>
+
+
+
+
+
+
+
     <div class="platform-link">
         <div class="link-bg">
             <div class="inner-bg"></div>
