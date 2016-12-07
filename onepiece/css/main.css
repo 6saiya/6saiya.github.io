@@ -1,0 +1,46 @@
+#main{
+	width: 100%;
+	height: 100%;
+}
+
+#loginPage{
+	width: 800px;
+	height: 500px;
+	display: none;
+}
+
+#pvnPage{
+	width: 800px;
+	height: 500px;
+	display: none;
+}
+
+#pvpPage{
+	width: 800px;
+	height: 500px;
+	display: none;
+}
+
+#gamemainPage{
+	width: 800px;
+	height: 500px;
+	display: block;
+}
+
+#menu{
+	width: 400px;
+	height: 200px;
+	display: none;
+}
+
+#person{
+	width: 400px;
+	height: 200px;
+	display: none;
+}
+
+#bag{
+	width: 400px;
+	height: 200px;
+	display: none;
+}
