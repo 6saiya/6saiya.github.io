@@ -79,9 +79,9 @@
 #LED{
 
 	width: 80px;
-	height: 120px;
-	background-image: url(../../img/LED.png);
-	background-size:80px 120px;
+	height: 80px;
+	background-image: url(../../img/buzzer.png);
+	background-size:80px 80px;
 	left: 50%;
 	position:absolute;
 	transform:translate(-50%,-200px);
@@ -100,7 +100,7 @@
 	width: 5px;
 	height: 5px;
 	background-color: yellow;
-	left:  116px;
+	left:  216px;
 	top: 8px;
 }
 

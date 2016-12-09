@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+ <script>
+        window.onload = function () {
+            var mUc = document.getElementById("muc");
+            var aUd = document.getElementById("aud");
+            var onOff = true;
+            mUc.onclick = function () {
+                if (onOff) {
+                    aUd.pause();
+                    this.className = '';
+                } else {
+                    aUd.play();
+                    this.className = 'mussic';
+                }
+                onOff = !onOff;
+            }
+        }
+    </script>
+
+    <audio src="../sound/onepiece.mp3" autoplay id="aud"></audio>
+</body>
+</html>
