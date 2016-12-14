@@ -1,30 +1,29 @@
 function kenrobotTest() {
-	var key = [
-		/for/g,
-		/i/g,
-		/255/g,
-		/>/g,
-		/--/g,
-		/analogWrite/g,
-		/delay/g,
-		/20/g
+	var key = [/digitalWrite\(13,1\);/ig,
+		/delay\(1000\);/ig,
+		/digitalWrite\(13,0\);/ig
 	];
 
-	var keyzz = [2, 447, 2, 326, 1, 2, 2, 5];
+	var keyzz = ["digitalWrite(13,1);",
+		"delay(1000);",
+		"digitalWrite(13,0);"
+	];
 
-	var keyflag = 0;
+	var keyflag = 1;
 
-	var otextarea = document.getElementById('editor').innerHTML;
+	var otextarea = $("#Qipan").empty();
+	otextarea = document.getElementById('foo').value;
+
+	// console.log(otextarea.innerHTML);
 
 	for (var i = 0; i < key.length; i++) {
-		var a = otextarea.match(key[i]).length;
-		console.log(a);
-		if (a == keyzz[i]) {
+		// console.log("keyflag" + keyflag);
+		if (otextarea.match(key[i]) == keyzz[i]) {
+			// console.log(otextarea.innerHTML.match(key[i]));
 			keyflag++;
-			// console.log(keyflag);
+
 		}
 	}
-	
 	if (key.length == keyflag) {
 		console.log("code right");
 		var QusetionDisplay = document.getElementById("codeNav");
@@ -39,3 +38,4 @@ function kenrobotTest() {
 
 	}
 }
+

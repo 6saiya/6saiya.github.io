@@ -1,0 +1,233 @@
+/* Generics */
+
+.DlHighlight {
+  background-color: #f8f8f8;
+  border-left: 2px solid #0c0;
+  font: 10pt monospace;
+  padding: 10px;
+  margin-left: 3em;
+}
+
+.DlHighlight pre { margin: 0; padding: 0; }
+
+.DlHighlight .keyword { color: #00f; font-weight: bold; }
+
+.DlHighlight .builtin { color: #22c; }
+
+.DlHighlight .string { color: #282; }
+.DlHighlight .string .before, .DlHighlight .string .after { color: #040; }
+
+.DlHighlight .regexp { color: #b2c; }
+.DlHighlight .regexp .before, .DlHighlight .regexp .after { color: #509; font-weight: bold; }
+
+.DlHighlight .comment { color: #c22; }
+.DlHighlight .comment .before, .DlHighlight .comment .after { color: #baa; }
+
+.DlHighlight .hashkey { color: #a51; }
+
+.DlHighlight .hasharrow { color: #f00; }
+
+.DlHighlight .paren { font-weight: bold; }
+
+.DlHighlight .operator { color: #077; }
+
+.DlHighlight .error { background-color: #c00; color: #fff; }
+
+.DlHighlight .defun { font-weight: bold; }
+
+.DlHighlight .line-numbers {
+  float: left;
+  margin-left: -4.5em;
+  width: 3em;
+  text-align: right;
+  color: #999;
+  font: 0.9em tahoma,verdana,sans-serif;
+  padding-top: 0.05em;
+}
+.DlHighlight .line-numbers:after { content: "." }
+
+/* XML */
+
+.DlHighlight .xml-tag-close .before { color: #52a; }
+
+.DlHighlight .xml-entity { color: #b2a; }
+.DlHighlight .xml-entity .before, .DlHighlight .xml-entity .after { color: #607; }
+
+/* CSS */
+
+.DlHighlight .css-class { color: #000; font-style: italic; }
+.DlHighlight .css-pseudo-class { color: #777; }
+.DlHighlight .css-id { font-weight: bold; }
+.DlHighlight .css-color-spec { color: #a51; }
+.DlHighlight .css-length { color: #a19; }
+.DlHighlight .css-length .after { font-weight: bold; }
+.DlHighlight .css-declaration-kw { font-weight: bold; }
+.DlHighlight .css-comma { color: red; }
+
+
+#header{
+  display: -webkit-flex;
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  width: 100%;
+  height: 100px;
+  background-color: lightgrey;
+}
+
+#flex-container{
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  height:750;
+}
+
+#flex-nav{
+  margin: 0px;
+  margin-left: 5px;
+  padding: 0px;
+  border: 0px;
+  width: 33%;
+  height: 700px;
+}
+
+#footer{
+  width: 100%;
+  height: 100px;
+  background-color: lightgrey;
+}
+
+#main{
+  margin-top: 100px;
+  width:100%;
+  height:100%; 
+}
+
+#flex-HardwareCsonnection{
+  border-radius: 10px;
+  background-color: #333;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  width: 33%;
+  height: 700px;
+  position: relative;
+}
+
+#flex-code{
+  /*border: solid; 1px #666;*/
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  width: 33%;
+  height: 700px;
+}
+
+#codeText{
+  width: 100%;
+  height: 95%
+}
+
+#flex-login{
+  margin-left: : 0px; 
+  /*padding: 0px;*/
+  border: 0px;
+  width: 300px;
+  height: 100px;
+}
+
+#flex-logo{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  width: 70%;
+  height: 100px;
+}
+#flex-free{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  width: 70%;
+  height: 100%;
+}
+
+.ArduinoKeyWord{
+  color: red;
+}
+
+.ArduinoBuiltins{
+  color: #4CAF50;
+}
+
+code{
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+}
+
+.text-center{
+    text-align: center;
+    font-size: 38px;
+    margin: 20px;
+}
+
+
+.wrappable{
+  margin: 0 0 10px;
+  padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#clearCodeButton{
+  float: right;
+}
+
+#submitButton{
+  float: left;
+}
+
+.rightonbutton{
+  width: 98%;
+  height: 50px;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 50px;
+  border:solid;
+  border-width: 2px;
+  border-color: #4CAF50;
+  color: #4CAF50;
+}
+
+#passPage{
+  width: 600px;
+  height: 350px;
+  background-color: white;
+  border: solid;
+  border-width: 2px;
+  border-color: #4CAF50;
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 10px;
+  opacity: .4
+}
+
+.passPageh1{
+  font-size: 40px;
+  background-color: #4CAF50;
+  text-align: center;
+}
+
+.passPagea{
+  font-size: 40px;
+  color: #4CAF50;
+  text-align: center;
+  line-height: 260px;
+}

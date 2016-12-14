@@ -59,7 +59,7 @@ var allquesion = [ 0 , 0 ];
     <title>啃萝卜考试页</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="all" />
     <script type="text/javascript" src="../lib/jquery.js"></script>
     <!-- <script type="text/javascript" src="js/main.js"></script> -->
     <script type="text/javascript" src="../lib/highlight.js"></script>
@@ -274,6 +274,7 @@ var allquesion = [ 0 , 0 ];
                 <div id="HardwareNav">
                 Hardware部分
                 </div>
+                <div class="rightonbutton" id="submitButton" onclick="kenrobotTest()">提 交 代 码</div>
             </div>
 <!-- 任务目标 -->
 <!-- 硬件连接 -->
@@ -290,43 +291,7 @@ var allquesion = [ 0 , 0 ];
 <!-- 硬件连接 -->
 <!-- 代码部分 -->
             <div id="flex-code">
-                <script>
-                            function test() {
-                              var code = document.getElementById("foo").value;
-                              var hl = new DlHighlight({ lang        :'js',
-                                                         lineNumbers : true});
-                              var formatted = hl.doItNow(code);
-                              var pre = document.getElementById("output");
-                              pre.className = "DlHighlight";
-                              pre.innerHTML = "<pre>" + formatted + "</pre>";
-                              ArduinoHighlight();
-                              kenrobotTest();
-                            }
-                            function loadCode(val) {
-                              if (!val)
-                                return;
-                              var req;
-                              if (window.ActiveXObject)
-                                req = new ActiveXObject("Microsoft.XMLHTTP");
-                              else if (window.XMLHttpRequest)
-                                req = new XMLHttpRequest();
-                              else
-                                throw "Browser does not support XMLHttpRequest";
-                              var a = val.split(/:/);
-                              var url = a[0];
-                              var lang = a[1];
-                              document.getElementById("lang").value = lang;
-                              req.open("GET", url, false);
-                              req.send();
-                              document.getElementById("foo").value = req.responseText;
-                              document.getElementById("output").innerHTML = "";
-                            }
-                  </script>
-                    <p>
-                    <div class="rightonbutton" id="submitButton" onclick="test()">提交代码</div>
-                    <div class="rightonbutton" id="clearCodeButton" onclick="document.getElementById('foo').value = ''">Clear code</div>
-                    </p>
-                <textarea id="foo" rows="10" style="width:100%">
+                <pre id="editor" >
 /************************************************************
  * Copyright(C), 2016-2038, KenRobot.com
  * Author: 啃萝卜
@@ -343,9 +308,28 @@ void loop(){
     delay(1000);
     digitalWrite(13,0);
     delay(1000);            
-}
-                </textarea>
-                <pre id="output"></pre>
+}</pre>
+                    <script src="../ace/ace.js"></script>
+                    <script src="../ace/ext-language_tools.js"></script>
+                    <script src="../ace/snippets/text.js"></script>
+                    <script src="../ace/ext-language_tools.js"></script>
+
+                    <script>
+                        var editor = ace.edit("editor");
+                        editor.setTheme("ace/theme/default");
+                        editor.session.setMode("ace/mode/arduino");
+                        editor.setOptions({autoScrollEditorIntoView: true});
+                        var editorstyle = document.getElementById('editor');
+                        editorstyle.style.margin = 0;
+                        editorstyle.style.width = "100%";
+                        editorstyle.style.height = "100%" ;
+                        // console.log(editorstyle);
+                    </script>
+                    <style type="text/css">
+                        .ace-default .ace_cursor {
+                            color: #333;
+                        }
+                    </style>
             </div>
             <!-- 代码部分 -->
         </div>  

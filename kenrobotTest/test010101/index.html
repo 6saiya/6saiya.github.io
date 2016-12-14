@@ -59,9 +59,8 @@ var allquesion = [ 0 , 0 ];
     <title>啃萝卜考试页</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="all" />
     <script type="text/javascript" src="../lib/jquery.js"></script>
-    <!-- <script type="text/javascript" src="js/main.js"></script> -->
     <script type="text/javascript" src="../lib/highlight.js"></script>
     <script type="text/javascript" src="../lib/lang-js.js"></script>
     <script type="text/javascript" src="../lib/helpers.js"></script>
@@ -72,6 +71,54 @@ var allquesion = [ 0 , 0 ];
     <script type="text/javascript" src="js/hardwareTeest010101.js"></script>
     <script type="text/javascript" src="js/codeTest010101.js"></script>
     <script type="text/javascript" src="js/pass.js"></script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <style type="text/css" media="screen">
+        .ace_editor {
+        position: relative !important;
+        border: 1px solid lightgray;
+        margin: auto;
+        height: 200px;
+        width: 80%;
+    }
+
+    .ace_editor.fullScreen {
+        height: auto;
+        width: auto;
+        border: 0;
+        margin: 0;
+        position: fixed !important;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+    }
+
+    .fullScreen {
+        overflow: hidden
+    }
+
+    .scrollmargin {
+        height: 500px;
+        text-align: center;
+    }
+
+    .large-button {
+        color: lightblue;
+        cursor: pointer;
+        font: 30px arial;
+        padding: 20px;
+        text-align: center;
+        border: medium solid transparent;
+        display: inline-block;
+    }
+    .large-button:hover {
+        border: medium solid lightgray;
+        border-radius: 10px 10px 10px 10px;
+        box-shadow: 0 0 12px 0 lightblue;
+    }
+  </style>
 
 </head>
 <body onload="DlHighlight.HELPERS.highlightByName('fooname', 'pre');">
@@ -274,6 +321,7 @@ var allquesion = [ 0 , 0 ];
                 <div id="HardwareNav">
                 Hardware部分
                 </div>
+                <div class="rightonbutton" id="submitButton" onclick="kenrobotTest()">提 交 代 码</div>
             </div>
 <!-- 任务目标 -->
 <!-- 硬件连接 -->
@@ -283,51 +331,15 @@ var allquesion = [ 0 , 0 ];
                     </div>
                     <div id="CsonnectionPoint13">
                     </div>
-                    <div id="CsonnectionPointGnd">
-                    </div>
+                    <!-- <div id="CsonnectionPointGnd"> -->
+                    <!-- </div> -->
                 </div>
             </div>
 <!-- 硬件连接 -->
 <!-- 代码部分 -->
-            <div id="flex-code">
-                <script>
-                            function test() {
-                              var code = document.getElementById("foo").value;
-                              var hl = new DlHighlight({ lang        :'js',
-                                                         lineNumbers : true});
-                              var formatted = hl.doItNow(code);
-                              var pre = document.getElementById("output");
-                              pre.className = "DlHighlight";
-                              pre.innerHTML = "<pre>" + formatted + "</pre>";
-                              ArduinoHighlight();
-                              kenrobotTest();
-                            }
-                            function loadCode(val) {
-                              if (!val)
-                                return;
-                              var req;
-                              if (window.ActiveXObject)
-                                req = new ActiveXObject("Microsoft.XMLHTTP");
-                              else if (window.XMLHttpRequest)
-                                req = new XMLHttpRequest();
-                              else
-                                throw "Browser does not support XMLHttpRequest";
-                              var a = val.split(/:/);
-                              var url = a[0];
-                              var lang = a[1];
-                              document.getElementById("lang").value = lang;
-                              req.open("GET", url, false);
-                              req.send();
-                              document.getElementById("foo").value = req.responseText;
-                              document.getElementById("output").innerHTML = "";
-                            }
-                  </script>
-                    <p>
-                    <div class="rightonbutton" id="submitButton" onclick="test()">提交代码</div>
-                    <div class="rightonbutton" id="clearCodeButton" onclick="document.getElementById('foo').value = ''">Clear code</div>
-                    </p>
-                <textarea id="foo" rows="10" style="width:100%">
-/************************************************************
+                <div id="flex-code">
+                    <pre id="editor" >
+/********************************************
  * Copyright(C), 2016-2038, KenRobot.com
  * Author: 啃萝卜
  */
@@ -339,13 +351,32 @@ void setup(){
 
 void loop(){ 
 // put your main code here, to run repeatedly:
-    digitalWrite(13,1);
+    digitalWrite(13,HIGH);
     delay(1000);
-    digitalWrite(13,0);
+    digitalWrite(13,LOW);
     delay(1000);            
-}
-                </textarea>
-                <pre id="output"></pre>
+}</pre>
+                    <script src="../ace/ace.js"></script>
+                    <script src="../ace/ext-language_tools.js"></script>
+                    <script src="../ace/snippets/text.js"></script>
+                    <script src="../ace/ext-language_tools.js"></script>
+
+                    <script>
+                        var editor = ace.edit("editor");
+                        editor.setTheme("ace/theme/default");
+                        editor.session.setMode("ace/mode/arduino");
+                        editor.setOptions({autoScrollEditorIntoView: true});
+                        var editorstyle = document.getElementById('editor');
+                        editorstyle.style.margin = 0;
+                        editorstyle.style.width = "100%";
+                        editorstyle.style.height = "100%" ;
+                        // console.log(editorstyle);
+                    </script>
+                    <style type="text/css">
+                        .ace-default .ace_cursor {
+                            color: #333;
+                        }
+                    </style>
             </div>
             <!-- 代码部分 -->
         </div>  
